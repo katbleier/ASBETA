@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnold Schönberg: Versuch eines Tagebuchs 1912</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Arnold Schönberg</h1>
+            <h2>Versuch eines Tagebuchs 1912</h2>
+            <p class="subtitle">Digitale Edition</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active">Startseite</a></li>
+                <li><a href="#" id="nav-entries">Tagebucheinträge</a></li>
+                <li><a href="#" id="nav-persons">Personen</a></li>
+                <li><a href="#" id="nav-places">Orte</a></li>
+                <li><a href="#" id="nav-works">Werke</a></li>
+                <li><a href="#" id="nav-orgs">Organisationen</a></li>
+                <li><a href="#" id="nav-about">Über die Edition</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="content">
+            <!-- Startseite -->
+            <section id="home" class="content-section active">
+                <div class="intro-text">
+                    <h3>Willkommen zur digitalen Edition</h3>
+                    <p>Diese digitale Edition präsentiert Arnold Schönbergs <em>Versuch eines Tagebuchs</em> aus dem Jahr 1912, einem entscheidenden Jahr in der Entwicklung seiner atonalen Kompositionstechnik. Das Tagebuch dokumentiert wichtige Begegnungen, Aufführungen und künstlerische Reflexionen während seiner Zeit in Berlin.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="number" id="entry-count">8</span>
+                            <span class="label">Einträge</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number" id="person-count">-</span>
+                            <span class="label">Personen</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number" id="place-count">-</span>
+                            <span class="label">Orte</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number" id="work-count">-</span>
+                            <span class="label">Werke</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-access">
+                    <h4>Schnellzugriff</h4>
+                    <button class="btn btn-primary" id="start-reading">Tagebuch lesen</button>
+                    <button class="btn btn-secondary" id="browse-indexes">Register durchsuchen</button>
+                </div>
+            </section>
+
+            <!-- Einträge Liste -->
+            <section id="entries" class="content-section">
+                <h3>Tagebucheinträge</h3>
+                <div id="entries-list" class="entries-grid">
+                    <!-- Wird durch JavaScript gefüllt -->
+                </div>
+            </section>
+
+            <!-- Einzelner Eintrag -->
+            <section id="entry-detail" class="content-section">
+                <div class="entry-nav">
+                    <button id="prev-entry" class="btn btn-nav">← Vorheriger</button>
+                    <button id="back-to-list" class="btn btn-secondary">Zur Übersicht</button>
+                    <button id="next-entry" class="btn btn-nav">Nächster →</button>
+                </div>
+                <div id="entry-content">
+                    <!-- Wird durch JavaScript gefüllt -->
+                </div>
+            </section>
+
+            <!-- Register Seiten -->
+            <section id="persons" class="content-section">
+                <h3>Personenregister</h3>
+                <div id="persons-list" class="index-list">
+                    <!-- Wird durch JavaScript gefüllt -->
+                </div>
+            </section>
+
+            <section id="places" class="content-section">
+                <h3>Ortsregister</h3>
+                <div id="places-list" class="index-list">
+                    <!-- Wird durch JavaScript gefüllt -->
+                </div>
+            </section>
+
+            <section id="works" class="content-section">
+                <h3>Werkregister</h3>
+                <div id="works-list" class="index-list">
+                    <!-- Wird durch JavaScript gefüllt -->
+                </div>
+            </section>
+
+            <section id="organizations" class="content-section">
+                <h3>Organisationen</h3>
+                <div id="orgs-list" class="index-list">
+                    <!-- Wird durch JavaScript gefüllt -->
+                </div>
+            </section>
+
+            <!-- Über die Edition -->
+            <section id="about" class="content-section">
+                <h3>Über diese digitale Edition</h3>
+                <div class="about-content">
+                    <h4>Quellennachweis</h4>
+                    <p><strong>Titel:</strong> Versuch eines Tagebuchs 1912<br>
+                    <strong>Autor:</strong> Arnold Schönberg<br>
+                    <strong>Aufbewahrungsort:</strong> Arnold Schönberg Center, Wien<br>
+                    <strong>Signatur:</strong> T26.02</p>
+
+                    <h4>Editorische Grundsätze</h4>
+                    <p>Diese Edition folgt den Standards der Text Encoding Initiative (TEI) und bietet sowohl diplomatische Transkriptionen als auch normalisierte Lesefassungen. Alle Personen-, Orts- und Werkangaben sind mit autoritativen Datenquellen (GND) verknüpft.</p>
+
+                    <h4>Technische Umsetzung</h4>
+                    <p>Die digitale Edition basiert auf TEI-XML und wird als statische Website über GitHub Pages bereitgestellt. Der Quellcode ist öffentlich verfügbar.</p>
+
+                    <h4>Lizenz</h4>
+                    <p>Creative Commons BY-NC-SA 4.0</p>
+
+                    <h4>Bearbeitung</h4>
+                    <p>Katharina Bleier, 2025</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Katharina Bleier | <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> | <a href="https://repo.schoenberg.at/">Arnold Schönberg Center</a></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
