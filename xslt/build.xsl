@@ -555,9 +555,9 @@
             >🖊️</span>
     </xsl:template>
 
-    <xsl:template match="tei:note[@type = 'comment']">
-        <span class="note-icon editor" title="Editor's note" data-note-id="{generate-id()}"
-            >ℹ️</span>
+    <xsl:template match="tei:note[@type='commentary']">
+        <xsl:variable name="id" select="generate-id()"/>
+        <a href="#{$id}" class="note-marker">ℹ</a>
     </xsl:template>
 
     <!-- Head / date inside the entry (we already render as H1 in header) – skip local output -->
