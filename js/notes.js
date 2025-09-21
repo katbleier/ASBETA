@@ -1,18 +1,25 @@
-(function(){
-  const panel = document.getElementById('notes-panel');
-  if(!panel) return;
-  document.addEventListener('click', (e)=>{
-    const icon = e.target.closest('.note-icon');
-    const closer = e.target.closest('[data-close-notes]');
-    if(icon){
-      panel.classList.add('open');
-      const target = icon.getAttribute('data-note-id');
-      if(target){
-        const el = panel.querySelector(`[data-note="${target}"]`);
-        if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
-      }
-    } else if(closer){
-      panel.classList.remove('open');
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".note-toggle").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const popup = btn.nextElementSibling;
+      const isVisible = popup.style.display === "block";
+
+      // Hide all other popups first
+      document.querySelectorAll(".note-popup").forEach(p => {
+        p.style.display = "none";
+      });
+
+      // Toggle this one
+      popup.style.display = isVisible ? "none" : "block";
+    });
+  });
+
+  // Close popup if clicking elsewhere
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".note.commentary") && !e.target.closest(".note.author")) {
+      document.querySelectorAll(".note-popup").forEach(p => {
+        p.style.display = "none";
+      });
     }
   });
-})();
+});

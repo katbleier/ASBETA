@@ -371,7 +371,7 @@
             <!-- PLACELIST -->
             <settingDesc><listPlace>
                 <place xml:id="pl1">
-                    <placeName ref="https://d-nb.info/gnd/106428518X">Petersburg</placeName>
+                    <placeName ref="https://d-nb.info/gnd/106428518X">St. Petersburg</placeName>
 
                     <location>
                         <geo>59.93073501457162 30.363842268494185</geo>
@@ -810,7 +810,7 @@
                     halte es doch noch für möglich, daß ich mit ihm <del rend="strikethrough"
                         >z</del> mich zusammenfinde. Gewünscht habe ich es immer. <pb n="8"
                         facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524925"/><note
-                        place="left" rend="vertical">Wohl in <placeName ref="#pl4"><hi
+                        place="left">Wohl in <placeName ref="#pl4"><hi
                                 rend="underline">Berlin</hi></placeName> !! <hi rend="underline"
                             >Schbg</hi></note>Denn er ist zweifellos ein genialer Mensch. Jedenfalls
                     weitaus das beste, was ich bisher kennenlernte. Im Vortrag sagte ich dann meine
@@ -820,8 +820,8 @@
                     vielen Gästen, einen solchen Vortrag halte. Ich bin nicht abgeneigt.</p>
             </div>
             <div type="entry" n="7">
-                <head rend="inline"><hi rend="underline">Dienstag</hi>, <del rend="overwritten"
-                        >1</del>30. <del rend="strikethrough">Februar</del></head>
+                <head rend="inline"><date when="1912-01-30"><hi rend="underline">Dienstag</hi>, <del rend="overwritten"
+                        >1</del>30. <del rend="strikethrough">Februar</del></date></head>
                 <p>Nachmittags Probe für <del rend="strikethrough">Klavierst</del>
                     <title type="music" ref="#m7">Orchesterstücke</title>. Endlich gingen I. und II.
                     gut. Sogar sehr gut. Ich war darauf gekommen, dass die Bezeichnung (p und f) in
@@ -830,14 +830,14 @@
                         >f</del>p einer Posaune), und änderte diese Zeichen nun. Jetzt geht es.</p>
             </div>
             <div type="entry" n="8">
-                <head><hi rend="underline">Mittwoch</hi>, 31.</head>
+                <head><date when="1912-01-31"><hi rend="underline">Mittwoch</hi>, 31.</date></head>
                 <p>Rendezvous mit <orgName ref="#o1">Peters</orgName>
                     <add place="above">(<persName ref="#p52">Henrichsen</persName>)</add>. Netter
                     Mensch, unbedeutend, Spießer, aber wohlwollend und anscheinend sehr anständig.
                     War sehr artig. In Habels Weinstube. Lud mich
                     ein zu Kaviar und Rheinwein. Forschte mich über mein Verhältnis zur <orgName
                         ref="#o2">Universal-Edition</orgName> aus. Gab zu erkennen, dass er mich
-                    gerne nähme, wenn ich frei wäre. <note place="left"/><del rend="overwritten"
+                    gerne nähme, wenn ich frei wäre. <del rend="overwritten"
                         >S</del>Deutete an, dass der Vertrag kündbar ist. <add place="inline"
                         >(Ich)</add> Lehnte indirekt ab, indem ich <persName ref="#p6"
                         >Herzka</persName> (mit Selbstüberwindung) sehr lobte. Geht ja wirklich

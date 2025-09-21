@@ -22,7 +22,7 @@
                         <link rel="stylesheet" href="../css/style.css"/>
                     </head>
                     <!-- default to Reading view; JS can flip -->
-                    <body class="mode-reading">
+                    <body class="mode-diplomatic">
                         <header>
                             <div class="topbar">
                                 <nav>
@@ -34,8 +34,7 @@
                                     <a href="../organizations/index.html">Organizations</a>
                                     <a href="../about.html">About</a>
                                 </nav>
-                                <button id="toggle-view" class="toggle">Switch to
-                                    Diplomatic</button>
+                                <button id="toggle-view" class="toggle">Switch to Reading</button>
                             </div>
                             <h1>
                                 <xsl:value-of select="tei:head/tei:date"/>
@@ -56,7 +55,7 @@
                             </div>
                             <div class="notes-content">
                                 <!-- Author notes -->
-                                <xsl:for-each select=".//tei:note[@place = 'left']">
+                                <xsl:for-each select=".//tei:note[@place]">
                                     <div class="note author" data-note="{generate-id()}">
                                         <small>Note by Schönberg</small>
                                         <div>
@@ -65,7 +64,7 @@
                                     </div>
                                 </xsl:for-each>
                                 <!-- Editor notes -->
-                                <xsl:for-each select=".//tei:note[@type = 'comment']">
+                                <xsl:for-each select=".//tei:note[@type = 'commentary']">
                                     <div class="note editor" data-note="{generate-id()}">
                                         <small>Editor's note</small>
                                         <div>
@@ -112,12 +111,13 @@
                             <xsl:for-each select="//tei:div[@type = 'entry']">
                                 <li>
                                     <a href="{concat('entry-',@n,'.html')}">
-                                        <xsl:value-of select="tei:head/tei:date"/>
+                                        <xsl:value-of select="format-date((.//tei:date/@when)[1], '[D01].[M01].[Y0001]')"/>
                                     </a>
                                 </li>
                             </xsl:for-each>
                         </ul>
                     </main>
+                    
                     <script src="../js/toggle.js"/>
                     <script src="../js/notes.js"/>
                 </body>
@@ -279,26 +279,30 @@
                                 <xsl:sort select="tei:placeName"/>
                                 <li id="{@xml:id}">
                                     <!-- Place name -->
-                                    <strong><xsl:value-of select="tei:placeName"/></strong>
-                                    
+                                    <strong>
+                                        <xsl:value-of select="tei:placeName"/>
+                                    </strong>
+
                                     <!-- GND link -->
                                     <xsl:if test="tei:placeName/@ref">
                                         <xsl:text> — </xsl:text>
                                         <a href="{tei:placeName/@ref}" target="_blank">GND</a>
                                     </xsl:if>
-                                    
+
                                     <!-- Coordinates -->
                                     <xsl:if test="tei:location/tei:geo">
                                         <xsl:text> — </xsl:text>
-                                        <a href="https://www.openstreetmap.org/?mlat={substring-before(tei:location/tei:geo,' ')}&amp;mlon={substring-after(tei:location/tei:geo,' ')}&amp;zoom=12"
+                                        <a
+                                            href="https://www.openstreetmap.org/?mlat={substring-before(tei:location/tei:geo,' ')}&amp;mlon={substring-after(tei:location/tei:geo,' ')}&amp;zoom=12"
                                             target="_blank">Map</a>
                                     </xsl:if>
-                                    
+
                                     <!-- Mentions -->
                                     <br/>
-                                    <small>Mentions in: 
-                                        <xsl:for-each select="//tei:placeName[@ref=concat('#', current()/@xml:id)]">
-                                            <xsl:variable name="entry" select="ancestor::tei:div[@type='entry']"/>
+                                    <small>Mentions in: <xsl:for-each
+                                            select="//tei:placeName[@ref = concat('#', current()/@xml:id)]">
+                                            <xsl:variable name="entry"
+                                                select="ancestor::tei:div[@type = 'entry']"/>
                                             <xsl:variable name="entryId" select="$entry/@n"/>
                                             <a href="../diary/entry-{$entryId}.html">
                                                 <xsl:value-of select="$entry/tei:head/tei:date"/>
@@ -310,8 +314,8 @@
                             </xsl:for-each>
                         </ul>
                     </main>
-                    <script src="../js/toggle.js"></script>
-                    <script src="../js/notes.js"></script>
+                    <script src="../js/toggle.js"/>
+                    <script src="../js/notes.js"/>
                 </body>
             </html>
         </xsl:result-document>
@@ -345,21 +349,24 @@
                                 <xsl:sort select="tei:author/tei:persName"/>
                                 <li id="{@xml:id}">
                                     <!-- Author first -->
-                                    <strong><xsl:value-of select="tei:author/tei:persName"/></strong>
+                                    <strong>
+                                        <xsl:value-of select="tei:author/tei:persName"/>
+                                    </strong>
                                     <xsl:text>: </xsl:text>
                                     <xsl:value-of select="tei:title"/>
-                                    
+
                                     <!-- GND link for work -->
                                     <xsl:if test="tei:title/@ref">
                                         <xsl:text> — </xsl:text>
                                         <a href="{tei:title/@ref}" target="_blank">GND</a>
                                     </xsl:if>
-                                    
+
                                     <!-- Mentions in diary -->
                                     <br/>
-                                    <small>Mentions in:
-                                        <xsl:for-each select="//tei:title[@type='music'][@ref=concat('#', current()/@xml:id)]">
-                                            <xsl:variable name="entry" select="ancestor::tei:div[@type='entry']"/>
+                                    <small>Mentions in: <xsl:for-each
+                                            select="//tei:title[@type = 'music'][@ref = concat('#', current()/@xml:id)]">
+                                            <xsl:variable name="entry"
+                                                select="ancestor::tei:div[@type = 'entry']"/>
                                             <xsl:variable name="entryId" select="$entry/@n"/>
                                             <a href="../diary/entry-{$entryId}.html">
                                                 <xsl:value-of select="$entry/tei:head/tei:date"/>
@@ -371,8 +378,8 @@
                             </xsl:for-each>
                         </ul>
                     </main>
-                    <script src="../js/toggle.js"></script>
-                    <script src="../js/notes.js"></script>
+                    <script src="../js/toggle.js"/>
+                    <script src="../js/notes.js"/>
                 </body>
             </html>
         </xsl:result-document>
@@ -384,10 +391,20 @@
                     <title>Facsimiles Overview</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                     <style>
-                        .thumbs { display:flex; flex-wrap:wrap; gap:1rem; }
-                        .thumbs a { display:block; text-align:center; font-size:0.8em; }
-                        .thumbs img { max-width:150px; border:1px solid #ccc; }
-                    </style>
+                        .thumbs {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 1rem;
+                        }
+                        .thumbs a {
+                            display: block;
+                            text-align: center;
+                            font-size: 0.8em;
+                        }
+                        .thumbs img {
+                            max-width: 150px;
+                            border: 1px solid #ccc;
+                        }</style>
                 </head>
                 <body class="mode-reading">
                     <header>
@@ -406,13 +423,14 @@
                         <h1>Facsimiles Overview</h1>
                     </header>
                     <main>
-                        <xsl:for-each-group select="//tei:pb[@facs]" group-by="ancestor::tei:div[@type='entry']/@n">
+                        <xsl:for-each-group select="//tei:pb[@facs]"
+                            group-by="ancestor::tei:div[@type = 'entry']/@n">
                             <xsl:variable name="entryId" select="current-grouping-key()"/>
-                            <xsl:variable name="entry" select="current-group()[1]/ancestor::tei:div[@type='entry']"/>
+                            <xsl:variable name="entry"
+                                select="current-group()[1]/ancestor::tei:div[@type = 'entry']"/>
                             <section>
-                                <h2>
-                                    Entry <xsl:value-of select="$entryId"/> — 
-                                    <xsl:value-of select="$entry/tei:head/tei:date"/>
+                                <h2> Entry <xsl:value-of select="$entryId"/> — <xsl:value-of
+                                        select="$entry/tei:head/tei:date"/>
                                 </h2>
                                 <div class="thumbs">
                                     <xsl:for-each select="current-group()">
@@ -425,12 +443,12 @@
                             </section>
                         </xsl:for-each-group>
                     </main>
-                    <script src="../js/toggle.js"></script>
-                    <script src="../js/notes.js"></script>
+                    <script src="../js/toggle.js"/>
+                    <script src="../js/notes.js"/>
                 </body>
             </html>
         </xsl:result-document>
-        
+
 
     </xsl:template>
 
@@ -469,6 +487,14 @@
         </span>
     </xsl:template>
 
+    <!-- render external links -->
+    <xsl:template match="tei:ref">
+        <a href="{@target}" target="_blank">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+
     <!-- Persons / Works / Places / Orgs -->
     <xsl:template match="tei:persName">
         <xsl:variable name="ref" select="@ref"/>
@@ -476,64 +502,78 @@
             <!-- Internal reference (e.g. #p1) -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <a href="../persons/index.html#{$id}">
+                <xsl:variable name="target"
+                    select="//tei:listPerson/tei:person[@xml:id = $id]/tei:persName"/>
+                <a href="../persons/index.html#{$id}" class="person" title="{$target}">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
             <!-- External reference (e.g. GND link) -->
             <xsl:otherwise>
-                <a href="{$ref}" target="_blank">
+                <a href="{$ref}" class="person" target="_blank">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
-    <xsl:template match="tei:title[@type='music']">
+
+    <xsl:template match="tei:title[@type = 'music']">
         <xsl:variable name="ref" select="@ref"/>
         <xsl:choose>
+            <!-- Internal reference -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <a href="../works/index.html#{$id}">
+                <xsl:variable name="target"
+                    select="//tei:listBibl/tei:bibl[@xml:id = $id]/tei:title"/>
+                <a href="../works/index.html#{$id}" class="work" title="{$target}">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
+            <!-- External reference -->
             <xsl:otherwise>
-                <a href="{$ref}" target="_blank">
+                <a href="{$ref}" class="work" target="_blank">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
-        <xsl:template match="tei:placeName">
+
+    <xsl:template match="tei:placeName">
         <xsl:variable name="ref" select="@ref"/>
         <xsl:choose>
+            <!-- Internal reference -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <a href="../places/index.html#{$id}">
+                <xsl:variable name="target"
+                    select="//tei:listPlace/tei:place[@xml:id = $id]/tei:placeName"/>
+                <a href="../places/index.html#{$id}" class="place" title="{$target}">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
+            <!-- External reference -->
             <xsl:otherwise>
-                <a href="{$ref}" target="_blank">
+                <a href="{$ref}" class="place" target="_blank">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
+
     <xsl:template match="tei:orgName">
         <xsl:variable name="ref" select="@ref"/>
         <xsl:choose>
+            <!-- Internal reference -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <a href="../organizations/index.html#{$id}">
+                <xsl:variable name="target"
+                    select="//tei:listOrg/tei:org[@xml:id = $id]/tei:orgName"/>
+                <a href="../organizations/index.html#{$id}" class="org" title="{$target}">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
+            <!-- External reference -->
             <xsl:otherwise>
-                <a href="{$ref}" target="_blank">
+                <a href="{$ref}" class="org" target="_blank">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:otherwise>
@@ -550,20 +590,31 @@
     </xsl:template>
 
     <!-- Notes: insert small clickable icons inline; the full note bodies live in the side panel -->
-    <xsl:template match="tei:note[@place = 'left']">
-        <span class="note-icon author" title="Note by Schönberg" data-note-id="{generate-id()}"
-            >🖊️</span>
+    <xsl:template match="tei:note[@place]">
+        <span class="note author" data-place="{@place}">
+            <button class="note-toggle note-author">✎</button>
+            <span class="note-popup">
+                <small>Note by Schönberg, <xsl:value-of select="@place"/> margin: </small>
+                <!-- IMPORTANT: render children in 'note' mode -->
+                <xsl:apply-templates select="node()" mode="note"/>
+            </span>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:note[@type='commentary']">
+        <span class="note commentary">
+            <button class="note-toggle">ℹ</button>
+            <span class="note-popup">
+                <xsl:apply-templates/>
+            </span>
+        </span>
     </xsl:template>
 
-    <xsl:template match="tei:note[@type='commentary']">
-        <xsl:variable name="id" select="generate-id()"/>
-        <a href="#{$id}" class="note-marker">ℹ</a>
-    </xsl:template>
 
     <!-- Head / date inside the entry (we already render as H1 in header) – skip local output -->
     <xsl:template match="tei:head"/>
     <xsl:template match="tei:head/tei:date"/>
-    
-    
+
+
 
 </xsl:stylesheet>
