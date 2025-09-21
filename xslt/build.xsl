@@ -26,13 +26,13 @@
                         <header>
                             <div class="topbar">
                                 <nav>
-                                    <a href="calendar.html">Diary (Calendar)</a>
-                                    <a href="../facsimiles/">Facsimiles</a>
-                                    <a href="../persons/">Persons</a>
-                                    <a href="../works/">Works</a>
-                                    <a href="../places/">Places</a>
-                                    <a href="../organizations/">Organizations</a>
-                                    <a href="../about/">About</a>
+                                    <a href="../diary/calendar.html">Diary</a>
+                                    <a href="../facsimiles/index.html">Facsimiles</a>
+                                    <a href="../persons/index.html">Persons</a>
+                                    <a href="../works/index.html">Works</a>
+                                    <a href="../places/index.html">Places</a>
+                                    <a href="../organizations/index.html">Organizations</a>
+                                    <a href="../about.html">About</a>
                                 </nav>
                                 <button id="toggle-view" class="toggle">Switch to
                                     Diplomatic</button>
@@ -95,18 +95,23 @@
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../index.html">Home</a>
+                                <a href="../diary/calendar.html">Diary</a>
+                                <a href="../facsimiles/index.html">Facsimiles</a>
+                                <a href="../persons/index.html">Persons</a>
+                                <a href="../works/index.html">Works</a>
+                                <a href="../places/index.html">Places</a>
+                                <a href="../organizations/index.html">Organizations</a>
+                                <a href="../about.html">About</a>
                             </nav>
                             <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
                         </div>
-                        <h1>Diary  — Entries</h1>
+                        <h1>Diary — Entries</h1>
                     </header>
                     <main>
                         <ul>
                             <xsl:for-each select="//tei:div[@type = 'entry']">
                                 <li>
-                                    <a
-                                        href="{concat(normalize-space(tei:head/tei:date/@when),'.html')}">
+                                    <a href="{concat('entry-',@n,'.html')}">
                                         <xsl:value-of select="tei:head/tei:date"/>
                                     </a>
                                 </li>
@@ -118,6 +123,315 @@
                 </body>
             </html>
         </xsl:result-document>
+        <!-- ================= PERSONS INDEX ================= -->
+        <xsl:result-document href="persons/index.html" method="xhtml" indent="yes">
+            <html lang="de">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Index — Persons</title>
+                    <link rel="stylesheet" href="../css/style.css"/>
+                </head>
+                <body class="mode-reading">
+                    <header>
+                        <div class="topbar">
+                            <nav>
+                                <a href="../diary/calendar.html">Diary</a>
+                                <a href="../facsimiles/index.html">Facsimiles</a>
+                                <a href="../persons/index.html">Persons</a>
+                                <a href="../works/index.html">Works</a>
+                                <a href="../places/index.html">Places</a>
+                                <a href="../organizations/index.html">Organizations</a>
+                                <a href="../about.html">About</a>
+                            </nav>
+                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
+                        </div>
+                        <h1>Persons Index</h1>
+                    </header>
+                    <main>
+                        <ul>
+                            <xsl:for-each select="//tei:listPerson/tei:person">
+                                <xsl:sort select="tei:persName"/>
+                                <li id="{@xml:id}">
+                                    <!-- Person's name -->
+                                    <strong>
+                                        <xsl:value-of select="tei:persName"/>
+                                    </strong>
+
+                                    <!-- GND link if present -->
+                                    <xsl:if test="tei:idno[@type = 'gnd']">
+                                        <xsl:text> — </xsl:text>
+                                        <a href="https://d-nb.info/gnd/{tei:idno[@type='gnd']}"
+                                            target="_blank">GND</a>
+                                    </xsl:if>
+
+                                    <!-- Mentions in entries -->
+                                    <br/>
+                                    <small>Mentions in: <xsl:for-each
+                                            select="//tei:persName[@ref = concat('#', current()/@xml:id)]">
+                                            <xsl:variable name="entry"
+                                                select="ancestor::tei:div[@type = 'entry']"/>
+                                            <xsl:variable name="entryId" select="$entry/@n"/>
+                                            <a href="../diary/entry-{$entryId}.html">
+                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
+                                            </a>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </small>
+                                </li>
+                            </xsl:for-each>
+                        </ul>
+                    </main>
+                    <script src="../js/toggle.js"/>
+                    <script src="../js/notes.js"/>
+                </body>
+            </html>
+        </xsl:result-document>
+        <!-- ================= ORGANIZATIONS INDEX ================= -->
+        <xsl:result-document href="organizations/index.html" method="xhtml" indent="yes">
+            <html lang="de">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Index — Organizations</title>
+                    <link rel="stylesheet" href="../css/style.css"/>
+                </head>
+                <body class="mode-reading">
+                    <header>
+                        <div class="topbar">
+                            <nav>
+                                <a href="../diary/calendar.html">Diary</a>
+                                <a href="../facsimiles/index.html">Facsimiles</a>
+                                <a href="../persons/index.html">Persons</a>
+                                <a href="../works/index.html">Works</a>
+                                <a href="../places/index.html">Places</a>
+                                <a href="../organizations/index.html">Organizations</a>
+                                <a href="../about.html">About</a>
+                            </nav>
+                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
+                        </div>
+                        <h1>Organizations Index</h1>
+                    </header>
+                    <main>
+                        <ul>
+                            <xsl:for-each select="//tei:listOrg/tei:org">
+                                <xsl:sort select="tei:orgName"/>
+                                <li id="{@xml:id}">
+                                    <!-- Org name -->
+                                    <strong>
+                                        <xsl:value-of select="tei:orgName"/>
+                                    </strong>
+
+                                    <!-- GND link -->
+                                    <xsl:if test="tei:idno[@type = 'gnd']">
+                                        <xsl:text> — </xsl:text>
+                                        <a href="https://d-nb.info/gnd/{tei:idno[@type='gnd']}"
+                                            target="_blank">GND</a>
+                                    </xsl:if>
+
+                                    <!-- Mentions -->
+                                    <br/>
+                                    <small>Mentions in: <xsl:for-each
+                                            select="//tei:orgName[@ref = concat('#', current()/@xml:id)]">
+                                            <xsl:variable name="entry"
+                                                select="ancestor::tei:div[@type = 'entry']"/>
+                                            <xsl:variable name="entryId" select="$entry/@n"/>
+                                            <a href="../diary/entry-{$entryId}.html">
+                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
+                                            </a>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </small>
+                                </li>
+                            </xsl:for-each>
+                        </ul>
+                    </main>
+                    <script src="../js/toggle.js"/>
+                    <script src="../js/notes.js"/>
+                </body>
+            </html>
+        </xsl:result-document>
+        <!-- ================= PLACES INDEX ================= -->
+        <xsl:result-document href="places/index.html" method="xhtml" indent="yes">
+            <html lang="de">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Index — Places</title>
+                    <link rel="stylesheet" href="../css/style.css"/>
+                </head>
+                <body class="mode-reading">
+                    <header>
+                        <div class="topbar">
+                            <nav>
+                                <a href="../diary/calendar.html">Diary</a>
+                                <a href="../facsimiles/index.html">Facsimiles</a>
+                                <a href="../persons/index.html">Persons</a>
+                                <a href="../works/index.html">Works</a>
+                                <a href="../places/index.html">Places</a>
+                                <a href="../organizations/index.html">Organizations</a>
+                                <a href="../about.html">About</a>
+                            </nav>
+                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
+                        </div>
+                        <h1>Places Index</h1>
+                    </header>
+                    <main>
+                        <ul>
+                            <xsl:for-each select="//tei:listPlace/tei:place">
+                                <xsl:sort select="tei:placeName"/>
+                                <li id="{@xml:id}">
+                                    <!-- Place name -->
+                                    <strong><xsl:value-of select="tei:placeName"/></strong>
+                                    
+                                    <!-- GND link -->
+                                    <xsl:if test="tei:placeName/@ref">
+                                        <xsl:text> — </xsl:text>
+                                        <a href="{tei:placeName/@ref}" target="_blank">GND</a>
+                                    </xsl:if>
+                                    
+                                    <!-- Coordinates -->
+                                    <xsl:if test="tei:location/tei:geo">
+                                        <xsl:text> — </xsl:text>
+                                        <a href="https://www.openstreetmap.org/?mlat={substring-before(tei:location/tei:geo,' ')}&amp;mlon={substring-after(tei:location/tei:geo,' ')}&amp;zoom=12"
+                                            target="_blank">Map</a>
+                                    </xsl:if>
+                                    
+                                    <!-- Mentions -->
+                                    <br/>
+                                    <small>Mentions in: 
+                                        <xsl:for-each select="//tei:placeName[@ref=concat('#', current()/@xml:id)]">
+                                            <xsl:variable name="entry" select="ancestor::tei:div[@type='entry']"/>
+                                            <xsl:variable name="entryId" select="$entry/@n"/>
+                                            <a href="../diary/entry-{$entryId}.html">
+                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
+                                            </a>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </small>
+                                </li>
+                            </xsl:for-each>
+                        </ul>
+                    </main>
+                    <script src="../js/toggle.js"></script>
+                    <script src="../js/notes.js"></script>
+                </body>
+            </html>
+        </xsl:result-document>
+        <!-- ================= WORKS INDEX ================= -->
+        <xsl:result-document href="works/index.html" method="xhtml" indent="yes">
+            <html lang="de">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Index — Works</title>
+                    <link rel="stylesheet" href="../css/style.css"/>
+                </head>
+                <body class="mode-reading">
+                    <header>
+                        <div class="topbar">
+                            <nav>
+                                <a href="../diary/calendar.html">Diary</a>
+                                <a href="../facsimiles/index.html">Facsimiles</a>
+                                <a href="../persons/index.html">Persons</a>
+                                <a href="../works/index.html">Works</a>
+                                <a href="../places/index.html">Places</a>
+                                <a href="../organizations/index.html">Organizations</a>
+                                <a href="../about.html">About</a>
+                            </nav>
+                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
+                        </div>
+                        <h1>Works Index</h1>
+                    </header>
+                    <main>
+                        <ul>
+                            <xsl:for-each select="//tei:listBibl/tei:bibl">
+                                <xsl:sort select="tei:author/tei:persName"/>
+                                <li id="{@xml:id}">
+                                    <!-- Author first -->
+                                    <strong><xsl:value-of select="tei:author/tei:persName"/></strong>
+                                    <xsl:text>: </xsl:text>
+                                    <xsl:value-of select="tei:title"/>
+                                    
+                                    <!-- GND link for work -->
+                                    <xsl:if test="tei:title/@ref">
+                                        <xsl:text> — </xsl:text>
+                                        <a href="{tei:title/@ref}" target="_blank">GND</a>
+                                    </xsl:if>
+                                    
+                                    <!-- Mentions in diary -->
+                                    <br/>
+                                    <small>Mentions in:
+                                        <xsl:for-each select="//tei:title[@type='music'][@ref=concat('#', current()/@xml:id)]">
+                                            <xsl:variable name="entry" select="ancestor::tei:div[@type='entry']"/>
+                                            <xsl:variable name="entryId" select="$entry/@n"/>
+                                            <a href="../diary/entry-{$entryId}.html">
+                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
+                                            </a>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </small>
+                                </li>
+                            </xsl:for-each>
+                        </ul>
+                    </main>
+                    <script src="../js/toggle.js"></script>
+                    <script src="../js/notes.js"></script>
+                </body>
+            </html>
+        </xsl:result-document>
+        <!-- ================= FACSIMILES INDEX ================= -->
+        <xsl:result-document href="facsimiles/index.html" method="xhtml" indent="yes">
+            <html lang="de">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Facsimiles Overview</title>
+                    <link rel="stylesheet" href="../css/style.css"/>
+                    <style>
+                        .thumbs { display:flex; flex-wrap:wrap; gap:1rem; }
+                        .thumbs a { display:block; text-align:center; font-size:0.8em; }
+                        .thumbs img { max-width:150px; border:1px solid #ccc; }
+                    </style>
+                </head>
+                <body class="mode-reading">
+                    <header>
+                        <div class="topbar">
+                            <nav>
+                                <a href="../diary/calendar.html">Diary</a>
+                                <a href="../facsimiles/index.html">Facsimiles</a>
+                                <a href="../persons/index.html">Persons</a>
+                                <a href="../works/index.html">Works</a>
+                                <a href="../places/index.html">Places</a>
+                                <a href="../organizations/index.html">Organizations</a>
+                                <a href="../about.html">About</a>
+                            </nav>
+                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
+                        </div>
+                        <h1>Facsimiles Overview</h1>
+                    </header>
+                    <main>
+                        <xsl:for-each-group select="//tei:pb[@facs]" group-by="ancestor::tei:div[@type='entry']/@n">
+                            <xsl:variable name="entryId" select="current-grouping-key()"/>
+                            <xsl:variable name="entry" select="current-group()[1]/ancestor::tei:div[@type='entry']"/>
+                            <section>
+                                <h2>
+                                    Entry <xsl:value-of select="$entryId"/> — 
+                                    <xsl:value-of select="$entry/tei:head/tei:date"/>
+                                </h2>
+                                <div class="thumbs">
+                                    <xsl:for-each select="current-group()">
+                                        <a href="{@facs}" target="_blank">
+                                            <img src="{@facs}" alt="Facsimile page {@n}"/>
+                                            <br/>Page <xsl:value-of select="@n"/>
+                                        </a>
+                                    </xsl:for-each>
+                                </div>
+                            </section>
+                        </xsl:for-each-group>
+                    </main>
+                    <script src="../js/toggle.js"></script>
+                    <script src="../js/notes.js"></script>
+                </body>
+            </html>
+        </xsl:result-document>
+        
+
     </xsl:template>
 
     <!-- ============ RENDERING TEMPLATES FOR ENTRY CONTENT ============ -->
@@ -157,25 +471,73 @@
 
     <!-- Persons / Works / Places / Orgs -->
     <xsl:template match="tei:persName">
-        <span class="person" data-ref="{@ref}">
-            <xsl:apply-templates/>
-        </span>
+        <xsl:variable name="ref" select="@ref"/>
+        <xsl:choose>
+            <!-- Internal reference (e.g. #p1) -->
+            <xsl:when test="starts-with($ref, '#')">
+                <xsl:variable name="id" select="substring($ref, 2)"/>
+                <a href="../persons/index.html#{$id}">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:when>
+            <!-- External reference (e.g. GND link) -->
+            <xsl:otherwise>
+                <a href="{$ref}" target="_blank">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
-
-    <xsl:template match="tei:title[@type = 'music']">
-        <span class="work" data-ref="{@ref}">🎵 <xsl:apply-templates/></span>
+    
+    <xsl:template match="tei:title[@type='music']">
+        <xsl:variable name="ref" select="@ref"/>
+        <xsl:choose>
+            <xsl:when test="starts-with($ref, '#')">
+                <xsl:variable name="id" select="substring($ref, 2)"/>
+                <a href="../works/index.html#{$id}">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <a href="{$ref}" target="_blank">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
-
-    <xsl:template match="tei:placeName">
-        <span class="place" data-ref="{@ref}">
-            <xsl:apply-templates/>
-        </span>
+    
+        <xsl:template match="tei:placeName">
+        <xsl:variable name="ref" select="@ref"/>
+        <xsl:choose>
+            <xsl:when test="starts-with($ref, '#')">
+                <xsl:variable name="id" select="substring($ref, 2)"/>
+                <a href="../places/index.html#{$id}">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <a href="{$ref}" target="_blank">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
-
+    
     <xsl:template match="tei:orgName">
-        <span class="org" data-ref="{@ref}">
-            <xsl:apply-templates/>
-        </span>
+        <xsl:variable name="ref" select="@ref"/>
+        <xsl:choose>
+            <xsl:when test="starts-with($ref, '#')">
+                <xsl:variable name="id" select="substring($ref, 2)"/>
+                <a href="../organizations/index.html#{$id}">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <a href="{$ref}" target="_blank">
+                    <xsl:value-of select="."/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <!-- Page breaks with facsimile link -->
@@ -201,5 +563,7 @@
     <!-- Head / date inside the entry (we already render as H1 in header) – skip local output -->
     <xsl:template match="tei:head"/>
     <xsl:template match="tei:head/tei:date"/>
+    
+    
 
 </xsl:stylesheet>

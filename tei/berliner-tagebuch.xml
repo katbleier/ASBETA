@@ -126,7 +126,9 @@
                             Singstimme und Klavier op. 2</title>
                     </bibl>
                     <bibl xml:id="m19">
+                        <author>
                         <persName ref="#p40">Arnold Schönberg</persName>
+                        </author>
                         <title type="music" ref="http://d-nb.info/gnd/300139136">Fünfzehn Gedichte aus
                             &#8222;Das Buch der hängenden Gärten&#8220; von Stefan George op. 15</title>
                     </bibl>
@@ -335,6 +337,9 @@
                 <person xml:id="p51">
                     <persName ref="https://d-nb.info/gnd/117011789">Karl Horwitz</persName>
                     <idno type="gnd">117011789</idno>
+                </person><person xml:id="p52">
+                    <persName ref="https://d-nb.info/gnd/116897899">Henri Hinrichsen</persName>
+                    <idno type="gnd">116897899</idno>
                 </person>
             </listPerson>
             <!-- ORGLIST -->
@@ -640,8 +645,8 @@
                         type="music" ref="#m9">VIII. Mahlers</title> abhängig, die er im <date
                         when="1912-05">Mai</date> dreimal aufführen will. <note place="left"
                         >!</note> Drei verschiedene Dirigenten: <persName ref="#p29"
-                    >mang</persName>, <persName ref="#p30">Mengelberg</persName>, <persName
-                        ref="#p31">Göhler</persName>. Schlechte Idee, mit der <persName ref="p18"
+                    >Walter</persName>, <persName ref="#p30">Mengelberg</persName>, <persName
+                        ref="#p31">Göhler</persName>. Schlechte Idee, mit der <persName ref="#p18"
                         >Mahler</persName> sicher nicht einverstanden gewesen wäre. Wenn schon drei
                     Aufführungen, dann alle von einem Dirigenten, damit <del rend="overwritten"
                         >sie</del> es von Mal zu Mal besser wird. Jede Aufführung ist dann eine
@@ -827,7 +832,7 @@
             <div type="entry" n="8">
                 <head><hi rend="underline">Mittwoch</hi>, 31.</head>
                 <p>Rendezvous mit <orgName ref="#o1">Peters</orgName>
-                    <add place="above">(<persName ref="#p48">Henrichsen</persName>)</add>. Netter
+                    <add place="above">(<persName ref="#p52">Henrichsen</persName>)</add>. Netter
                     Mensch, unbedeutend, Spießer, aber wohlwollend und anscheinend sehr anständig.
                     War sehr artig. In Habels Weinstube. Lud mich
                     ein zu Kaviar und Rheinwein. Forschte mich über mein Verhältnis zur <orgName
@@ -837,7 +842,7 @@
                         >(Ich)</add> Lehnte indirekt ab, indem ich <persName ref="#p6"
                         >Herzka</persName> (mit Selbstüberwindung) sehr lobte. Geht ja wirklich
                     nicht. Manchmal war er ja ganz nett gegen mich (der Kunstverständige, der
-                    Mäcen!) – <persName ref="#p48">Henrichsen</persName> fragte mich über <persName
+                    Mäcen!) – <persName ref="#p52">Henrichsen</persName> fragte mich über <persName
                         ref="#p18">Mahler</persName>, und als ich mich begeistert aussprach, fragte
                     er, &#8222;ob er also nicht die Platten einschmelzen lassen solle&#8220;.
                     Entsetzlich!! Das ist ja unerhört. Es ist höchste Zeit, dass ich etwas über
@@ -851,7 +856,7 @@
                     gut spielen. Etwas trocken zwar. – <date when="1912-01-29">Montag</date> abend war ich in dem erwähnten
                         <orgName ref="#o4">Schirmer-Verlags</orgName>-Konzert von <persName
                         ref="#p2">Busoni</persName>. <persName ref="#p18">Mahlers</persName>
-                    <title type="music" ref="m12">Bearbeitung</title> von <persName ref="#p50">Bach</persName> gehört, die ich dirigieren
+                    <title type="music" ref="#m12">Bearbeitung</title> von <persName ref="#p50">Bach</persName> gehört, die ich dirigieren
                     soll. Klingt sehr gut, bloss Orgel zu stark. Die übrigen Sachen wenig
                     interessant, (Geigenkonzerte) und eine symphonische Sache von <gap/> sogar
                     unausstehlich. – Mittwoch Abend kam <persName ref="#p51">Horwitz</persName>. Um
