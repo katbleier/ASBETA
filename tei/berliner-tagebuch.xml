@@ -568,7 +568,7 @@
             </div>
 
             <div type="entry" n="4">
-                <head rend="inline"><date when="1912-01-23"><hi rend="inline">23.
+                <head rend="inline"><date when="1912-01-23"><hi rend="underline">23.
                     Jänner</hi></date>;</head>
                 <p>Heute Probe mit <persName ref="#p22">Closson</persName>, <persName ref="#p23"
                         >Steuermann</persName>, <persName ref="#p24">Grünberg</persName> (lauter
@@ -668,7 +668,7 @@
                     Absage Probe gehalten. Geht nicht besonders gut. <persName ref="#p24"
                         >Grünberg</persName> ohne Rhythmus, <persName ref="#p22">Closson</persName>
                     gut musikalisch, aber trocken. Fragte <persName ref="#p22">Closson</persName>,
-                    ob er <add rend="above">an</add>
+                    ob er <add place="above">an</add>
                     <persName ref="#p9">Petris</persName> Stelle einspringen wolle. Er lehnte ab.
                     Unmöglich in so kurzer Zeit. Stellt sich heraus, daß Abend am <date
                         when="1912-02-04">4. Februar</date> sein muss, weil sonst auch <persName
@@ -710,10 +710,10 @@
                     nicht gesteht, nicht ausgeplaudert. Titel aber plaudert aus. Außerdem: Was zu
                     sagen war, hat die Musik gesagt. Wozu dann noch das Wort. Wären Worte nötig,
                     wären sie drin. Aber die Musik sagt doch mehr als Worte. Die Titel, die ich
-                    vielleicht geben werde, plaudern nun, da sie <add rend="overwritten">teils</add>
+                    vielleicht geben werde, plaudern nun, da sie <add place="above">teils</add>
                     höchst dunkel sind, <pb n="6"
                         facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524905"/>teils
-                    Technisches sagen, nichts aus. Nämlich: I. Vorgefühle <add rend="above">(hat
+                    Technisches sagen, nichts aus. Nämlich: I. Vorgefühle <add place="above">(hat
                         jeder)</add>, II. Vergangenes (hat auch jeder), III. Akkordfärbungen
                     (technisches), IV. Peripetie (ist wohl allgemein genug), V. Das obligate
                     (vielleicht besser das &#8222;ausgeführte&#8220; oder das
@@ -757,7 +757,7 @@
                     es ihm gelänge. Er spricht auch, insbesondere wenn er von seinem Fach spricht,
                     sehr klug. Wenn er nur mehr davon spräche, da er doch weiß, daß ich mich für die
                     Technik so interessiere. <persName ref="#p11">Sie</persName> bemühte sich auch,
-                    möglichst die Spannung auszugleichen, die durch ihre <add rend="above">uns
+                    möglichst die Spannung auszugleichen, die durch ihre <add place="above">uns
                         gezeigte</add> Teilnahmslosigkeit zwischen uns herrschte. Anfangs <gap
                         reason="illegible" unit="char" quantity="1"/> bliebs kalt, dann wurden wir
                     ja wieder etwas wärmer. <persName ref="#p38">Eichberg</persName> benützte
@@ -766,7 +766,7 @@
                     Noten und Bücher. <pb n="7"
                         facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524915"/> Erkundigte
                     sich, ob er meine Harmonielehre verstehen werde. Fragte nach meinen Vorträgen.
-                    Sprach die Absicht aus, meine <add rend="above">gedruckten</add>
+                    Sprach die Absicht aus, meine <add place="above">gedruckten</add>
                     <title type="music" ref="#m5">Lieder</title> anzuschaffen. (Etwas forciert!) Und
                     lobte besonders ein Bild wiederholt. Schließlich sprach er den Wunsch aus, es
                     mir abzukaufen (eine kleine Winterlandschaft, die ich einmal, weil ich Kopfweh

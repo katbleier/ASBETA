@@ -482,10 +482,15 @@
 
     <!-- Additions -->
     <xsl:template match="tei:add">
-        <span class="add" data-place="{@place}">
-            <xsl:apply-templates/>
+        <span class="textcrit add" data-place="{@place}">
+            <span class="add-text"><xsl:apply-templates/></span>
+            <span class="add-popup">
+                Added (<xsl:value-of select="@place"/>)
+            </span>
         </span>
     </xsl:template>
+     
+    
 
     <!-- render external links -->
     <xsl:template match="tei:ref">

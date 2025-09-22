@@ -205,3 +205,59 @@ a.work[title] {
   border-left: 3px solid darkred;
 }
 
+/* Deleted text */
+.textcrit.del .del-text {
+  text-decoration: line-through;
+  color: darkred;
+  cursor: pointer;
+}
+
+.textcrit.del .del-popup,
+.textcrit.add .add-popup {
+  display: none;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  border: 1px solid #aaa;
+  padding: 0.3em 0.6em;
+  font-size: 0.8em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+.textcrit.add {
+  position: relative;
+  display: inline-block;
+}
+
+.textcrit.add .add-popup {
+  display: none;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  z-index: 10;
+  background-color: #f0f0f0;   /* heller, deutlicheres Grau */
+  border: 1px solid #aaa;
+  padding: 0.4em 0.6em;
+  font-size: 0.8em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  display: none;
+  /* WICHTIG: */
+  display: none;
+  min-width: max-content;     /* breiter als Text falls nötig */
+}
+.textcrit.add:hover .add-popup {
+  display: inline-block; 
+}
+
+
+
+/* Wrappers need positioning */
+.textcrit.del,
+.textcrit.add {
+  position: relative;
+  display: inline-block;
+}
