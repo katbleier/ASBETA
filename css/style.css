@@ -226,32 +226,6 @@ a.work[title] {
 body.mode-reading .textcrit.del {
   display: none;
 }
-/* Reading mode: show additions inline without special formatting */
-body.mode-reading .textcrit.add {
-  position: static; /* Remove absolute positioning */
-}
-
-body.mode-reading .textcrit.add .add-text {
-  /* Style the added text normally in reading mode */
-  color: inherit; /* Use normal text color */
-  background: none; /* Remove any special background */
-}
-
-body.mode-reading .popup-add {
-  display: none !important; /* Hide the popup in reading mode */
-}
-
-/* Diplomatic mode: keep the existing behavior with popups */
-body.mode-diplomatic .textcrit.add {
-  position: relative;
-  display: inline-block;
-}
-
-body.mode-diplomatic .textcrit.add:hover .popup-add {
-  display: inline-block;
-}
-/* Add these new rules to your existing CSS */
-
 /* Diplomatic mode: show additions with background color and popups */
 body.mode-diplomatic .textcrit.add .add-text {
   background-color: #e8f5e8; /* Light green background */
