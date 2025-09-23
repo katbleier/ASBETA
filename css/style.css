@@ -258,6 +258,19 @@ a.work[title] {
   font-weight: normal; 
   display: inline; 
 }
-.entry-head-inline::after { content: " "; } /* Abstand zum nächsten Wort */
+.entry-head-inline::after {
+  content: " "; 
+} /* Abstand zum nächsten Wort */
+.page-break {
+  border: none;
+  border-top: 2px dashed #999;
+  margin: 2em 0;
+}
+
+.pb {
+  font-size: 0.85em;
+  color: #555
+  margin-bottom: 1em;
+}
 
 

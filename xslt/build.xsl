@@ -21,12 +21,13 @@
                         </title>
                         <link rel="stylesheet" href="../css/style.css"/>
                     </head>
-                    <!-- default to Reading view; JS can flip -->
+                    <!-- default to Diplomatic view; JS can flip -->
                     <body class="mode-diplomatic">
                         <header>
                             <div class="topbar">
                                 <nav>
                                     <a href="../diary/calendar.html">Diary</a>
+                                    <a href="../diary/all.html">All Entries</a>
                                     <a href="../facsimiles/index.html">Facsimiles</a>
                                     <a href="../persons/index.html">Persons</a>
                                     <a href="../works/index.html">Works</a>
@@ -38,7 +39,9 @@
                             </div>
                             <h1>
                                 <xsl:value-of select="concat(@n, '. Tagebucheintrag, ')"/>
-                                <xsl:value-of select="format-date(tei:head/tei:date/@when, '[D01].[M01].[Y0001]')"/>
+                                <xsl:value-of
+                                    select="format-date(tei:head/tei:date/@when, '[D01].[M01].[Y0001]')"
+                                />
                             </h1>
                         </header>
 
@@ -46,35 +49,6 @@
                             <!-- Render paragraphs etc. -->
                             <xsl:apply-templates select="node()"/>
                         </main>
-
-                        <!-- Notes side panel (populated here per entry) -->
-                        <div id="notes-panel">
-                            <div
-                                style="display:flex;justify-content:space-between;align-items:center">
-                                <h2>Notes</h2>
-                                <button data-close-notes="" class="toggle">Close</button>
-                            </div>
-                            <div class="notes-content">
-                                <!-- Author notes -->
-                                <xsl:for-each select=".//tei:note[@place]">
-                                    <div class="note author" data-note="{generate-id()}">
-                                        <small>Note by Schönberg</small>
-                                        <div>
-                                            <xsl:apply-templates/>
-                                        </div>
-                                    </div>
-                                </xsl:for-each>
-                                <!-- Editor notes -->
-                                <xsl:for-each select=".//tei:note[@type = 'commentary']">
-                                    <div class="note editor" data-note="{generate-id()}">
-                                        <small>Editor's note</small>
-                                        <div>
-                                            <xsl:apply-templates/>
-                                        </div>
-                                    </div>
-                                </xsl:for-each>
-                            </div>
-                        </div>
 
                         <script src="../js/toggle.js"/>
                         <script src="../js/notes.js"/>
@@ -91,11 +65,12 @@
                     <title>Diary — Calendar</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
-                <body class="mode-reading">
+                <body>
                     <header>
                         <div class="topbar">
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
+                                <a href="../diary/all.html">All Entries</a>
                                 <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
@@ -103,7 +78,6 @@
                                 <a href="../organizations/index.html">Organizations</a>
                                 <a href="../about.html">About</a>
                             </nav>
-                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
                         </div>
                         <h1>Diary — Entries</h1>
                     </header>
@@ -112,18 +86,58 @@
                             <xsl:for-each select="//tei:div[@type = 'entry']">
                                 <li>
                                     <a href="{concat('entry-',@n,'.html')}">
-                                        <xsl:value-of select="format-date((.//tei:date/@when)[1], '[D01].[M01].[Y0001]')"/>
+                                        <xsl:value-of
+                                            select="format-date((.//tei:date/@when)[1], '[D01].[M01].[Y0001]')"
+                                        />
                                     </a>
                                 </li>
                             </xsl:for-each>
                         </ul>
                     </main>
-                    
+
                     <script src="../js/toggle.js"/>
                     <script src="../js/notes.js"/>
                 </body>
             </html>
         </xsl:result-document>
+
+        <!-- ================= ALL ENTRIES PAGE ================= -->
+        <xsl:result-document href="diary/all.html" method="xhtml" indent="yes">
+            <html lang="de">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Berliner Tagebuch – Gesamtausgabe (Scroll)</title>
+                    <link rel="stylesheet" href="../css/style.css"/>
+                </head>
+                <body class="mode-diplomatic">
+                    <header>
+                        <div class="topbar">
+                            <nav>
+                                <a href="../diary/calendar.html">Diary</a>
+                                <a href="../diary/all.html">All Entries</a>
+                                <a href="../facsimiles/index.html">Facsimiles</a>
+                                <a href="../persons/index.html">Persons</a>
+                                <a href="../works/index.html">Works</a>
+                                <a href="../places/index.html">Places</a>
+                                <a href="../organizations/index.html">Organizations</a>
+                                <a href="../about.html">About</a>
+                            </nav>
+                            <button id="toggle-view" class="toggle">Switch to Reading</button>
+                        </div>
+                        <h1>Gesamtausgabe (Scrollansicht)</h1>
+                    </header>
+
+                    <main class="diary-scroll">
+                        <!-- Alles linear ausgeben -->
+                        <xsl:apply-templates select="//tei:text/tei:body/node()"/>
+                    </main>
+
+                    <script src="../js/toggle.js"/>
+                    <script src="../js/notes.js"/>
+                </body>
+            </html>
+        </xsl:result-document>
+
         <!-- ================= PERSONS INDEX ================= -->
         <xsl:result-document href="persons/index.html" method="xhtml" indent="yes">
             <html lang="de">
@@ -132,11 +146,12 @@
                     <title>Index — Persons</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
-                <body class="mode-reading">
+                <body>
                     <header>
                         <div class="topbar">
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
+                                <a href="../diary/all.html">All Entries</a>
                                 <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
@@ -144,7 +159,6 @@
                                 <a href="../organizations/index.html">Organizations</a>
                                 <a href="../about.html">About</a>
                             </nav>
-                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
                         </div>
                         <h1>Persons Index</h1>
                     </header>
@@ -195,11 +209,12 @@
                     <title>Index — Organizations</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
-                <body class="mode-reading">
+                <body>
                     <header>
                         <div class="topbar">
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
+                                <a href="../diary/all.html">All Entries</a>
                                 <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
@@ -207,7 +222,6 @@
                                 <a href="../organizations/index.html">Organizations</a>
                                 <a href="../about.html">About</a>
                             </nav>
-                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
                         </div>
                         <h1>Organizations Index</h1>
                     </header>
@@ -258,11 +272,12 @@
                     <title>Index — Places</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
-                <body class="mode-reading">
+                <body>
                     <header>
                         <div class="topbar">
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
+                                <a href="../diary/all.html">All Entries</a>
                                 <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
@@ -270,7 +285,6 @@
                                 <a href="../organizations/index.html">Organizations</a>
                                 <a href="../about.html">About</a>
                             </nav>
-                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
                         </div>
                         <h1>Places Index</h1>
                     </header>
@@ -328,11 +342,12 @@
                     <title>Index — Works</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
-                <body class="mode-reading">
+                <body>
                     <header>
                         <div class="topbar">
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
+                                <a href="../diary/all.html">All Entries</a>
                                 <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
@@ -340,7 +355,6 @@
                                 <a href="../organizations/index.html">Organizations</a>
                                 <a href="../about.html">About</a>
                             </nav>
-                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
                         </div>
                         <h1>Works Index</h1>
                     </header>
@@ -407,11 +421,12 @@
                             border: 1px solid #ccc;
                         }</style>
                 </head>
-                <body class="mode-reading">
+                <body>
                     <header>
                         <div class="topbar">
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
+                                <a href="../diary/all.html">All Entries</a>
                                 <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
@@ -419,7 +434,6 @@
                                 <a href="../organizations/index.html">Organizations</a>
                                 <a href="../about.html">About</a>
                             </nav>
-                            <button id="toggle-view" class="toggle">Switch to Diplomatic</button>
                         </div>
                         <h1>Facsimiles Overview</h1>
                     </header>
@@ -461,19 +475,19 @@
     </xsl:template>
 
     <!-- Paragraphs that should continue inline (no linebreak) -->
-    <xsl:template match="tei:p[@rend='inline']">
+    <xsl:template match="tei:p[@rend = 'inline']">
         <span class="inline-paragraph">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
+
     <!-- Normal paragraphs -->
     <xsl:template match="tei:p">
         <p>
             <xsl:apply-templates/>
         </p>
     </xsl:template>
-    
+
 
     <!-- Inline emphasis -->
     <xsl:template match="tei:hi[@rend = 'underline']">
@@ -481,15 +495,15 @@
             <xsl:apply-templates/>
         </u>
     </xsl:template>
-  
-      
+
+
     <!-- render external links -->
     <xsl:template match="tei:ref">
         <a href="{@target}" target="_blank">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
-    
+
 
     <!-- Persons / Works / Places / Orgs -->
     <xsl:template match="tei:persName">
@@ -578,12 +592,14 @@
 
     <!-- Page breaks with facsimile link -->
     <xsl:template match="tei:pb">
+        <hr class="page-break"/>
         <div class="pb">
             <strong>Page <xsl:value-of select="@n"/></strong>
             <xsl:text> — </xsl:text>
             <a href="{@facs}" target="_blank">📄 Open facsimile</a>
         </div>
     </xsl:template>
+
 
     <!-- Notes: insert small clickable icons inline; the full note bodies live in the side panel -->
     <xsl:template match="tei:note[@place]">
@@ -595,10 +611,10 @@
             </span>
         </span>
     </xsl:template>
-    
-    
-    
-    <xsl:template match="tei:note[@type='commentary']">
+
+
+
+    <xsl:template match="tei:note[@type = 'commentary']">
         <span class="note commentary">
             <button class="note-toggle">ℹ</button>
             <span class="popup-commentary">
@@ -606,33 +622,34 @@
             </span>
         </span>
     </xsl:template>
-    
+
     <!-- Additions -->
     <xsl:template match="tei:add">
         <span class="textcrit add" data-place="{@place}">
-            <span class="add-text"><xsl:apply-templates/></span>
-            <span class="popup-add">
-                Added (<xsl:value-of select="@place"/>)
+            <span class="add-text">
+                <xsl:apply-templates/>
             </span>
+            <span class="popup-add"> Added (<xsl:value-of select="@place"/>) </span>
         </span>
     </xsl:template>
-    
+
     <!-- Deletions / Overwritten -->
     <xsl:template match="tei:del">
         <span class="textcrit del" data-rend="{@rend}">
-            <span class="del-text"><xsl:apply-templates/></span>
-            <span class="popup-del">
-                Deleted (<xsl:value-of select="@rend"/>)
+            <span class="del-text">
+                <xsl:apply-templates/>
             </span>
+            <span class="popup-del"> Deleted (<xsl:value-of select="@rend"/>) </span>
         </span>
     </xsl:template>
-    
+
     <!-- Head / date inside the entry (we already render as H1 in header) – skip local output -->
     <xsl:template match="tei:head">
         <span class="entry-head-inline">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
-    
+
+
+
 </xsl:stylesheet>
