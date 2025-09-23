@@ -435,7 +435,7 @@
     <text>
         <body>
             <div type="entry" n="1">
-                <pb n="2" facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524854"/>
+                <pb n="1" facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524854"/>
                 <head>
                     <date when="1912-01-20"><hi rend="underline">20. Jänner 1912</hi></date>
                 </head>
@@ -528,9 +528,9 @@
             </div>
 
             <div type="entry" n="3">
-                <head rend="inline"><date when="1912-01-22"><hi rend="underline">22.
+                <head><date when="1912-01-22"><hi rend="underline">22.
                         Jänner</hi></date>.</head>
-                <p>Mit <persName ref="#p9">Petri</persName> Probe gehabt. Er wird die Stücke
+                <p rend="inline">Mit <persName ref="#p9">Petri</persName> Probe gehabt. Er wird die Stücke
                     wahrscheinlich ausgezeichnet spielen. Mindestens klavieristisch. Im Ganzen nahm
                     er alles zu rasch; oder vielmehr zu eilig. Ich sagte zu <persName ref="#p7"
                         >Webern</persName>: zu meiner Musik muss man Zeit haben. Die ist nichts für
@@ -568,9 +568,9 @@
             </div>
 
             <div type="entry" n="4">
-                <head rend="inline"><date when="1912-01-23"><hi rend="underline">23.
+                <head><date when="1912-01-23"><hi rend="underline">23.
                     Jänner</hi></date>;</head>
-                <p>Heute Probe mit <persName ref="#p22">Closson</persName>, <persName ref="#p23"
+                <p rend="inline">Heute Probe mit <persName ref="#p22">Closson</persName>, <persName ref="#p23"
                         >Steuermann</persName>, <persName ref="#p24">Grünberg</persName> (lauter
                         <persName ref="#p2">Busoni</persName>-Schüler) und <persName ref="#p7"
                         >Webern</persName>: die <title type="music" ref="#m7"
@@ -617,9 +617,9 @@
             </div>
 
             <div type="entry" n="5">
-                <head rend="inline"><date when="1912-01-28"><hi rend="underline">28. 1.</hi></date>
+                <head><date when="1912-01-28"><hi rend="underline">28. 1.</hi></date>
                     – </head>
-                <p><persName ref="#p15">Winternitz-Dorda</persName> hat am <date when="1912-01-24"
+                <p rend="inline"><persName ref="#p15">Winternitz-Dorda</persName> hat am <date when="1912-01-24"
                         >24.</date> das Konzert abgesagt! Repertoire-Änderung. Sie singt <date
                         when="1912-01-28">Sonntag</date> nachmittag. Große Verlegenheit. <persName
                         ref="#p9">Petri</persName> fährt am <date when="1912-01-29">29.</date> für
@@ -748,9 +748,9 @@
             </div>
 
             <div type="entry" n="6">
-                <head rend="inline"><date when="1912-02-02"><hi rend="underline">2.
+                <head><date when="1912-02-02"><hi rend="underline">2.
                         Februar</hi></date></head>
-                <p>Sonntag, 2<del rend="overwritten">7</del>8., waren <!-- er und sie -->Eichbergs
+                <p rend="inline">Sonntag, 2<del rend="overwritten">7</del>8., waren <!-- er und sie -->Eichbergs
                     zu Mittag <supplied cert="high">da</supplied>. Er ist ja ein ganz guter Kerl.
                     Immer noch der alte, der eigentlich von einer Verlegenheit in die andere fällt,
                     was er zwar durch weltmännisch-berlinische Forschheit verbergen möchte, ohne daß
@@ -820,9 +820,9 @@
                     vielen Gästen, einen solchen Vortrag halte. Ich bin nicht abgeneigt.</p>
             </div>
             <div type="entry" n="7">
-                <head rend="inline"><date when="1912-01-30"><hi rend="underline">Dienstag</hi>, <del rend="overwritten"
+                <head><date when="1912-01-30"><hi rend="underline">Dienstag</hi>, <del rend="overwritten"
                         >1</del>30. <del rend="strikethrough">Februar</del></date></head>
-                <p>Nachmittags Probe für <del rend="strikethrough">Klavierst</del>
+                <p rend="inline">Nachmittags Probe für <del rend="strikethrough">Klavierst</del>
                     <title type="music" ref="#m7">Orchesterstücke</title>. Endlich gingen I. und II.
                     gut. Sogar sehr gut. Ich war darauf gekommen, dass die Bezeichnung (p und f) in
                     der Bearbeitung von <persName ref="#p47">Stein</persName> unrichtig ist (<del

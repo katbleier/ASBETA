@@ -37,7 +37,8 @@
                                 <button id="toggle-view" class="toggle">Switch to Reading</button>
                             </div>
                             <h1>
-                                <xsl:value-of select="tei:head/tei:date"/>
+                                <xsl:value-of select="concat(@n, '. Tagebucheintrag, ')"/>
+                                <xsl:value-of select="format-date(tei:head/tei:date/@when, '[D01].[M01].[Y0001]')"/>
                             </h1>
                         </header>
 
@@ -459,12 +460,20 @@
         <xsl:value-of select="."/>
     </xsl:template>
 
-    <!-- Paragraphs -->
+    <!-- Paragraphs that should continue inline (no linebreak) -->
+    <xsl:template match="tei:p[@rend='inline']">
+        <span class="inline-paragraph">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <!-- Normal paragraphs -->
     <xsl:template match="tei:p">
         <p>
             <xsl:apply-templates/>
         </p>
     </xsl:template>
+    
 
     <!-- Inline emphasis -->
     <xsl:template match="tei:hi[@rend = 'underline']">
@@ -472,26 +481,8 @@
             <xsl:apply-templates/>
         </u>
     </xsl:template>
-
-    <!-- Deletions / Overwritten -->
-    <xsl:template match="tei:del">
-        <del>
-            <xsl:apply-templates/>
-        </del>
-    </xsl:template>
-
-    <!-- Additions -->
-    <xsl:template match="tei:add">
-        <span class="textcrit add" data-place="{@place}">
-            <span class="add-text"><xsl:apply-templates/></span>
-            <span class="add-popup">
-                Added (<xsl:value-of select="@place"/>)
-            </span>
-        </span>
-    </xsl:template>
-     
-    
-
+  
+      
     <!-- render external links -->
     <xsl:template match="tei:ref">
         <a href="{@target}" target="_blank">
@@ -598,28 +589,50 @@
     <xsl:template match="tei:note[@place]">
         <span class="note author" data-place="{@place}">
             <button class="note-toggle note-author">✎</button>
-            <span class="note-popup">
+            <span class="popup-author">
                 <small>Note by Schönberg, <xsl:value-of select="@place"/> margin: </small>
-                <!-- IMPORTANT: render children in 'note' mode -->
-                <xsl:apply-templates select="node()" mode="note"/>
+                <xsl:apply-templates select="node()"/>
             </span>
         </span>
     </xsl:template>
     
+    
+    
     <xsl:template match="tei:note[@type='commentary']">
         <span class="note commentary">
             <button class="note-toggle">ℹ</button>
-            <span class="note-popup">
+            <span class="popup-commentary">
                 <xsl:apply-templates/>
             </span>
         </span>
     </xsl:template>
-
-
+    
+    <!-- Additions -->
+    <xsl:template match="tei:add">
+        <span class="textcrit add" data-place="{@place}">
+            <span class="add-text"><xsl:apply-templates/></span>
+            <span class="popup-add">
+                Added (<xsl:value-of select="@place"/>)
+            </span>
+        </span>
+    </xsl:template>
+    
+    <!-- Deletions / Overwritten -->
+    <xsl:template match="tei:del">
+        <span class="textcrit del" data-rend="{@rend}">
+            <span class="del-text"><xsl:apply-templates/></span>
+            <span class="popup-del">
+                Deleted (<xsl:value-of select="@rend"/>)
+            </span>
+        </span>
+    </xsl:template>
+    
     <!-- Head / date inside the entry (we already render as H1 in header) – skip local output -->
-    <xsl:template match="tei:head"/>
-    <xsl:template match="tei:head/tei:date"/>
-
-
-
+    <xsl:template match="tei:head">
+        <span class="entry-head-inline">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    
 </xsl:stylesheet>

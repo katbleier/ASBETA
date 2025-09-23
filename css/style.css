@@ -143,11 +143,11 @@ a.work[title] {
   cursor: help;
 }
 
-/* ======================
-   Commentary notes (ℹ)
-   ====================== */
+/* =========================================
+   Notes (commentary + author)
+   ========================================= */
 
-.note-marker {
+.note-marker { 
   font-weight: bold;
   color: darkslateblue;
   text-decoration: none;
@@ -158,6 +158,7 @@ a.work[title] {
 .note-marker:hover {
   color: darkorange;
 }
+
 .note.commentary,
 .note.author {
   display: inline-block;
@@ -173,7 +174,9 @@ a.work[title] {
   font-size: 0.9em;
 }
 
-.note-popup {
+/* Popups for commentary + author notes (opened by JS click) */
+.popup-commentary,
+.popup-author {
   display: none;
   position: absolute;
   top: 1.2em;
@@ -187,7 +190,8 @@ a.work[title] {
   font-size: 0.85em;
   white-space: normal;
 }
-/* Author (place) notes */
+
+/* Author notes: red marker + left border in popup */
 .note-author {
   color: darkred;
   font-size: 0.9em;
@@ -201,63 +205,59 @@ a.work[title] {
   color: darkorange;
 }
 
-.note.author .note-popup {
+.note.author .popup-author {
   border-left: 3px solid darkred;
 }
 
-/* Deleted text */
+
+/* =========================================
+   Text-critical features (add + del)
+   ========================================= */
+
+.textcrit.del,
+.textcrit.add {
+  position: relative;
+  display: inline-block;
+}
+
+/* Deleted text appears with strikethrough */
 .textcrit.del .del-text {
   text-decoration: line-through;
   color: darkred;
   cursor: pointer;
 }
 
-.textcrit.del .del-popup,
-.textcrit.add .add-popup {
+/* Popups for add + del (hover) */
+.popup-add,
+.popup-del {
   display: none;
   position: absolute;
   top: 1.5em;
   left: 0;
   z-index: 10;
-  background: #fff;
-  border: 1px solid #aaa;
-  padding: 0.3em 0.6em;
-  font-size: 0.8em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  white-space: nowrap;
-}
-
-.textcrit.add {
-  position: relative;
-  display: inline-block;
-}
-
-.textcrit.add .add-popup {
-  display: none;
-  position: absolute;
-  top: 1.5em;
-  left: 0;
-  z-index: 10;
-  background-color: #f0f0f0;   /* heller, deutlicheres Grau */
+  background: #f0f0f0;   /* ✅ einheitlich hellgrau */
   border: 1px solid #aaa;
   padding: 0.4em 0.6em;
   font-size: 0.8em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   white-space: nowrap;
-  display: none;
-  /* WICHTIG: */
-  display: none;
-  min-width: max-content;     /* breiter als Text falls nötig */
-}
-.textcrit.add:hover .add-popup {
-  display: inline-block; 
+  min-width: max-content;
 }
 
-
-
-/* Wrappers need positioning */
-.textcrit.del,
-.textcrit.add {
-  position: relative;
+/* Show popups on hover */
+.textcrit.add:hover .popup-add,
+.textcrit.del:hover .popup-del {
   display: inline-block;
 }
+.entry-head {
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+.entry-head-inline { 
+  font-weight: normal; 
+  display: inline; 
+}
+.entry-head-inline::after { content: " "; } /* Abstand zum nächsten Wort */
+
+

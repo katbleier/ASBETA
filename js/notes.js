@@ -1,25 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Toggle for commentary & author notes (already there)
-  document.querySelectorAll(".note-toggle").forEach(...);
-
-  // NEW: toggle for textcritical popups
-  document.querySelectorAll(".textcrit .del-text, .textcrit .add-text").forEach(el => {
-    el.addEventListener("click", e => {
-      const popup = el.nextElementSibling;
+  document.querySelectorAll(".note-toggle").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const popup = btn.nextElementSibling;
       const isVisible = popup.style.display === "block";
 
-      // Hide all others
-      document.querySelectorAll(".del-popup, .add-popup").forEach(p => p.style.display = "none");
+      // Alle Kommentar-/Autor-Popups schließen
+      document.querySelectorAll(".popup-commentary, .popup-author")
+        .forEach(p => p.style.display = "none");
 
-      // Toggle current
+      // Toggle aktuelle
       popup.style.display = isVisible ? "none" : "block";
     });
   });
 
-  // Close when clicking outside
+  // Schließen, wenn außerhalb geklickt
   document.addEventListener("click", e => {
-    if (!e.target.closest(".textcrit")) {
-      document.querySelectorAll(".del-popup, .add-popup").forEach(p => p.style.display = "none");
+    if (!e.target.closest(".note")) {
+      document.querySelectorAll(".popup-commentary, .popup-author")
+        .forEach(p => p.style.display = "none");
     }
   });
 });
