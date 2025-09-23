@@ -13,14 +13,6 @@ body.mode-diplomatic .reading-only{display:none}
 .person,.work,.place,.org{border-bottom:1px dotted #bbb; cursor:help}
 .note-icon{font-size:0.9em; margin:0 0.15rem; cursor:pointer}
 
-/* Side panel for notes */
-#notes-panel{position:fixed;top:0;right:-420px;width:400px;height:100vh;background:#f9fafb;
-  box-shadow:-4px 0 10px rgba(0,0,0,.08);padding:1rem;overflow:auto;transition:right .25s ease}
-#notes-panel.open{right:0}
-#notes-panel h2{margin-top:0}
-.note.editor{background:var(--note-editor); padding:0.5rem;border-radius:8px;margin-bottom:0.5rem}
-.note.author{background:var(--note-author); padding:0.5rem;border-radius:8px;margin-bottom:0.5rem}
-.note small{color:var(--muted)}
 
 /* Page break block */
 .pb{margin:1rem 0; padding:0.5rem; background:#f5f5f5; border-radius:6px}
@@ -29,48 +21,6 @@ body.mode-diplomatic .reading-only{display:none}
 .topbar{display:flex;gap:1rem;align-items:center;justify-content:space-between}
 button.toggle{padding:0.4rem 0.8rem; border:1px solid #ddd; border-radius:6px; background:#fff; cursor:pointer}
 
-/* ======================
-   Notes Panel (Author & Editor)
-   ====================== */
-
-#notes-panel {
-  border-left: 3px solid #ccc;
-  padding: 1rem;
-  margin-top: 2rem;
-  background: #fafafa;
-  font-size: 0.9em;
-}
-
-#notes-panel h2 {
-  margin-top: 0;
-  font-size: 1.1em;
-}
-
-#notes-panel .note {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background: #fff;
-}
-
-/* Author notes (Schönberg’s marginalia) */
-#notes-panel .note.author {
-  border-left: 4px solid darkred;
-}
-#notes-panel .note.author small {
-  color: darkred;
-  font-weight: bold;
-}
-
-/* Editor’s technical notes */
-#notes-panel .note.editor {
-  border-left: 4px solid navy;
-}
-#notes-panel .note.editor small {
-  color: navy;
-  font-weight: bold;
-}
 
 /* ======================
    Commentary notes (ℹ + sidebar)
@@ -269,8 +219,67 @@ a.work[title] {
 
 .pb {
   font-size: 0.85em;
-  color: #555
+  color: #555;
   margin-bottom: 1em;
 }
+/* Hide deletions in reading mode */
+body.mode-reading .textcrit.del {
+  display: none;
+}
+/* Reading mode: show additions inline without special formatting */
+body.mode-reading .textcrit.add {
+  position: static; /* Remove absolute positioning */
+}
 
+body.mode-reading .textcrit.add .add-text {
+  /* Style the added text normally in reading mode */
+  color: inherit; /* Use normal text color */
+  background: none; /* Remove any special background */
+}
 
+body.mode-reading .popup-add {
+  display: none !important; /* Hide the popup in reading mode */
+}
+
+/* Diplomatic mode: keep the existing behavior with popups */
+body.mode-diplomatic .textcrit.add {
+  position: relative;
+  display: inline-block;
+}
+
+body.mode-diplomatic .textcrit.add:hover .popup-add {
+  display: inline-block;
+}
+/* Add these new rules to your existing CSS */
+
+/* Diplomatic mode: show additions with background color and popups */
+body.mode-diplomatic .textcrit.add .add-text {
+  background-color: #e8f5e8; /* Light green background */
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
+}
+
+/* Reading mode: show additions inline without special formatting */
+body.mode-reading .textcrit.add {
+  position: static;
+}
+
+body.mode-reading .textcrit.add .add-text {
+  color: inherit;
+  background: none; /* No background in reading mode */
+  padding: 0; /* No padding in reading mode */
+}
+
+body.mode-reading .popup-add {
+  display: none !important;
+}
+
+/* Diplomatic mode: keep existing popup behavior */
+body.mode-diplomatic .textcrit.add {
+  position: relative;
+  display: inline-block;
+}
+
+body.mode-diplomatic .textcrit.add:hover .popup-add {
+  display: inline-block;
+}
