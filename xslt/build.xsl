@@ -28,7 +28,6 @@
                                 <nav>
                                     <a href="../diary/calendar.html">Diary</a>
                                     <a href="../diary/all.html">All Entries</a>
-                                    <a href="../facsimiles/index.html">Facsimiles</a>
                                     <a href="../persons/index.html">Persons</a>
                                     <a href="../works/index.html">Works</a>
                                     <a href="../places/index.html">Places</a>
@@ -71,7 +70,6 @@
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
                                 <a href="../diary/all.html">All Entries</a>
-                                <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
                                 <a href="../places/index.html">Places</a>
@@ -115,7 +113,6 @@
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
                                 <a href="../diary/all.html">All Entries</a>
-                                <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
                                 <a href="../places/index.html">Places</a>
@@ -152,7 +149,6 @@
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
                                 <a href="../diary/all.html">All Entries</a>
-                                <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
                                 <a href="../places/index.html">Places</a>
@@ -178,19 +174,45 @@
                                         <a href="https://d-nb.info/gnd/{tei:idno[@type='gnd']}"
                                             target="_blank">GND</a>
                                     </xsl:if>
-
+                                    
                                     <!-- Mentions in entries -->
                                     <br/>
-                                    <small>Mentions in: <xsl:for-each
-                                            select="//tei:persName[@ref = concat('#', current()/@xml:id)]">
-                                            <xsl:variable name="entry"
-                                                select="ancestor::tei:div[@type = 'entry']"/>
-                                            <xsl:variable name="entryId" select="$entry/@n"/>
-                                            <a href="../diary/entry-{$entryId}.html">
-                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
-                                            </a>
-                                            <xsl:if test="position() != last()">, </xsl:if>
-                                        </xsl:for-each>
+                                    <small>
+                                        <!-- Get unique diary entries where person is mentioned -->
+                                        <xsl:variable name="mentionedEntries" 
+                                            select="//tei:persName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
+                                        
+                                        <xsl:if test="$mentionedEntries">
+                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:for-each select="$mentionedEntries">
+                                                <xsl:sort select="@n" data-type="number"/>
+                                                <!-- Remove duplicates by checking if this entry hasn't been processed before -->
+                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                    <a href="../diary/entry-{@n}.html">
+                                                        <xsl:value-of select="tei:head/tei:date"/>
+                                                    </a>
+                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                </xsl:if>
+                                            </xsl:for-each>
+                                        </xsl:if>
+                                        
+                                        <!-- Mentions as author of works -->
+                                        <xsl:variable name="authoredWorks" 
+                                            select="//tei:listBibl/tei:bibl[tei:author/tei:persName/@ref = concat('#', current()/@xml:id)]"/>
+                                        
+                                        <xsl:if test="$authoredWorks">
+                                            <xsl:if test="$mentionedEntries">
+                                                <xsl:text> </xsl:text>
+                                            </xsl:if>
+                                            <xsl:for-each select="$authoredWorks">
+                                                <xsl:text>(as author: </xsl:text>
+                                                <a href="../works/index.html#{@xml:id}">
+                                                    <xsl:value-of select="tei:title"/>
+                                                </a>
+                                                <xsl:text>)</xsl:text>
+                                                <xsl:if test="position() != last()">, </xsl:if>
+                                            </xsl:for-each>
+                                        </xsl:if>
                                     </small>
                                 </li>
                             </xsl:for-each>
@@ -215,7 +237,6 @@
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
                                 <a href="../diary/all.html">All Entries</a>
-                                <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
                                 <a href="../places/index.html">Places</a>
@@ -244,16 +265,22 @@
 
                                     <!-- Mentions -->
                                     <br/>
-                                    <small>Mentions in: <xsl:for-each
-                                            select="//tei:orgName[@ref = concat('#', current()/@xml:id)]">
-                                            <xsl:variable name="entry"
-                                                select="ancestor::tei:div[@type = 'entry']"/>
-                                            <xsl:variable name="entryId" select="$entry/@n"/>
-                                            <a href="../diary/entry-{$entryId}.html">
-                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
-                                            </a>
-                                            <xsl:if test="position() != last()">, </xsl:if>
-                                        </xsl:for-each>
+                                    <small>
+                                        <xsl:variable name="mentionedEntries" 
+                                            select="//tei:orgName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
+                                        
+                                        <xsl:if test="$mentionedEntries">
+                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:for-each select="$mentionedEntries">
+                                                <xsl:sort select="@n" data-type="number"/>
+                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                    <a href="../diary/entry-{@n}.html">
+                                                        <xsl:value-of select="tei:head/tei:date"/>
+                                                    </a>
+                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                </xsl:if>
+                                            </xsl:for-each>
+                                        </xsl:if>
                                     </small>
                                 </li>
                             </xsl:for-each>
@@ -278,7 +305,6 @@
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
                                 <a href="../diary/all.html">All Entries</a>
-                                <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
                                 <a href="../places/index.html">Places</a>
@@ -314,16 +340,22 @@
 
                                     <!-- Mentions -->
                                     <br/>
-                                    <small>Mentions in: <xsl:for-each
-                                            select="//tei:placeName[@ref = concat('#', current()/@xml:id)]">
-                                            <xsl:variable name="entry"
-                                                select="ancestor::tei:div[@type = 'entry']"/>
-                                            <xsl:variable name="entryId" select="$entry/@n"/>
-                                            <a href="../diary/entry-{$entryId}.html">
-                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
-                                            </a>
-                                            <xsl:if test="position() != last()">, </xsl:if>
-                                        </xsl:for-each>
+                                    <small>
+                                        <xsl:variable name="mentionedEntries" 
+                                            select="//tei:placeName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
+                                        
+                                        <xsl:if test="$mentionedEntries">
+                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:for-each select="$mentionedEntries">
+                                                <xsl:sort select="@n" data-type="number"/>
+                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                    <a href="../diary/entry-{@n}.html">
+                                                        <xsl:value-of select="tei:head/tei:date"/>
+                                                    </a>
+                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                </xsl:if>
+                                            </xsl:for-each>
+                                        </xsl:if>
                                     </small>
                                 </li>
                             </xsl:for-each>
@@ -348,7 +380,6 @@
                             <nav>
                                 <a href="../diary/calendar.html">Diary</a>
                                 <a href="../diary/all.html">All Entries</a>
-                                <a href="../facsimiles/index.html">Facsimiles</a>
                                 <a href="../persons/index.html">Persons</a>
                                 <a href="../works/index.html">Works</a>
                                 <a href="../places/index.html">Places</a>
@@ -378,16 +409,22 @@
 
                                     <!-- Mentions in diary -->
                                     <br/>
-                                    <small>Mentions in: <xsl:for-each
-                                            select="//tei:title[@type = 'music'][@ref = concat('#', current()/@xml:id)]">
-                                            <xsl:variable name="entry"
-                                                select="ancestor::tei:div[@type = 'entry']"/>
-                                            <xsl:variable name="entryId" select="$entry/@n"/>
-                                            <a href="../diary/entry-{$entryId}.html">
-                                                <xsl:value-of select="$entry/tei:head/tei:date"/>
-                                            </a>
-                                            <xsl:if test="position() != last()">, </xsl:if>
-                                        </xsl:for-each>
+                                    <small>
+                                        <xsl:variable name="mentionedEntries" 
+                                            select="//tei:title[@type = 'music'][@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
+                                        
+                                        <xsl:if test="$mentionedEntries">
+                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:for-each select="$mentionedEntries">
+                                                <xsl:sort select="@n" data-type="number"/>
+                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                    <a href="../diary/entry-{@n}.html">
+                                                        <xsl:value-of select="tei:head/tei:date"/>
+                                                    </a>
+                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                </xsl:if>
+                                            </xsl:for-each>
+                                        </xsl:if>
                                     </small>
                                 </li>
                             </xsl:for-each>
@@ -398,72 +435,6 @@
                 </body>
             </html>
         </xsl:result-document>
-        <!-- ================= FACSIMILES INDEX ================= -->
-        <xsl:result-document href="facsimiles/index.html" method="xhtml" indent="yes">
-            <html lang="de">
-                <head>
-                    <meta charset="utf-8"/>
-                    <title>Facsimiles Overview</title>
-                    <link rel="stylesheet" href="../css/style.css"/>
-                    <style>
-                        .thumbs {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 1rem;
-                        }
-                        .thumbs a {
-                            display: block;
-                            text-align: center;
-                            font-size: 0.8em;
-                        }
-                        .thumbs img {
-                            max-width: 150px;
-                            border: 1px solid #ccc;
-                        }</style>
-                </head>
-                <body>
-                    <header>
-                        <div class="topbar">
-                            <nav>
-                                <a href="../diary/calendar.html">Diary</a>
-                                <a href="../diary/all.html">All Entries</a>
-                                <a href="../facsimiles/index.html">Facsimiles</a>
-                                <a href="../persons/index.html">Persons</a>
-                                <a href="../works/index.html">Works</a>
-                                <a href="../places/index.html">Places</a>
-                                <a href="../organizations/index.html">Organizations</a>
-                                <a href="../about.html">About</a>
-                            </nav>
-                        </div>
-                        <h1>Facsimiles Overview</h1>
-                    </header>
-                    <main>
-                        <xsl:for-each-group select="//tei:pb[@facs]"
-                            group-by="ancestor::tei:div[@type = 'entry']/@n">
-                            <xsl:variable name="entryId" select="current-grouping-key()"/>
-                            <xsl:variable name="entry"
-                                select="current-group()[1]/ancestor::tei:div[@type = 'entry']"/>
-                            <section>
-                                <h2> Entry <xsl:value-of select="$entryId"/> — <xsl:value-of
-                                        select="$entry/tei:head/tei:date"/>
-                                </h2>
-                                <div class="thumbs">
-                                    <xsl:for-each select="current-group()">
-                                        <a href="{@facs}" target="_blank">
-                                            <img src="{@facs}" alt="Facsimile page {@n}"/>
-                                            <br/>Page <xsl:value-of select="@n"/>
-                                        </a>
-                                    </xsl:for-each>
-                                </div>
-                            </section>
-                        </xsl:for-each-group>
-                    </main>
-                    <script src="../js/toggle.js"/>
-                    <script src="../js/notes.js"/>
-                </body>
-            </html>
-        </xsl:result-document>
-
 
     </xsl:template>
 

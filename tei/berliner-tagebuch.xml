@@ -100,7 +100,7 @@
                     </bibl>
                     <bibl xml:id="m10">
                         <author>
-                            <persName ref="#p24">Grünberg</persName>
+                            <persName ref="#p24">Louis Grünberg</persName>
                         </author>
                         <title type="music">Klavierstücke</title>
                     </bibl>
@@ -137,208 +137,206 @@
             <!-- physDesc objektbeschreibung -->
         </fileDesc><profileDesc><particDesc><listPerson>
                 <person xml:id="p1">
-                    <persName ref="https://d-nb.info/gnd/116791357">Oskar Fried</persName>
+                    <persName ref="https://d-nb.info/gnd/116791357">Fried, Oskar</persName>
                     <idno type="gnd">116791357</idno>
                 </person>
                 <person xml:id="p2">
-                    <persName ref="https://d-nb.info/gnd/118518011">Ferruccio Busoni</persName>
+                    <persName ref="https://d-nb.info/gnd/118518011">Busoni, Ferruccio </persName>
                     <idno type="gnd">118518011</idno>
                 </person>
                 <person xml:id="p3">
-                    <persName ref="https://d-nb.info/gnd/119436744">Sergej Koussevitzky</persName>
+                    <persName ref="https://d-nb.info/gnd/119436744">Koussevitzky, Sergej</persName>
                     <idno type="gnd">119436744</idno>
                 </person>
                 <person xml:id="p4">
-                    <persName ref="https://d-nb.info/gnd/116934042">Emil Gutmann</persName>
+                    <persName ref="https://d-nb.info/gnd/116934042">Gutmann, Emil</persName>
                     <idno type="gnd">116934042</idno>
                 </person>
                 <person xml:id="p5">
-                    <persName ref="https://d-nb.info/gnd/142882690">Bernhard van Dieren</persName>
+                    <persName ref="https://d-nb.info/gnd/142882690">Dieren, Bernhard van</persName>
                     <idno type="gnd">142882690</idno>
                 </person>
                 <person xml:id="p6">
-                    <persName ref="https://d-nb.info/gnd/116755121">Emil Hertzka</persName>
+                    <persName ref="https://d-nb.info/gnd/116755121">Hertzka, Emil</persName>
                     <idno type="gnd">116755121</idno>
                 </person>
                 <person xml:id="p7">
-                    <persName ref="https://d-nb.info/gnd/118629786">Anton Webern</persName>
+                    <persName ref="https://d-nb.info/gnd/118629786">Webern, Anton</persName>
                     <idno type="gnd">118629786</idno>
                 </person>
                 <person xml:id="p8">
-                    <persName ref="https://d-nb.info/gnd/1018203141">Edward Clark</persName>
+                    <persName ref="https://d-nb.info/gnd/1018203141">Clark, Edward</persName>
                     <idno type="gnd">1018203141</idno>
                 </person>
                 <person xml:id="p9">
-                    <persName ref="https://d-nb.info/gnd/116133767">Egon Petri</persName>
+                    <persName ref="https://d-nb.info/gnd/116133767">Petri, Egon</persName>
                     <idno type="gnd">116133767</idno>
                 </person>
                 <person xml:id="p10">
-                    <persName ref="https://d-nb.info/gnd/116790962">Max Marschalk</persName>
+                    <persName ref="https://d-nb.info/gnd/116790962">Marschalk, Max</persName>
                     <idno type="gnd">116790962</idno>
                 </person>
                 <person xml:id="p11">
                     <persName>Frau Eichberg<!-- check unklar: Bonnie Lee Eichberg?--></persName>
                 </person>
                 <person xml:id="p12">
-                    <persName ref="https://d-nb.info/gnd/116000902">Fritz Zweig</persName>
+                    <persName ref="https://d-nb.info/gnd/116000902">Zweig, Fritz</persName>
                     <idno type="gnd">116000902</idno>
                 </person>
                 <person xml:id="p13">
-                    <persName ref="https://d-nb.info/gnd/1073437310">Paula Simon-Herlitz</persName>
+                    <persName ref="https://d-nb.info/gnd/1073437310">Simon-Herlitz, Paula</persName>
                     <idno type="gnd">1073437310</idno>
                 </person>
                 <person xml:id="p14">
-                    <persName ref="https://d-nb.info/gnd/116013729">Karl Kämpf</persName>
+                    <persName ref="https://d-nb.info/gnd/116013729">Kämpf, Karl</persName>
                     <idno type="gnd">116013729</idno>
                 </person>
                 <person xml:id="p15">
-                    <persName ref="https://d-nb.info/gnd/133474364">Martha
-                        Winternitz-Dorda</persName>
+                    <persName ref="https://d-nb.info/gnd/133474364">Winternitz-Dorda, Martha</persName>
                     <idno type="gnd">133474364</idno>
                 </person>
                 <person xml:id="p16">
-                    <persName ref="https://d-nb.info/gnd/116608943">Arnold Rosé</persName>
+                    <persName ref="https://d-nb.info/gnd/116608943">Rosé, Arnold</persName>
                     <idno type="gnd">116608943</idno>
                 </person>
                 <person xml:id="p17">
-                    <persName ref="https://d-nb.info/gnd/119318628">Mathilde Schönberg</persName>
+                    <persName ref="https://d-nb.info/gnd/119318628">Schönberg, Mathilde</persName>
                     <idno type="gnd">119318628</idno>
                 </person>
                 <person xml:id="p18">
-                    <persName ref="https://d-nb.info/gnd/118576291">Gustav Mahler</persName>
+                    <persName ref="https://d-nb.info/gnd/118576291">Mahler, Gustav</persName>
                     <idno type="gnd">118576291</idno>
                 </person>
                 <person xml:id="p19">
-                    <persName ref="https://d-nb.info/gnd/117183482">Gerda Busoni</persName>
+                    <persName ref="https://d-nb.info/gnd/117183482">Busoni, Gerda</persName>
                     <idno type="gnd">117183482</idno>
                 </person>
                 <person xml:id="p20">
-                    <persName>Sohn
-                        Busoni<!-- check unklar welcher: https://d-nb.info/gnd/127117601 oder https://d-nb.info/gnd/105070920--></persName>
+                    <persName>Busoni, (Sohn)<!-- check unklar welcher: https://d-nb.info/gnd/127117601 oder https://d-nb.info/gnd/105070920--></persName>
                 </person>
                 <person xml:id="p21">
-                    <persName ref="https://d-nb.info/gnd/1013623088">Georg Schönberg</persName>
+                    <persName ref="https://d-nb.info/gnd/1013623088">Schönberg, Georg</persName>
                     <idno type="gnd">1013623088</idno>
                 </person>
                 <person xml:id="p22">
-                    <persName ref="https://d-nb.info/gnd/1078437424">Louis Closson</persName>
+                    <persName ref="https://d-nb.info/gnd/1078437424">Closson, Louis</persName>
                     <idno type="gnd">1078437424</idno>
                 </person>
                 <person xml:id="p23">
-                    <persName ref="https://d-nb.info/gnd/118953060">Eduard Steuermann</persName>
+                    <persName ref="https://d-nb.info/gnd/118953060">Steuermann, Eduard</persName>
                     <idno type="gnd">118953060</idno>
                 </person>
                 <person xml:id="p24">
-                    <persName ref="https://d-nb.info/gnd/103802479">Louis Grünberg</persName>
+                    <persName ref="https://d-nb.info/gnd/103802479">Grünberg, Louis</persName>
                     <idno type="gnd">103802479</idno>
                 </person>
                 <person xml:id="p25">
-                    <persName>Leo Perelmann<!-- check --></persName>
+                    <persName>Perelmann, Leo<!-- check --></persName>
                 </person>
                 <person xml:id="p26">
-                    <persName>Balaban<!-- check https://d-nb.info/gnd/134842472  https://en.wikipedia.org/wiki/Emanuel_Balaban studierte in Deutschland wurde aber erst 1895 geb - zu jung?--></persName>
+                    <persName>Balaban, Emanuel<!-- check https://d-nb.info/gnd/134842472  https://en.wikipedia.org/wiki/Emanuel_Balaban studierte in Deutschland wurde aber erst 1895 geb - zu jung?--></persName>
                 </person>
                 <person xml:id="p27">
-                    <persName ref="https://d-nb.info/gnd/1236288378">Etta Werndorff</persName>
+                    <persName ref="https://d-nb.info/gnd/1236288378">Werndorff, Etta</persName>
                     <idno type="gnd">1236288378</idno>
                 </person>
                 <person xml:id="p28">
-                    <persName ref="https://d-nb.info/gnd/134788389">Richard Buhlig</persName>
+                    <persName ref="https://d-nb.info/gnd/134788389">Buhlig, Richard</persName>
                     <idno type="gnd">134788389</idno>
                 </person>
                 <person xml:id="p29">
-                    <persName ref="https://d-nb.info/gnd/118628879">Bruno Walter</persName>
+                    <persName ref="https://d-nb.info/gnd/118628879">Walter, Bruno</persName>
                     <idno type="gnd">118628879</idno>
                 </person>
                 <person xml:id="p30">
-                    <persName ref="https://d-nb.info/gnd/119338920">Willem Mengelberg</persName>
+                    <persName ref="https://d-nb.info/gnd/119338920">Mengelberg, Willem</persName>
                     <idno type="gnd">119338920</idno>
                 </person>
                 <person xml:id="p31">
-                    <persName ref="https://d-nb.info/gnd/116701471">Karl Georg Göhler</persName>
+                    <persName ref="https://d-nb.info/gnd/116701471">Göhler, Karl Georg</persName>
                     <idno type="gnd">116701471</idno>
                 </person>
                 <person xml:id="p32">
-                    <persName ref="https://d-nb.info/gnd/11863643X">Alexander Zemlinsky</persName>
+                    <persName ref="https://d-nb.info/gnd/11863643X">Zemlinsky, Alexander</persName>
                     <idno type="gnd">11863643X</idno>
                 </person>
                 <person xml:id="p33">
-                    <persName ref="https://d-nb.info/gnd/116968818">Albertine Zehme</persName>
+                    <persName ref="https://d-nb.info/gnd/116968818">Zehme, Albertine</persName>
                     <idno type="gnd">116968818</idno>
                 </person>
                 <person xml:id="p34">
-                    <persName ref="https://d-nb.info/gnd/118710281">Frieda Hempel</persName>
+                    <persName ref="https://d-nb.info/gnd/118710281">Hempel, Frieda</persName>
                     <idno type="gnd">118710281</idno>
                 </person>
                 <person xml:id="p35">
-                    <persName ref="https://d-nb.info/gnd/119025809">Leo Blech</persName>
+                    <persName ref="https://d-nb.info/gnd/119025809">Blech, Leo</persName>
                     <idno type="gnd">119025809</idno>
                 </person>
                 <person xml:id="p36">
-                    <persName ref="https://d-nb.info/gnd/118500694">Guido Adler</persName>
+                    <persName ref="https://d-nb.info/gnd/118500694">Adler, Guido</persName>
                     <idno type="gnd">118500694</idno>
                 </person>
                 <person xml:id="p37">
-                    <persName ref="https://d-nb.info/gnd/118619314">August Strindberg</persName>
+                    <persName ref="https://d-nb.info/gnd/118619314">Strindberg, August</persName>
                     <idno type="gnd">118619314</idno>
                 </person>
                 <person xml:id="p38">
-                    <persName ref="https://d-nb.info/gnd/133566625">Friedrich Eichberg</persName>
+                    <persName ref="https://d-nb.info/gnd/133566625">Eichberg, Friedrich</persName>
                     <idno type="gnd">133566625</idno>
                 </person>
                 <person xml:id="p39">
-                    <persName ref="https://d-nb.info/gnd/11857745X">Franz Marc</persName>
+                    <persName ref="https://d-nb.info/gnd/11857745X">Marc, Franz</persName>
                     <idno type="gnd">11857745X</idno>
                 </person>
                 <person xml:id="p40">
-                    <persName ref="https://d-nb.info/gnd/118610023">Arnold Schönberg</persName>
+                    <persName ref="https://d-nb.info/gnd/118610023">Schönberg, Arnold</persName>
                     <idno type="gnd">118610023</idno>
                 </person>
                 <person xml:id="p41">
-                    <persName ref="https://d-nb.info/gnd/119073226">Richard Gerstl</persName>
+                    <persName ref="https://d-nb.info/gnd/119073226">Gerstl, Richard</persName>
                     <idno type="gnd">119073226</idno>
                 </person>
                 <person xml:id="p42">
-                    <persName ref="https://d-nb.info/gnd/117411043">Arnold Winternitz</persName>
+                    <persName ref="https://d-nb.info/gnd/117411043">Winternitz, Arnold</persName>
                     <idno type="gnd">117411043</idno>
                 </person>
                 <person xml:id="p43">
-                    <persName ref="https://d-nb.info/gnd/136859054">Marie Marc-Schnür</persName>
+                    <persName ref="https://d-nb.info/gnd/136859054">Marc-Schnür, Marie</persName>
                     <idno type="gnd">136859054</idno>
                 </person>
                 <person xml:id="p44">
-                    <persName ref="https://d-nb.info/gnd/118870645">Paul Cassirer</persName>
+                    <persName ref="https://d-nb.info/gnd/118870645">Cassirer, Paul</persName>
                     <idno type="gnd">118870645</idno>
                 </person>
                 <person xml:id="p45">
-                    <persName ref="https://d-nb.info/gnd/11857423X">Adolf Loos</persName>
+                    <persName ref="https://d-nb.info/gnd/11857423X">Loos, Adolf</persName>
                     <idno type="gnd">11857423X</idno>
                 </person>
                 <person xml:id="p46">
-                    <persName ref="https://d-nb.info/gnd/118736426">Max Oppenheimer</persName>
+                    <persName ref="https://d-nb.info/gnd/118736426">Oppenheimer, Max</persName>
                     <idno type="gnd">118736426</idno>
                 </person>
                 <person xml:id="p47">
-                    <persName ref="https://d-nb.info/gnd/118564722">Oskar Kokoschka</persName>
+                    <persName ref="https://d-nb.info/gnd/118564722">Kokoschka, Oskar</persName>
                     <idno type="gnd">118564722</idno>
                 </person>
                 <person xml:id="p48">
-                    <persName ref="https://d-nb.info/gnd/118559737">Wassily Kandinsky</persName>
+                    <persName ref="https://d-nb.info/gnd/118559737">Kandinsky, Wassily</persName>
                     <idno type="gnd">118559737</idno>
                 </person>
                 <person xml:id="p49">
-                    <persName ref="https://d-nb.info/gnd/119164086">Hans von Weber</persName>
+                    <persName ref="https://d-nb.info/gnd/119164086">Weber, Hans von</persName>
                     <idno type="gnd">119164086</idno>
                 </person>
                 <person xml:id="p50">
-                    <persName ref="https://d-nb.info/gnd/11850553X">Johann Sebastian Bach</persName>
+                    <persName ref="https://d-nb.info/gnd/11850553X">Bach, Johann Sebastian</persName>
                     <idno type="gnd">11850553X</idno>
                 </person>
                 <person xml:id="p51">
-                    <persName ref="https://d-nb.info/gnd/117011789">Karl Horwitz</persName>
+                    <persName ref="https://d-nb.info/gnd/117011789">Horwitz, Karl</persName>
                     <idno type="gnd">117011789</idno>
                 </person><person xml:id="p52">
-                    <persName ref="https://d-nb.info/gnd/116897899">Henri Hinrichsen</persName>
+                    <persName ref="https://d-nb.info/gnd/116897899">Hinrichsen, Henri</persName>
                     <idno type="gnd">116897899</idno>
                 </person>
             </listPerson>
