@@ -1,259 +1,484 @@
-:root { --fg:#222; --bg:#fff; --muted:#666; --note-editor:#eef4ff; --note-author:#fff6e5; }
-html,body{margin:0;padding:0;font:16px/1.6 system-ui, sans-serif;color:var(--fg);background:var(--bg);}
-header,nav,main,footer{max-width:1000px;margin:auto;padding:1rem;}
-nav a{margin-right:1rem;text-decoration:none;color:#06c}
-h1{font-size:1.6rem;margin:0.5rem 0 1rem}
+/* Professional Digital Edition Stylesheet */
 
- /* Toggle modes */
-body.mode-reading del{display:none}
-body.mode-reading .pb{display:none}
-body.mode-diplomatic .reading-only{display:none}
+:root { 
+  --text-primary: #2c3e50;
+  --text-secondary: #34495e;
+  --text-muted: #7f8c8d;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-accent: #ecf0f1;
+  --border-light: #e1e8ed;
+  --border-medium: #bdc3c7;
+  --accent-blue: #3498db;
+  --accent-red: #e74c3c;
+  --accent-green: #27ae60;
+  --accent-orange: #f39c12;
+  --accent-purple: #9b59b6;
+  --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 12px rgba(0,0,0,0.15);
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.125rem;
+  --line-height-base: 1.6;
+  --line-height-tight: 1.4;
+}
 
- /* Inline entities */
-.person,.work,.place,.org{border-bottom:1px dotted #bbb; cursor:help}
-.note-icon{font-size:0.9em; margin:0 0.15rem; cursor:pointer}
+/* Base typography and layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
+/* Layout containers */
+header, nav, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
-/* Page break block */
-.pb{margin:1rem 0; padding:0.5rem; background:#f5f5f5; border-radius:6px}
+/* Header and navigation */
+header {
+  background: var(--bg-primary);
+  border-bottom: 2px solid var(--border-light);
+  margin-bottom: 2rem;
+}
 
-/* Simple top bar */
-.topbar{display:flex;gap:1rem;align-items:center;justify-content:space-between}
-button.toggle{padding:0.4rem 0.8rem; border:1px solid #ddd; border-radius:6px; background:#fff; cursor:pointer}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  gap: 2rem;
+}
 
+nav {
+  padding: 0;
+}
 
-/* ======================
-   Commentary notes (ℹ + sidebar)
-   ====================== */
-
-.note-marker {
-  font-weight: bold;
-  color: darkslateblue;
+nav a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  margin-right: 2rem;
   text-decoration: none;
-  margin-left: 0.2em;
+  color: var(--text-secondary);
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent-blue);
+  border-bottom-color: var(--accent-blue);
+}
+
+/* Headings */
+h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--font-size-large);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 2rem 0 1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+/* Main content area */
+main {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-light);
+  margin-bottom: 3rem;
+}
+
+.diary-text p,
+.diary-scroll p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Toggle modes */
+body.mode-reading .textcrit.del {
+  display: none;
+}
+
+body.mode-reading .pb {
+  display: none;
+}
+
+body.mode-diplomatic .reading-only {
+  display: none;
+}
+
+/* Mode toggle button */
+button.toggle {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent-blue);
+  border-radius: var(--radius-medium);
+  background: var(--bg-primary);
+  color: var(--accent-blue);
   cursor: pointer;
-}
-.note-marker:hover {
-  color: darkorange;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-light);
 }
 
-aside#commentary {
-  margin-top: 2rem;
-  padding: 1rem;
-  border-top: 2px solid #ccc;
-  background: #f9f9f9;
-  font-size: 0.9em;
+button.toggle:hover {
+  background: var(--accent-blue);
+  color: var(--bg-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
 }
-aside#commentary h2 {
-  margin-top: 0;
-}
-aside#commentary ul {
-  padding-left: 1.2em;
-}
-/* ======================
-   Inline references
-   ====================== */
 
+/* Entity references with improved styling */
 a.person {
-  color: darkred;
+  color: var(--accent-red);
   text-decoration: none;
-  border-bottom: 1px dotted darkred;
+  border-bottom: 1px solid rgba(231, 76, 60, 0.3);
+  padding: 0.1em 0.2em;
+  border-radius: var(--radius-small);
+  transition: all 0.2s ease;
+}
+
+a.person:hover {
+  background: rgba(231, 76, 60, 0.1);
+  border-bottom-color: var(--accent-red);
 }
 
 a.place {
-  color: darkgreen;
+  color: var(--accent-green);
   text-decoration: none;
-  border-bottom: 1px dotted darkgreen;
+  border-bottom: 1px solid rgba(39, 174, 96, 0.3);
+  padding: 0.1em 0.2em;
+  border-radius: var(--radius-small);
+  transition: all 0.2s ease;
+}
+
+a.place:hover {
+  background: rgba(39, 174, 96, 0.1);
+  border-bottom-color: var(--accent-green);
 }
 
 a.org {
-  color: navy;
+  color: var(--accent-purple);
   text-decoration: none;
-  border-bottom: 1px dotted navy;
+  border-bottom: 1px solid rgba(155, 89, 182, 0.3);
+  padding: 0.1em 0.2em;
+  border-radius: var(--radius-small);
+  transition: all 0.2s ease;
+}
+
+a.org:hover {
+  background: rgba(155, 89, 182, 0.1);
+  border-bottom-color: var(--accent-purple);
 }
 
 a.work {
-  color: darkorange;
+  color: var(--accent-orange);
   text-decoration: none;
-  border-bottom: 1px dotted darkorange;
+  border-bottom: 1px solid rgba(243, 156, 18, 0.3);
+  padding: 0.1em 0.2em;
+  border-radius: var(--radius-small);
+  transition: all 0.2s ease;
 }
 
-a.person:hover,
-a.place:hover,
-a.org:hover,
 a.work:hover {
-  background: #f0f0f0;
+  background: rgba(243, 156, 18, 0.1);
+  border-bottom-color: var(--accent-orange);
 }
 
-/* Tooltips via title= */
-a.person[title],
-a.place[title],
-a.org[title],
-a.work[title] {
-  cursor: help;
-}
-
-/* =========================================
-   Notes (commentary + author)
-   ========================================= */
-
-.note-marker { 
-  font-weight: bold;
-  color: darkslateblue;
-  text-decoration: none;
-  margin-left: 0.2em;
-  cursor: pointer;
-}
-
-.note-marker:hover {
-  color: darkorange;
-}
-
-.note.commentary,
-.note.author {
-  display: inline-block;
-  position: relative;
-}
-
-.note-toggle {
-  background: none;
-  border: none;
-  color: darkslateblue;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-/* Popups for commentary + author notes (opened by JS click) */
-.popup-commentary,
-.popup-author {
-  display: none;
-  position: absolute;
-  top: 1.2em;
-  left: 0;
-  z-index: 10;
-  background: #fff;
-  border: 1px solid #aaa;
-  padding: 0.5em;
-  max-width: 300px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  font-size: 0.85em;
-  white-space: normal;
-}
-
-/* Author notes: red marker + left border in popup */
-.note-author {
-  color: darkred;
-  font-size: 0.9em;
-  font-weight: bold;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.note-author:hover {
-  color: darkorange;
-}
-
-.note.author .popup-author {
-  border-left: 3px solid darkred;
-}
-
-
-/* =========================================
-   Text-critical features (add + del)
-   ========================================= */
-
+/* Text-critical apparatus */
 .textcrit.del,
 .textcrit.add {
   position: relative;
   display: inline-block;
 }
 
-/* Deleted text appears with strikethrough */
-.textcrit.del .del-text {
-  text-decoration: line-through;
-  color: darkred;
-  cursor: pointer;
-}
-
-/* Popups for add + del (hover) */
-.popup-add,
-.popup-del {
-  display: none;
-  position: absolute;
-  top: 1.5em;
-  left: 0;
-  z-index: 10;
-  background: #f0f0f0;   /* ✅ einheitlich hellgrau */
-  border: 1px solid #aaa;
-  padding: 0.4em 0.6em;
-  font-size: 0.8em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  white-space: nowrap;
-  min-width: max-content;
-}
-
-/* Show popups on hover */
-.textcrit.add:hover .popup-add,
-.textcrit.del:hover .popup-del {
-  display: inline-block;
-}
-.entry-head {
-  font-size: 1.1em;
-  font-weight: normal;
-  margin-bottom: 1em;
-}
-.entry-head-inline { 
-  font-weight: normal; 
-  display: inline; 
-}
-.entry-head-inline::after {
-  content: " "; 
-} /* Abstand zum nächsten Wort */
-.page-break {
-  border: none;
-  border-top: 2px dashed #999;
-  margin: 2em 0;
-}
-
-.pb {
-  font-size: 0.85em;
-  color: #555;
-  margin-bottom: 1em;
-}
-/* Hide deletions in reading mode */
-body.mode-reading .textcrit.del {
-  display: none;
-}
-/* Diplomatic mode: show additions with background color and popups */
+/* Diplomatic mode: additions with subtle background */
 body.mode-diplomatic .textcrit.add .add-text {
-  background-color: #e8f5e8; /* Light green background */
-  padding: 0.1em 0.2em;
-  border-radius: 3px;
+  background: linear-gradient(120deg, rgba(39, 174, 96, 0.15) 0%, rgba(39, 174, 96, 0.08) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-small);
+  border-left: 2px solid rgba(39, 174, 96, 0.4);
 }
 
-/* Reading mode: show additions inline without special formatting */
+/* Reading mode: additions inline */
 body.mode-reading .textcrit.add {
   position: static;
 }
 
 body.mode-reading .textcrit.add .add-text {
   color: inherit;
-  background: none; /* No background in reading mode */
-  padding: 0; /* No padding in reading mode */
+  background: none;
+  padding: 0;
+  border: none;
 }
 
 body.mode-reading .popup-add {
   display: none !important;
 }
 
-/* Diplomatic mode: keep existing popup behavior */
-body.mode-diplomatic .textcrit.add {
+/* Diplomatic mode: deletions */
+body.mode-diplomatic .textcrit.del .del-text {
+  text-decoration: line-through;
+  color: var(--accent-red);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* Enhanced popups */
+/* Note popups positioned at marker location */
+.popup-add,
+.popup-del,
+.popup-commentary,
+.popup-author {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-medium);
+  padding: 0.75rem 1rem;
+  max-width: 320px;
+  box-shadow: var(--shadow-medium);
+  font-size: var(--font-size-small);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: var(--line-height-base);
+  white-space: normal;
+  margin-top: 0.5rem;
+}
+
+.popup-add::before,
+.popup-del::before,
+.popup-commentary::before,
+.popup-author::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid var(--border-medium);
+}
+
+/* Ensure the note containers have relative positioning */
+.note.commentary,
+.note.author {
+  display: inline-block;
   position: relative;
+}
+
+/* Note toggles */
+.note-toggle,
+.note-author {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--font-size-small);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-small);
+  transition: all 0.2s ease;
+}
+
+.note-toggle:hover,
+.note-author:hover {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--text-primary);
+}
+
+.note-author {
+  color: var(--accent-red);
+}
+
+.note-author:hover {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+/* Author note popups */
+.note.author .popup-author {
+  border-left: 3px solid var(--accent-red);
+  background: linear-gradient(135deg, #fff 0%, rgba(231, 76, 60, 0.02) 100%);
+}
+
+/* Page breaks */
+.page-break {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 3rem 0;
+}
+
+.pb {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--font-size-small);
+  color: var(--text-muted);
+  margin: 2rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-medium);
+  text-align: center;
+}
+
+.pb a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pb a:hover {
+  text-decoration: underline;
+}
+
+/* Entry headers */
+.entry-head {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--font-size-large);
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.entry-head-inline {
+  font-weight: 400;
+  display: inline;
+}
+
+.entry-head-inline::after {
+  content: " ";
+}
+
+/* Index pages */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-medium);
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  background: var(--bg-accent);
+  border-color: var(--border-medium);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-light);
+}
+
+li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+li small {
+  color: var(--text-muted);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+li small a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+li small a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header, nav, main, footer {
+    padding: 0 1rem;
+  }
+  
+  .topbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  nav a {
+    margin-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .popup-add,
+  .popup-del,
+  .popup-commentary,
+  .popup-author {
+    max-width: 280px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .topbar,
+  .toggle,
+  .pb,
+  .popup-add,
+  .popup-del,
+  .popup-commentary,
+  .popup-author {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+}
+/* Show popups on hover for add/del elements */
+.textcrit.add:hover .popup-add,
+.textcrit.del:hover .popup-del {
   display: inline-block;
 }
 
-body.mode-diplomatic .textcrit.add:hover .popup-add {
-  display: inline-block;
+/* But hide add popups in reading mode */
+body.mode-reading .textcrit.add:hover .popup-add {
+  display: none !important;
 }
