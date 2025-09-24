@@ -482,3 +482,47 @@ li small a:hover {
 body.mode-reading .textcrit.add:hover .popup-add {
   display: none !important;
 }
+/* About page styling */
+.metadata dl,
+.manuscript dl,
+.publication dl,
+.statistics dl,
+.technical dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.metadata dt,
+.manuscript dt,
+.publication dt,
+.statistics dt,
+.technical dt {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.metadata dd,
+.manuscript dd,
+.publication dd,
+.statistics dd,
+.technical dd {
+  margin: 0;
+}
+
+.technical ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.technical li {
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}

@@ -26,13 +26,13 @@
                         <header>
                             <div class="topbar">
                                 <nav>
-                                    <a href="../diary/calendar.html">Diary</a>
-                                    <a href="../diary/all.html">All Entries</a>
-                                    <a href="../persons/index.html">Persons</a>
-                                    <a href="../works/index.html">Works</a>
-                                    <a href="../places/index.html">Places</a>
-                                    <a href="../organizations/index.html">Organizations</a>
-                                    <a href="../about.html">About</a>
+                                    <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                    <a href="../diary/all.html">Tagebuch gesamt</a>
+                                    <a href="../persons/index.html">Personen</a>
+                                    <a href="../works/index.html">Werke</a>
+                                    <a href="../places/index.html">Orte</a>
+                                    <a href="../organizations/index.html">Organisationen</a>
+                                    <a href="../about.html">Über diese Edition</a>
                                 </nav>
                                 <button id="toggle-view" class="toggle">Switch to Reading</button>
                             </div>
@@ -56,28 +56,28 @@
             </xsl:result-document>
         </xsl:for-each>
 
-        <!-- Stub calendar page; we'll build it properly in the next step -->
+        <!-- List of Entries -->
         <xsl:result-document href="diary/calendar.html" method="xhtml" indent="yes">
             <html lang="en">
                 <head>
                     <meta charset="utf-8"/>
-                    <title>Diary — Calendar</title>
+                    <title>Tagebuch Einträge</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
                 <body>
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../diary/calendar.html">Diary</a>
-                                <a href="../diary/all.html">All Entries</a>
-                                <a href="../persons/index.html">Persons</a>
-                                <a href="../works/index.html">Works</a>
-                                <a href="../places/index.html">Places</a>
-                                <a href="../organizations/index.html">Organizations</a>
-                                <a href="../about.html">About</a>
+                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="../diary/all.html">Tagebuch gesamt</a>
+                                <a href="../persons/index.html">Personen</a>
+                                <a href="../works/index.html">Werke</a>
+                                <a href="../places/index.html">Orte</a>
+                                <a href="../organizations/index.html">Organisationen</a>
+                                <a href="../about.html">Über diese Edition</a>
                             </nav>
                         </div>
-                        <h1>Diary — Entries</h1>
+                        <h1>Tagebuch Einträge</h1>
                     </header>
                     <main>
                         <ul>
@@ -104,24 +104,24 @@
             <html lang="de">
                 <head>
                     <meta charset="utf-8"/>
-                    <title>Berliner Tagebuch – Gesamtausgabe (Scroll)</title>
+                    <title>Tagebuch gesamt</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
                 <body class="mode-diplomatic">
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../diary/calendar.html">Diary</a>
-                                <a href="../diary/all.html">All Entries</a>
-                                <a href="../persons/index.html">Persons</a>
-                                <a href="../works/index.html">Works</a>
-                                <a href="../places/index.html">Places</a>
-                                <a href="../organizations/index.html">Organizations</a>
-                                <a href="../about.html">About</a>
+                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="../diary/all.html">Tagebuch gesamt</a>
+                                <a href="../persons/index.html">Personen</a>
+                                <a href="../works/index.html">Werke</a>
+                                <a href="../places/index.html">Orte</a>
+                                <a href="../organizations/index.html">Organisationen</a>
+                                <a href="../about.html">Über diese Edition</a>
                             </nav>
                             <button id="toggle-view" class="toggle">Switch to Reading</button>
                         </div>
-                        <h1>Gesamtausgabe (Scrollansicht)</h1>
+                        <h1>Tagebuch gesamt</h1>
                     </header>
 
                     <main class="diary-scroll">
@@ -140,23 +140,23 @@
             <html lang="de">
                 <head>
                     <meta charset="utf-8"/>
-                    <title>Index — Persons</title>
+                    <title>Index — Personen</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
                 <body>
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../diary/calendar.html">Diary</a>
-                                <a href="../diary/all.html">All Entries</a>
-                                <a href="../persons/index.html">Persons</a>
-                                <a href="../works/index.html">Works</a>
-                                <a href="../places/index.html">Places</a>
-                                <a href="../organizations/index.html">Organizations</a>
-                                <a href="../about.html">About</a>
+                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="../diary/all.html">Tagebuch gesamt</a>
+                                <a href="../persons/index.html">Personen</a>
+                                <a href="../works/index.html">Werke</a>
+                                <a href="../places/index.html">Orte</a>
+                                <a href="../organizations/index.html">Organisationen</a>
+                                <a href="../about.html">Über diese Edition</a>
                             </nav>
                         </div>
-                        <h1>Persons Index</h1>
+                        <h1>Personen Index</h1>
                     </header>
                     <main>
                         <ul>
@@ -228,23 +228,23 @@
             <html lang="de">
                 <head>
                     <meta charset="utf-8"/>
-                    <title>Index — Organizations</title>
+                    <title>Index — Organisationen</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
                 <body>
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../diary/calendar.html">Diary</a>
-                                <a href="../diary/all.html">All Entries</a>
-                                <a href="../persons/index.html">Persons</a>
-                                <a href="../works/index.html">Works</a>
-                                <a href="../places/index.html">Places</a>
-                                <a href="../organizations/index.html">Organizations</a>
-                                <a href="../about.html">About</a>
+                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="../diary/all.html">Tagebuch gesamt</a>
+                                <a href="../persons/index.html">Personen</a>
+                                <a href="../works/index.html">Werke</a>
+                                <a href="../places/index.html">Orte</a>
+                                <a href="../organizations/index.html">Organisationen</a>
+                                <a href="../about.html">Über diese Edition</a>
                             </nav>
                         </div>
-                        <h1>Organizations Index</h1>
+                        <h1>Organisationen Index</h1>
                     </header>
                     <main>
                         <ul>
@@ -296,23 +296,23 @@
             <html lang="de">
                 <head>
                     <meta charset="utf-8"/>
-                    <title>Index — Places</title>
+                    <title>Index — Orte</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
                 <body>
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../diary/calendar.html">Diary</a>
-                                <a href="../diary/all.html">All Entries</a>
-                                <a href="../persons/index.html">Persons</a>
-                                <a href="../works/index.html">Works</a>
-                                <a href="../places/index.html">Places</a>
-                                <a href="../organizations/index.html">Organizations</a>
-                                <a href="../about.html">About</a>
+                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="../diary/all.html">Tagebuch gesamt</a>
+                                <a href="../persons/index.html">Personen</a>
+                                <a href="../works/index.html">Werke</a>
+                                <a href="../places/index.html">Orte</a>
+                                <a href="../organizations/index.html">Organisationen</a>
+                                <a href="../about.html">Über diese Edition</a>
                             </nav>
                         </div>
-                        <h1>Places Index</h1>
+                        <h1>Orte Index</h1>
                     </header>
                     <main>
                         <ul>
@@ -371,23 +371,23 @@
             <html lang="de">
                 <head>
                     <meta charset="utf-8"/>
-                    <title>Index — Works</title>
+                    <title>Index — Werke</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
                 <body>
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../diary/calendar.html">Diary</a>
-                                <a href="../diary/all.html">All Entries</a>
-                                <a href="../persons/index.html">Persons</a>
-                                <a href="../works/index.html">Works</a>
-                                <a href="../places/index.html">Places</a>
-                                <a href="../organizations/index.html">Organizations</a>
-                                <a href="../about.html">About</a>
+                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="../diary/all.html">Tagebuch gesamt</a>
+                                <a href="../persons/index.html">Personen</a>
+                                <a href="../works/index.html">Werke</a>
+                                <a href="../places/index.html">Orte</a>
+                                <a href="../organizations/index.html">Organisationen</a>
+                                <a href="../about.html">Über diese Edition</a>
                             </nav>
                         </div>
-                        <h1>Works Index</h1>
+                        <h1>Werke Index</h1>
                     </header>
                     <main>
                         <ul>
@@ -435,7 +435,149 @@
                 </body>
             </html>
         </xsl:result-document>
-
+        <!-- ================= ABOUT PAGE ================= -->
+        <xsl:result-document href="about.html" method="xhtml" indent="yes">
+            <html lang="de">
+                <head>
+                    <meta charset="utf-8"/>
+                    <title>Über diese Edition</title>
+                    <link rel="stylesheet" href="css/style.css"/>
+                </head>
+                <body>
+                    <header>
+                        <div class="topbar">
+                            <nav>
+                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="../diary/all.html">Tagebuch gesamt</a>
+                                <a href="../persons/index.html">Personen</a>
+                                <a href="../works/index.html">Werke</a>
+                                <a href="../places/index.html">Orte</a>
+                                <a href="../organizations/index.html">Organisationen</a>
+                                <a href="../about.html">Über diese Edition</a>
+                            </nav>
+                        </div>
+                        <h1>Über diese Edition</h1>
+                    </header>
+                    <main>
+                        <section class="metadata">
+                            <h2>Source Document</h2>
+                            <dl>
+                                <dt>Title:</dt>
+                                <dd><xsl:value-of select="//tei:titleStmt/tei:title[@type='source']"/></dd>
+                                
+                                <dt>Uniform Title:</dt>
+                                <dd><xsl:value-of select="//tei:titleStmt/tei:title[@type='uniform']"/></dd>
+                                
+                                <dt>Author:</dt>
+                                <dd>
+                                    <xsl:value-of select="//tei:titleStmt/tei:author/tei:forename"/>
+                                    <xsl:text> </xsl:text>
+                                    <xsl:value-of select="//tei:titleStmt/tei:author/tei:surname"/>
+                                    <xsl:if test="//tei:titleStmt/tei:author/@ref">
+                                        <xsl:text> — </xsl:text>
+                                        <a href="{//tei:titleStmt/tei:author/@ref}" target="_blank">GND</a>
+                                    </xsl:if>
+                                </dd>
+                                
+                                <dt>Editor:</dt>
+                                <dd>
+                                    <xsl:value-of select="//tei:titleStmt/tei:editor/tei:forename"/>
+                                    <xsl:text> </xsl:text>
+                                    <xsl:value-of select="//tei:titleStmt/tei:editor/tei:surname"/>
+                                </dd>
+                            </dl>
+                        </section>
+                        
+                        <section class="manuscript">
+                            <h2>Manuscript Information</h2>
+                            <dl>
+                                <dt>Repository:</dt>
+                                <dd><xsl:value-of select="//tei:msIdentifier/tei:institution"/></dd>
+                                
+                                <dt>Location:</dt>
+                                <dd><xsl:value-of select="//tei:msIdentifier/tei:settlement/tei:placeName"/></dd>
+                                
+                                <dt>Collection:</dt>
+                                <dd><xsl:value-of select="//tei:msIdentifier/tei:collection"/></dd>
+                                
+                                <dt>Shelf Mark:</dt>
+                                <dd><xsl:value-of select="//tei:msIdentifier/tei:idno[@type='shelfmark']"/></dd>
+                                
+                                <xsl:if test="//tei:msIdentifier/tei:altIdentifier/tei:idno[@type='URI']">
+                                    <dt>Digital Resource:</dt>
+                                    <dd>
+                                        <a href="{//tei:msIdentifier/tei:altIdentifier/tei:idno[@type='URI']}" 
+                                            target="_blank">View in Repository</a>
+                                    </dd>
+                                </xsl:if>
+                            </dl>
+                        </section>
+                        
+                        <section class="publication">
+                            <h2>Publication Information</h2>
+                            <dl>
+                                <dt>Publisher:</dt>
+                                <dd><xsl:value-of select="//tei:publicationStmt/tei:publisher/tei:persName"/></dd>
+                                
+                                <dt>Publication Date:</dt>
+                                <dd><xsl:value-of select="//tei:publicationStmt/tei:date"/></dd>
+                                
+                                <dt>Publication Place:</dt>
+                                <dd><xsl:value-of select="//tei:publicationStmt/tei:pubPlace"/></dd>
+                                
+                                <dt>License:</dt>
+                                <dd>
+                                    <a href="{//tei:publicationStmt/tei:availability/tei:licence/@target}" 
+                                        target="_blank">
+                                        <xsl:value-of select="//tei:publicationStmt/tei:availability/tei:licence"/>
+                                    </a>
+                                </dd>
+                            </dl>
+                        </section>
+                        
+                        <section class="statistics">
+                            <h2>Edition Statistics</h2>
+                            <dl>
+                                <dt>Diary Entries:</dt>
+                                <dd><xsl:value-of select="count(//tei:div[@type='entry'])"/></dd>
+                                
+                                <dt>Persons Referenced:</dt>
+                                <dd><xsl:value-of select="count(//tei:listPerson/tei:person)"/></dd>
+                                
+                                <dt>Places Referenced:</dt>
+                                <dd><xsl:value-of select="count(//tei:listPlace/tei:place)"/></dd>
+                                
+                                <dt>Musical Works:</dt>
+                                <dd><xsl:value-of select="count(//tei:listBibl/tei:bibl)"/></dd>
+                                
+                                <dt>Organizations:</dt>
+                                <dd><xsl:value-of select="count(//tei:listOrg/tei:org)"/></dd>
+                            </dl>
+                        </section>
+                        
+                        <section class="technical">
+                            <h2>Technical Information</h2>
+                            <p>This digital edition was created using:</p>
+                            <ul>
+                                <li><strong>TEI P5</strong> for text encoding</li>
+                                <li><strong>XSLT 3.0</strong> for HTML transformation</li>
+                                <li><strong>CSS3</strong> for styling and responsive design</li>
+                                <li><strong>JavaScript</strong> for interactive features</li>
+                            </ul>
+                            
+                            <p>The edition offers two viewing modes:</p>
+                            <ul>
+                                <li><strong>Diplomatic mode</strong>: Shows all editorial apparatus including deletions, additions, and manuscript features</li>
+                                <li><strong>Reading mode</strong>: Provides a clean reading text with additions integrated and deletions hidden</li>
+                            </ul>
+                        </section>
+                    </main>
+                    
+                    <script src="js/toggle.js"/>
+                    <script src="js/notes.js"/>
+                </body>
+            </html>
+        </xsl:result-document>
     </xsl:template>
 
     <!-- ============ RENDERING TEMPLATES FOR ENTRY CONTENT ============ -->

@@ -4,28 +4,91 @@
   <meta charset="utf-8"/>
   <title>Arnold Schönberg – Berliner Tagebuch (1912)</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .hero-section {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      padding: 3rem 0;
+    }
+    
+    .manuscript-image {
+      flex: 0 0 400px;
+      height: 500px;
+      background-image: url('https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524845');
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--border-light);
+    }
+    
+    .hero-content {
+      flex: 1;
+      max-width: 500px;
+    }
+    
+    .hero-content h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+      
+      .manuscript-image {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+      }
+      
+      .hero-content h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="topbar">
       <nav>
-        <a href="diary/calendar.html">Diary (Calendar)</a>
-        <a href="diary/all.html">All Entries</a>
-        <a href="persons/index.html">Persons</a>
-        <a href="works/index.html">Works</a>
-        <a href="places/index.html">Places</a>
-        <a href="organizations/index.html">Organizations</a>
-        <a href="about.html">About</a>
+        <a href="diary/calendar.html">Tagebucheinträge</a>
+        <a href="diary/all.html">Tagebuch gesamt</a>
+        <a href="persons/index.html">Personen</a>
+        <a href="works/index.html">Werke</a>
+        <a href="places/index.html">Orte</a>
+        <a href="organizations/index.html">Organisationen</a>
+        <a href="about.html">Über diese Edition</a>
       </nav>
     </div>
-    <h1>Arnold Schönberg – <em>Berliner Tagebuch</em> (1912)</h1>
-  </header>
+      </header>
 
   <main>
-    <p>
-      Digital edition (TEI-based), published as a static site.  
-      Use the <a href="diary/calendar.html">calendar</a> or <a href="diary/all.html">scroll view</a> to browse entries.
-    </p>
+    <section class="hero-section">
+      <div class="manuscript-image"></div>
+      <div class="hero-content">
+        <h2>Arnold Schönberg – <em>Berliner Tagebuch</em> (1912)</h2>
+        <p>
+          Digitale Edition der Tagebuchaufzeichnungen Arnold Schönbergs aus seiner Berliner Zeit.
+        </p>
+      </div>
+    </section>
   </main>
 </body>
 </html>
