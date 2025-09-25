@@ -101,7 +101,7 @@
             </html>
         </xsl:result-document>
 
-        <!-- ================= ALL ENTRIES PAGE ================= -->
+        <!-- Replace the "ALL ENTRIES PAGE" section for facsimile-text synoptic view -->
         <xsl:result-document href="diary/all.html" method="xhtml" indent="yes">
             <html lang="de">
                 <head>
@@ -109,7 +109,7 @@
                     <title>Tagebuch gesamt</title>
                     <link rel="stylesheet" href="../css/style.css"/>
                 </head>
-                <body class="mode-diplomatic">
+                <body class="synoptical-view">
                     <header>
                         <div class="topbar">
                             <nav>
@@ -122,18 +122,64 @@
                                 <a href="../organizations/index.html">Organisationen</a>
                                 <a href="../about.html">Über diese Edition</a>
                             </nav>
-                            <button id="toggle-view" class="toggle">Switch to Reading</button>
+                            <div class="view-controls">
+                                <button id="toggle-synoptic" class="toggle active">Synoptische Ansicht</button>
+                                <button id="toggle-text" class="toggle">Nur Text</button>
+                                <button id="toggle-view" class="toggle">Switch to Reading</button>
+                            </div>
                         </div>
                         <h1>Tagebuch gesamt</h1>
                     </header>
-
-                    <main class="diary-scroll">
-                        <!-- Alles linear ausgeben -->
-                        <xsl:apply-templates select="//tei:text/tei:body/node()"/>
+                    
+                    <main class="diary-synoptic">
+                        <!-- Column headers -->
+                        <div class="column-headers">
+                            <div class="col-header facsimile">Faksimile</div>
+                            <div class="col-header transcription">Transkription</div>
+                        </div>
+                        
+                        <!-- Synoptic content -->
+                        <div class="synoptic-content">
+                            <!-- Process each page as a unit -->
+                            <xsl:for-each-group select="//tei:text/tei:body//node()" group-starting-with="tei:pb">
+                                <div class="page-unit">
+                                    <!-- Facsimile column -->
+                                    <div class="facsimile-column">
+                                        <xsl:if test="self::tei:pb">
+                                            <div class="facsimile-container">
+                                                <div class="page-label">Seite <xsl:value-of select="@n"/></div>
+                                                <img src="{@facs}" alt="Manuscript page {@n}" class="facsimile-image"/>
+                                            </div>
+                                        </xsl:if>
+                                    </div>
+                                    
+                                    <!-- Text column -->
+                                    <div class="text-column mode-diplomatic">
+                                        <div class="text-content">
+                                            <xsl:if test="self::tei:pb">
+                                                <div class="page-header">
+                                                    <strong>Seite <xsl:value-of select="@n"/></strong>
+                                                </div>
+                                            </xsl:if>
+                                            <!-- Apply templates to all nodes in this page group -->
+                                            <xsl:apply-templates select="current-group()[not(self::tei:pb)]"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </xsl:for-each-group>
+                        </div>
+                        
+                        <!-- Text-only view (hidden by default) -->
+                        <div class="text-only-content" style="display: none;">
+                            <div class="single-text mode-diplomatic">
+                                <xsl:apply-templates select="//tei:text/tei:body/node()"/>
+                            </div>
+                        </div>
                     </main>
-
+                    
                     <script src="../js/toggle.js"/>
                     <script src="../js/notes.js"/>
+                    <script src="../js/synoptic.js"/>
                 </body>
             </html>
         </xsl:result-document>
