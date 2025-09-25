@@ -492,6 +492,10 @@
                                     <xsl:value-of select="//tei:titleStmt/tei:editor/tei:forename"/>
                                     <xsl:text> </xsl:text>
                                     <xsl:value-of select="//tei:titleStmt/tei:editor/tei:surname"/>
+                                    <xsl:if test="//tei:titleStmt/tei:editor/@ref">
+                                        <xsl:text> — </xsl:text>
+                                        <a href="{//tei:titleStmt/tei:editor/@ref}" target="_blank">GND</a>
+                                    </xsl:if>
                                 </dd>
                             </dl>
                         </section>
@@ -633,9 +637,7 @@
             <!-- Internal reference (e.g. #p1) -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <xsl:variable name="target"
-                    select="//tei:listPerson/tei:person[@xml:id = $id]/tei:persName"/>
-                <a href="../persons/index.html#{$id}" class="person" title="{$target}">
+                <a href="../persons/index.html#{$id}" class="person">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
@@ -654,9 +656,7 @@
             <!-- Internal reference -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <xsl:variable name="target"
-                    select="//tei:listBibl/tei:bibl[@xml:id = $id]/tei:title"/>
-                <a href="../works/index.html#{$id}" class="work" title="{$target}">
+                <a href="../works/index.html#{$id}" class="work">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
@@ -675,9 +675,7 @@
             <!-- Internal reference -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <xsl:variable name="target"
-                    select="//tei:listPlace/tei:place[@xml:id = $id]/tei:placeName"/>
-                <a href="../places/index.html#{$id}" class="place" title="{$target}">
+                <a href="../places/index.html#{$id}" class="place">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
@@ -696,9 +694,7 @@
             <!-- Internal reference -->
             <xsl:when test="starts-with($ref, '#')">
                 <xsl:variable name="id" select="substring($ref, 2)"/>
-                <xsl:variable name="target"
-                    select="//tei:listOrg/tei:org[@xml:id = $id]/tei:orgName"/>
-                <a href="../organizations/index.html#{$id}" class="org" title="{$target}">
+                <a href="../organizations/index.html#{$id}" class="org">
                     <xsl:value-of select="."/>
                 </a>
             </xsl:when>
@@ -715,9 +711,9 @@
     <xsl:template match="tei:pb">
         <hr class="page-break"/>
         <div class="pb">
-            <strong>Page <xsl:value-of select="@n"/></strong>
+            <strong>Seite <xsl:value-of select="@n"/></strong>
             <xsl:text> — </xsl:text>
-            <a href="{@facs}" target="_blank">📄 Open facsimile</a>
+            <a href="{@facs}" target="_blank">📄 facsimile</a>
         </div>
     </xsl:template>
 
@@ -727,17 +723,23 @@
         <span class="note author" data-place="{@place}">
             <button class="note-toggle note-author">✎</button>
             <span class="popup-author">
-                Note by Schönberg, <xsl:value-of select="@place"/> margin: 
+                Anmerkung Schönberg, 
+                    <xsl:choose>
+                        <xsl:when test="@place = 'left'">linker</xsl:when>
+                        <xsl:when test="@place = 'right'">rechter</xsl:when>
+                        <xsl:when test="@place = 'top'">oberer</xsl:when>
+                        <xsl:when test="@place = 'bottom'">unterer</xsl:when>
+                        <xsl:otherwise><xsl:value-of select="@place"/></xsl:otherwise>
+                    </xsl:choose>
+                    Rand: 
                 <xsl:apply-templates select="node()"/>
             </span>
         </span>
     </xsl:template>
 
-
-
     <xsl:template match="tei:note[@type = 'commentary']">
         <span class="note commentary">
-            <button class="note-toggle">ℹ</button>
+            <button class="note-toggle">‡</button>
             <span class="popup-commentary">
                 <xsl:apply-templates/>
             </span>
@@ -750,7 +752,14 @@
             <span class="add-text">
                 <xsl:apply-templates/>
             </span>
-            <span class="popup-add"> Added (<xsl:value-of select="@place"/>) </span>
+            <span class="popup-add">
+                <xsl:choose>
+                    <xsl:when test="@place = 'above'">über der Zeile</xsl:when>
+                    <xsl:when test="@place = 'below'">unterhalb der Zeile</xsl:when>
+                    <xsl:when test="@place = 'inline'">innerhalb der Zeile</xsl:when>
+                    <xsl:otherwise><xsl:value-of select="@place"/></xsl:otherwise>
+                </xsl:choose>
+                hinzugefügt</span>
         </span>
     </xsl:template>
 
@@ -760,7 +769,13 @@
             <span class="del-text">
                 <xsl:apply-templates/>
             </span>
-            <span class="popup-del"> Deleted (<xsl:value-of select="@rend"/>) </span>
+            <span class="popup-del">Gelöscht (
+                <xsl:choose>
+                    <xsl:when test="@rend = 'strikethrough'">durchgestrichen</xsl:when>
+                    <xsl:when test="@rend = 'overwritten'">überschrieben</xsl:when>
+                    <xsl:otherwise><xsl:value-of select="@rend"/></xsl:otherwise>
+                </xsl:choose>
+                )</span>
         </span>
     </xsl:template>
 
