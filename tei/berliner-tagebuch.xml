@@ -13,6 +13,8 @@
                     <surname>Bleier</surname></editor>
             </titleStmt>
             <publicationStmt>
+                
+              
                 <publisher><persName>Katharina Bleier</persName></publisher>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by-nc-Sa/4.0">Creative
@@ -35,7 +37,8 @@
                                 >https://repo.schoenberg.at/urn:nbn:at:at-asc-T013485</idno>
                         </altIdentifier>
                     </msIdentifier>
-                </msDesc><listBibl>
+                </msDesc>
+                <listBibl>
                     <bibl xml:id="m1">
                         <author>
                             <persName ref="#p2">Ferruccio Busoni</persName>
@@ -47,29 +50,29 @@
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="https://d-nb.info/gnd/300139241">Pelleas und Melisande
-                            op. 5</title>
+                        <title type="music" ref="https://d-nb.info/gnd/300139241">Pelleas und
+                            Melisande op. 5</title>
                     </bibl>
                     <bibl xml:id="m3">
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/300197497">Streichquartett Nr. 2
-                            op. 10</title>
+                        <title type="music" ref="http://d-nb.info/gnd/300197497">Streichquartett Nr.
+                            2 op. 10</title>
                     </bibl>
                     <bibl xml:id="m4">
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/300139152">Gurrelieder für Soli,
-                            Chor und Orchester</title>
+                        <title type="music" ref="http://d-nb.info/gnd/300139152">Gurrelieder für
+                            Soli, Chor und Orchester</title>
                     </bibl>
                     <bibl xml:id="m5">
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/300417454">Acht Lieder für eine
-                            Singstimme und Klavier op. 6</title>
+                        <title type="music" ref="http://d-nb.info/gnd/300417454">Acht Lieder für
+                            eine Singstimme und Klavier op. 6</title>
                     </bibl>
                     <bibl xml:id="m6">
                         <author>
@@ -82,21 +85,22 @@
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/300139349">Fünf Orchesterstücke
-                            op. 16</title>
+                        <title type="music" ref="http://d-nb.info/gnd/300139349">Fünf
+                            Orchesterstücke op. 16</title>
                     </bibl>
                     <bibl xml:id="m8">
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/300139284">Streichquartett Nr. 1
-                            op. 7</title>
+                        <title type="music" ref="http://d-nb.info/gnd/300139284">Streichquartett Nr.
+                            1 op. 7</title>
                     </bibl>
                     <bibl xml:id="m9">
                         <author>
                             <persName ref="#p18">Gustav Mahler</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/30009809X">Symphonie Nr. 8</title>
+                        <title type="music" ref="http://d-nb.info/gnd/30009809X">Symphonie Nr.
+                            8</title>
                     </bibl>
                     <bibl xml:id="m10">
                         <author>
@@ -108,8 +112,9 @@
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/30013925X">Dreimal sieben Gedichte
-                            aus Albert Girauds &#8222;Lieder des Pierrot lunaire&#8220; op. 21</title>
+                        <title type="music" ref="http://d-nb.info/gnd/30013925X">Dreimal sieben
+                            Gedichte aus Albert Girauds &#8222;Lieder des Pierrot lunaire&#8220; op.
+                            21</title>
                     </bibl>
                     <bibl xml:id="m12">
                         <author>
@@ -122,311 +127,336 @@
                         <author>
                             <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/300201699">Vier Lieder für eine
-                            Singstimme und Klavier op. 2</title>
+                        <title type="music" ref="http://d-nb.info/gnd/300201699">Vier Lieder für
+                            eine Singstimme und Klavier op. 2</title>
                     </bibl>
                     <bibl xml:id="m19">
                         <author>
-                        <persName ref="#p40">Arnold Schönberg</persName>
+                            <persName ref="#p40">Arnold Schönberg</persName>
                         </author>
-                        <title type="music" ref="http://d-nb.info/gnd/300139136">Fünfzehn Gedichte aus
-                            &#8222;Das Buch der hängenden Gärten&#8220; von Stefan George op. 15</title>
+                        <title type="music" ref="http://d-nb.info/gnd/300139136">Fünfzehn Gedichte
+                            aus &#8222;Das Buch der hängenden Gärten&#8220; von Stefan George op.
+                            15</title>
                     </bibl>
                 </listBibl>
             </sourceDesc>
             <!-- physDesc objektbeschreibung -->
-        </fileDesc><profileDesc><particDesc><listPerson>
-                <person xml:id="p1">
-                    <persName ref="https://d-nb.info/gnd/116791357">Fried, Oskar</persName>
-                    <idno type="gnd">116791357</idno>
-                </person>
-                <person xml:id="p2">
-                    <persName ref="https://d-nb.info/gnd/118518011">Busoni, Ferruccio </persName>
-                    <idno type="gnd">118518011</idno>
-                </person>
-                <person xml:id="p3">
-                    <persName ref="https://d-nb.info/gnd/119436744">Koussevitzky, Sergej</persName>
-                    <idno type="gnd">119436744</idno>
-                </person>
-                <person xml:id="p4">
-                    <persName ref="https://d-nb.info/gnd/116934042">Gutmann, Emil</persName>
-                    <idno type="gnd">116934042</idno>
-                </person>
-                <person xml:id="p5">
-                    <persName ref="https://d-nb.info/gnd/142882690">Dieren, Bernhard van</persName>
-                    <idno type="gnd">142882690</idno>
-                </person>
-                <person xml:id="p6">
-                    <persName ref="https://d-nb.info/gnd/116755121">Hertzka, Emil</persName>
-                    <idno type="gnd">116755121</idno>
-                </person>
-                <person xml:id="p7">
-                    <persName ref="https://d-nb.info/gnd/118629786">Webern, Anton</persName>
-                    <idno type="gnd">118629786</idno>
-                </person>
-                <person xml:id="p8">
-                    <persName ref="https://d-nb.info/gnd/1018203141">Clark, Edward</persName>
-                    <idno type="gnd">1018203141</idno>
-                </person>
-                <person xml:id="p9">
-                    <persName ref="https://d-nb.info/gnd/116133767">Petri, Egon</persName>
-                    <idno type="gnd">116133767</idno>
-                </person>
-                <person xml:id="p10">
-                    <persName ref="https://d-nb.info/gnd/116790962">Marschalk, Max</persName>
-                    <idno type="gnd">116790962</idno>
-                </person>
-                <person xml:id="p11">
-                    <persName>Frau Eichberg<!-- check unklar: Bonnie Lee Eichberg?--></persName>
-                </person>
-                <person xml:id="p12">
-                    <persName ref="https://d-nb.info/gnd/116000902">Zweig, Fritz</persName>
-                    <idno type="gnd">116000902</idno>
-                </person>
-                <person xml:id="p13">
-                    <persName ref="https://d-nb.info/gnd/1073437310">Simon-Herlitz, Paula</persName>
-                    <idno type="gnd">1073437310</idno>
-                </person>
-                <person xml:id="p14">
-                    <persName ref="https://d-nb.info/gnd/116013729">Kämpf, Karl</persName>
-                    <idno type="gnd">116013729</idno>
-                </person>
-                <person xml:id="p15">
-                    <persName ref="https://d-nb.info/gnd/133474364">Winternitz-Dorda, Martha</persName>
-                    <idno type="gnd">133474364</idno>
-                </person>
-                <person xml:id="p16">
-                    <persName ref="https://d-nb.info/gnd/116608943">Rosé, Arnold</persName>
-                    <idno type="gnd">116608943</idno>
-                </person>
-                <person xml:id="p17">
-                    <persName ref="https://d-nb.info/gnd/119318628">Schönberg, Mathilde</persName>
-                    <idno type="gnd">119318628</idno>
-                </person>
-                <person xml:id="p18">
-                    <persName ref="https://d-nb.info/gnd/118576291">Mahler, Gustav</persName>
-                    <idno type="gnd">118576291</idno>
-                </person>
-                <person xml:id="p19">
-                    <persName ref="https://d-nb.info/gnd/117183482">Busoni, Gerda</persName>
-                    <idno type="gnd">117183482</idno>
-                </person>
-                <person xml:id="p20">
-                    <persName>Busoni, (Sohn)<!-- check unklar welcher: https://d-nb.info/gnd/127117601 oder https://d-nb.info/gnd/105070920--></persName>
-                </person>
-                <person xml:id="p21">
-                    <persName ref="https://d-nb.info/gnd/1013623088">Schönberg, Georg</persName>
-                    <idno type="gnd">1013623088</idno>
-                </person>
-                <person xml:id="p22">
-                    <persName ref="https://d-nb.info/gnd/1078437424">Closson, Louis</persName>
-                    <idno type="gnd">1078437424</idno>
-                </person>
-                <person xml:id="p23">
-                    <persName ref="https://d-nb.info/gnd/118953060">Steuermann, Eduard</persName>
-                    <idno type="gnd">118953060</idno>
-                </person>
-                <person xml:id="p24">
-                    <persName ref="https://d-nb.info/gnd/103802479">Grünberg, Louis</persName>
-                    <idno type="gnd">103802479</idno>
-                </person>
-                <person xml:id="p25">
-                    <persName>Perelmann, Leo<!-- check --></persName>
-                </person>
-                <person xml:id="p26">
-                    <persName>Balaban, Emanuel<!-- check https://d-nb.info/gnd/134842472  https://en.wikipedia.org/wiki/Emanuel_Balaban studierte in Deutschland wurde aber erst 1895 geb - zu jung?--></persName>
-                </person>
-                <person xml:id="p27">
-                    <persName ref="https://d-nb.info/gnd/1236288378">Werndorff, Etta</persName>
-                    <idno type="gnd">1236288378</idno>
-                </person>
-                <person xml:id="p28">
-                    <persName ref="https://d-nb.info/gnd/134788389">Buhlig, Richard</persName>
-                    <idno type="gnd">134788389</idno>
-                </person>
-                <person xml:id="p29">
-                    <persName ref="https://d-nb.info/gnd/118628879">Walter, Bruno</persName>
-                    <idno type="gnd">118628879</idno>
-                </person>
-                <person xml:id="p30">
-                    <persName ref="https://d-nb.info/gnd/119338920">Mengelberg, Willem</persName>
-                    <idno type="gnd">119338920</idno>
-                </person>
-                <person xml:id="p31">
-                    <persName ref="https://d-nb.info/gnd/116701471">Göhler, Karl Georg</persName>
-                    <idno type="gnd">116701471</idno>
-                </person>
-                <person xml:id="p32">
-                    <persName ref="https://d-nb.info/gnd/11863643X">Zemlinsky, Alexander</persName>
-                    <idno type="gnd">11863643X</idno>
-                </person>
-                <person xml:id="p33">
-                    <persName ref="https://d-nb.info/gnd/116968818">Zehme, Albertine</persName>
-                    <idno type="gnd">116968818</idno>
-                </person>
-                <person xml:id="p34">
-                    <persName ref="https://d-nb.info/gnd/118710281">Hempel, Frieda</persName>
-                    <idno type="gnd">118710281</idno>
-                </person>
-                <person xml:id="p35">
-                    <persName ref="https://d-nb.info/gnd/119025809">Blech, Leo</persName>
-                    <idno type="gnd">119025809</idno>
-                </person>
-                <person xml:id="p36">
-                    <persName ref="https://d-nb.info/gnd/118500694">Adler, Guido</persName>
-                    <idno type="gnd">118500694</idno>
-                </person>
-                <person xml:id="p37">
-                    <persName ref="https://d-nb.info/gnd/118619314">Strindberg, August</persName>
-                    <idno type="gnd">118619314</idno>
-                </person>
-                <person xml:id="p38">
-                    <persName ref="https://d-nb.info/gnd/133566625">Eichberg, Friedrich</persName>
-                    <idno type="gnd">133566625</idno>
-                </person>
-                <person xml:id="p39">
-                    <persName ref="https://d-nb.info/gnd/11857745X">Marc, Franz</persName>
-                    <idno type="gnd">11857745X</idno>
-                </person>
-                <person xml:id="p40">
-                    <persName ref="https://d-nb.info/gnd/118610023">Schönberg, Arnold</persName>
-                    <idno type="gnd">118610023</idno>
-                </person>
-                <person xml:id="p41">
-                    <persName ref="https://d-nb.info/gnd/119073226">Gerstl, Richard</persName>
-                    <idno type="gnd">119073226</idno>
-                </person>
-                <person xml:id="p42">
-                    <persName ref="https://d-nb.info/gnd/117411043">Winternitz, Arnold</persName>
-                    <idno type="gnd">117411043</idno>
-                </person>
-                <person xml:id="p43">
-                    <persName ref="https://d-nb.info/gnd/136859054">Marc-Schnür, Marie</persName>
-                    <idno type="gnd">136859054</idno>
-                </person>
-                <person xml:id="p44">
-                    <persName ref="https://d-nb.info/gnd/118870645">Cassirer, Paul</persName>
-                    <idno type="gnd">118870645</idno>
-                </person>
-                <person xml:id="p45">
-                    <persName ref="https://d-nb.info/gnd/11857423X">Loos, Adolf</persName>
-                    <idno type="gnd">11857423X</idno>
-                </person>
-                <person xml:id="p46">
-                    <persName ref="https://d-nb.info/gnd/118736426">Oppenheimer, Max</persName>
-                    <idno type="gnd">118736426</idno>
-                </person>
-                <person xml:id="p47">
-                    <persName ref="https://d-nb.info/gnd/118564722">Kokoschka, Oskar</persName>
-                    <idno type="gnd">118564722</idno>
-                </person>
-                <person xml:id="p48">
-                    <persName ref="https://d-nb.info/gnd/118559737">Kandinsky, Wassily</persName>
-                    <idno type="gnd">118559737</idno>
-                </person>
-                <person xml:id="p49">
-                    <persName ref="https://d-nb.info/gnd/119164086">Weber, Hans von</persName>
-                    <idno type="gnd">119164086</idno>
-                </person>
-                <person xml:id="p50">
-                    <persName ref="https://d-nb.info/gnd/11850553X">Bach, Johann Sebastian</persName>
-                    <idno type="gnd">11850553X</idno>
-                </person>
-                <person xml:id="p51">
-                    <persName ref="https://d-nb.info/gnd/117011789">Horwitz, Karl</persName>
-                    <idno type="gnd">117011789</idno>
-                </person><person xml:id="p52">
-                    <persName ref="https://d-nb.info/gnd/116897899">Hinrichsen, Henri</persName>
-                    <idno type="gnd">116897899</idno>
-                </person>
-            </listPerson>
-            <!-- ORGLIST -->
-            <listOrg>
-                <org xml:id="o1">
-                    <orgName ref="https://d-nb.info/gnd/4351303-7">C. F. Peters</orgName>
-                    <idno type="gnd">4351303-7</idno>
-                </org>
-                <org xml:id="o2">
-                    <orgName ref="https://d-nb.info/gnd/2045143-X">Universal-Edition</orgName>
-                    <idno type="gnd">2045143-X</idno>
-                </org>
-                <org xml:id="o4">
-                    <orgName ref="https://d-nb.info/dnbn/33021750X">G. Schirmer Inc.</orgName>
-                    <idno type="gnd">33021750X</idno>
-                </org>
-                <org xml:id="o5">
-                    <orgName ref="https://d-nb.info/gnd/42927-2">Akademischer Verband für Literatur
-                        und Musik</orgName>
-                    <idno type="gnd">42927-2</idno>
-                </org>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <listPerson>
+                    <person xml:id="p1">
+                        <persName ref="https://d-nb.info/gnd/116791357">Fried, Oskar</persName>
+                        <idno type="gnd">116791357</idno>
+                    </person>
+                    <person xml:id="p2">
+                        <persName ref="https://d-nb.info/gnd/118518011">Busoni, Ferruccio </persName>
+                        <idno type="gnd">118518011</idno>
+                    </person>
+                    <person xml:id="p3">
+                        <persName ref="https://d-nb.info/gnd/119436744">Koussevitzky,
+                            Sergej</persName>
+                        <idno type="gnd">119436744</idno>
+                    </person>
+                    <person xml:id="p4">
+                        <persName ref="https://d-nb.info/gnd/116934042">Gutmann, Emil</persName>
+                        <idno type="gnd">116934042</idno>
+                    </person>
+                    <person xml:id="p5">
+                        <persName ref="https://d-nb.info/gnd/142882690">Dieren, Bernhard
+                            van</persName>
+                        <idno type="gnd">142882690</idno>
+                    </person>
+                    <person xml:id="p6">
+                        <persName ref="https://d-nb.info/gnd/116755121">Hertzka, Emil</persName>
+                        <idno type="gnd">116755121</idno>
+                    </person>
+                    <person xml:id="p7">
+                        <persName ref="https://d-nb.info/gnd/118629786">Webern, Anton</persName>
+                        <idno type="gnd">118629786</idno>
+                    </person>
+                    <person xml:id="p8">
+                        <persName ref="https://d-nb.info/gnd/1018203141">Clark, Edward</persName>
+                        <idno type="gnd">1018203141</idno>
+                    </person>
+                    <person xml:id="p9">
+                        <persName ref="https://d-nb.info/gnd/116133767">Petri, Egon</persName>
+                        <idno type="gnd">116133767</idno>
+                    </person>
+                    <person xml:id="p10">
+                        <persName ref="https://d-nb.info/gnd/116790962">Marschalk, Max</persName>
+                        <idno type="gnd">116790962</idno>
+                    </person>
+                    <person xml:id="p11">
+                        <persName>Frau Eichberg<!-- check unklar: Bonnie Lee Eichberg?--></persName>
+                    </person>
+                    <person xml:id="p12">
+                        <persName ref="https://d-nb.info/gnd/116000902">Zweig, Fritz</persName>
+                        <idno type="gnd">116000902</idno>
+                    </person>
+                    <person xml:id="p13">
+                        <persName ref="https://d-nb.info/gnd/1073437310">Simon-Herlitz,
+                            Paula</persName>
+                        <idno type="gnd">1073437310</idno>
+                    </person>
+                    <person xml:id="p14">
+                        <persName ref="https://d-nb.info/gnd/116013729">Kämpf, Karl</persName>
+                        <idno type="gnd">116013729</idno>
+                    </person>
+                    <person xml:id="p15">
+                        <persName ref="https://d-nb.info/gnd/133474364">Winternitz-Dorda,
+                            Martha</persName>
+                        <idno type="gnd">133474364</idno>
+                    </person>
+                    <person xml:id="p16">
+                        <persName ref="https://d-nb.info/gnd/116608943">Rosé, Arnold</persName>
+                        <idno type="gnd">116608943</idno>
+                    </person>
+                    <person xml:id="p17">
+                        <persName ref="https://d-nb.info/gnd/119318628">Schönberg,
+                            Mathilde</persName>
+                        <idno type="gnd">119318628</idno>
+                    </person>
+                    <person xml:id="p18">
+                        <persName ref="https://d-nb.info/gnd/118576291">Mahler, Gustav</persName>
+                        <idno type="gnd">118576291</idno>
+                    </person>
+                    <person xml:id="p19">
+                        <persName ref="https://d-nb.info/gnd/117183482">Busoni, Gerda</persName>
+                        <idno type="gnd">117183482</idno>
+                    </person>
+                    <person xml:id="p20">
+                        <persName>Busoni,
+                            (Sohn)<!-- check unklar welcher: https://d-nb.info/gnd/127117601 oder https://d-nb.info/gnd/105070920--></persName>
+                    </person>
+                    <person xml:id="p21">
+                        <persName ref="https://d-nb.info/gnd/1013623088">Schönberg, Georg</persName>
+                        <idno type="gnd">1013623088</idno>
+                    </person>
+                    <person xml:id="p22">
+                        <persName ref="https://d-nb.info/gnd/1078437424">Closson, Louis</persName>
+                        <idno type="gnd">1078437424</idno>
+                    </person>
+                    <person xml:id="p23">
+                        <persName ref="https://d-nb.info/gnd/118953060">Steuermann,
+                            Eduard</persName>
+                        <idno type="gnd">118953060</idno>
+                    </person>
+                    <person xml:id="p24">
+                        <persName ref="https://d-nb.info/gnd/103802479">Grünberg, Louis</persName>
+                        <idno type="gnd">103802479</idno>
+                    </person>
+                    <person xml:id="p25">
+                        <persName>Perelmann, Leo<!-- check --></persName>
+                    </person>
+                    <person xml:id="p26">
+                        <persName>Balaban,
+                            Emanuel<!-- check https://d-nb.info/gnd/134842472  https://en.wikipedia.org/wiki/Emanuel_Balaban studierte in Deutschland wurde aber erst 1895 geb - zu jung?--></persName>
+                    </person>
+                    <person xml:id="p27">
+                        <persName ref="https://d-nb.info/gnd/1236288378">Werndorff, Etta</persName>
+                        <idno type="gnd">1236288378</idno>
+                    </person>
+                    <person xml:id="p28">
+                        <persName ref="https://d-nb.info/gnd/134788389">Buhlig, Richard</persName>
+                        <idno type="gnd">134788389</idno>
+                    </person>
+                    <person xml:id="p29">
+                        <persName ref="https://d-nb.info/gnd/118628879">Walter, Bruno</persName>
+                        <idno type="gnd">118628879</idno>
+                    </person>
+                    <person xml:id="p30">
+                        <persName ref="https://d-nb.info/gnd/119338920">Mengelberg,
+                            Willem</persName>
+                        <idno type="gnd">119338920</idno>
+                    </person>
+                    <person xml:id="p31">
+                        <persName ref="https://d-nb.info/gnd/116701471">Göhler, Karl
+                            Georg</persName>
+                        <idno type="gnd">116701471</idno>
+                    </person>
+                    <person xml:id="p32">
+                        <persName ref="https://d-nb.info/gnd/11863643X">Zemlinsky,
+                            Alexander</persName>
+                        <idno type="gnd">11863643X</idno>
+                    </person>
+                    <person xml:id="p33">
+                        <persName ref="https://d-nb.info/gnd/116968818">Zehme, Albertine</persName>
+                        <idno type="gnd">116968818</idno>
+                    </person>
+                    <person xml:id="p34">
+                        <persName ref="https://d-nb.info/gnd/118710281">Hempel, Frieda</persName>
+                        <idno type="gnd">118710281</idno>
+                    </person>
+                    <person xml:id="p35">
+                        <persName ref="https://d-nb.info/gnd/119025809">Blech, Leo</persName>
+                        <idno type="gnd">119025809</idno>
+                    </person>
+                    <person xml:id="p36">
+                        <persName ref="https://d-nb.info/gnd/118500694">Adler, Guido</persName>
+                        <idno type="gnd">118500694</idno>
+                    </person>
+                    <person xml:id="p37">
+                        <persName ref="https://d-nb.info/gnd/118619314">Strindberg,
+                            August</persName>
+                        <idno type="gnd">118619314</idno>
+                    </person>
+                    <person xml:id="p38">
+                        <persName ref="https://d-nb.info/gnd/133566625">Eichberg,
+                            Friedrich</persName>
+                        <idno type="gnd">133566625</idno>
+                    </person>
+                    <person xml:id="p39">
+                        <persName ref="https://d-nb.info/gnd/11857745X">Marc, Franz</persName>
+                        <idno type="gnd">11857745X</idno>
+                    </person>
+                    <person xml:id="p40">
+                        <persName ref="https://d-nb.info/gnd/118610023">Schönberg, Arnold</persName>
+                        <idno type="gnd">118610023</idno>
+                    </person>
+                    <person xml:id="p41">
+                        <persName ref="https://d-nb.info/gnd/119073226">Gerstl, Richard</persName>
+                        <idno type="gnd">119073226</idno>
+                    </person>
+                    <person xml:id="p42">
+                        <persName ref="https://d-nb.info/gnd/117411043">Winternitz,
+                            Arnold</persName>
+                        <idno type="gnd">117411043</idno>
+                    </person>
+                    <person xml:id="p43">
+                        <persName ref="https://d-nb.info/gnd/136859054">Marc-Schnür,
+                            Marie</persName>
+                        <idno type="gnd">136859054</idno>
+                    </person>
+                    <person xml:id="p44">
+                        <persName ref="https://d-nb.info/gnd/118870645">Cassirer, Paul</persName>
+                        <idno type="gnd">118870645</idno>
+                    </person>
+                    <person xml:id="p45">
+                        <persName ref="https://d-nb.info/gnd/11857423X">Loos, Adolf</persName>
+                        <idno type="gnd">11857423X</idno>
+                    </person>
+                    <person xml:id="p46">
+                        <persName ref="https://d-nb.info/gnd/118736426">Oppenheimer, Max</persName>
+                        <idno type="gnd">118736426</idno>
+                    </person>
+                    <person xml:id="p47">
+                        <persName ref="https://d-nb.info/gnd/118564722">Kokoschka, Oskar</persName>
+                        <idno type="gnd">118564722</idno>
+                    </person>
+                    <person xml:id="p48">
+                        <persName ref="https://d-nb.info/gnd/118559737">Kandinsky,
+                            Wassily</persName>
+                        <idno type="gnd">118559737</idno>
+                    </person>
+                    <person xml:id="p49">
+                        <persName ref="https://d-nb.info/gnd/119164086">Weber, Hans von</persName>
+                        <idno type="gnd">119164086</idno>
+                    </person>
+                    <person xml:id="p50">
+                        <persName ref="https://d-nb.info/gnd/11850553X">Bach, Johann
+                            Sebastian</persName>
+                        <idno type="gnd">11850553X</idno>
+                    </person>
+                    <person xml:id="p51">
+                        <persName ref="https://d-nb.info/gnd/117011789">Horwitz, Karl</persName>
+                        <idno type="gnd">117011789</idno>
+                    </person>
+                    <person xml:id="p52">
+                        <persName ref="https://d-nb.info/gnd/116897899">Hinrichsen, Henri</persName>
+                        <idno type="gnd">116897899</idno>
+                    </person>
+                </listPerson>
+                <!-- ORGLIST -->
+                <listOrg>
+                    <org xml:id="o1">
+                        <orgName ref="https://d-nb.info/gnd/4351303-7">C. F. Peters</orgName>
+                        <idno type="gnd">4351303-7</idno>
+                    </org>
+                    <org xml:id="o2">
+                        <orgName ref="https://d-nb.info/gnd/2045143-X">Universal-Edition</orgName>
+                        <idno type="gnd">2045143-X</idno>
+                    </org>
+                    <org xml:id="o4">
+                        <orgName ref="https://d-nb.info/dnbn/33021750X">G. Schirmer Inc.</orgName>
+                        <idno type="gnd">33021750X</idno>
+                    </org>
+                    <org xml:id="o5">
+                        <orgName ref="https://d-nb.info/gnd/42927-2">Akademischer Verband für
+                            Literatur und Musik</orgName>
+                        <idno type="gnd">42927-2</idno>
+                    </org>
 
-                <org xml:id="o9">
-                    <orgName ref="https://d-nb.info/gnd/106428518X">Tischer &amp;
-                        Jagenberg</orgName>
-                    <idno type="gnd">106428518X</idno>
-                </org>
-            </listOrg></particDesc>
+                    <org xml:id="o9">
+                        <orgName ref="https://d-nb.info/gnd/106428518X">Tischer &amp;
+                            Jagenberg</orgName>
+                        <idno type="gnd">106428518X</idno>
+                    </org>
+                </listOrg>
+            </particDesc>
             <!-- PLACELIST -->
-            <settingDesc><listPlace>
-                <place xml:id="pl1">
-                    <placeName ref="https://d-nb.info/gnd/106428518X">St. Petersburg</placeName>
+            <settingDesc>
+                <listPlace>
+                    <place xml:id="pl1">
+                        <placeName ref="https://d-nb.info/gnd/106428518X">St. Petersburg</placeName>
 
-                    <location>
-                        <geo>59.93073501457162 30.363842268494185</geo>
-                    </location>
-                </place>
-                <place xml:id="pl2">
-                    <placeName ref="https://d-nb.info/gnd/4074987-3">Moskau</placeName>
-                    <location>
-                        <geo>55.7504461 37.6174943</geo>
-                    </location>
-                </place>
-                <place xml:id="pl4">
-                    <placeName ref="https://d-nb.info/gnd/4005728-8">Berlin</placeName>
-                    <location>
-                        <geo>52.5170365 13.3888599</geo>
-                    </location>
-                </place>
-                <place xml:id="pl5">
-                    <placeName ref="https://d-nb.info/gnd/4066009-6">Wien</placeName>
-                    <location>
-                        <geo>48.2083537 16.3725042</geo>
-                    </location>
-                </place>
-                <place xml:id="pl6">
-                    <placeName ref="https://d-nb.info/gnd/4074335-4">London</placeName>
-                    <location>
-                        <geo>51.5073219 -0.1276474</geo>
-                    </location>
-                </place>
-                <place xml:id="pl7">
-                    <placeName ref="https://d-nb.info/gnd/4035206-7">Leipzig</placeName>
-                    <location>
-                        <geo>51.3406321 12.3747329</geo>
-                    </location>
-                </place>
-                <place xml:id="pl8">
-                    <placeName ref="https://d-nb.info/gnd/4012995-0">Dresden</placeName>
-                    <location>
-                        <geo>51.0493286 13.7381437</geo>
-                    </location>
-                </place>
-                <place xml:id="pl9">
-                    <placeName ref="https://d-nb.info/gnd/4008216-7">Breslau</placeName>
-                    <location>
-                        <geo>51.1089776 17.0326689</geo>
-                    </location>
-                </place>
-                <place xml:id="pl10">
-                    <placeName ref="https://d-nb.info/gnd/4076310-9">Prag</placeName>
-                    <location>
-                        <geo>50.0874654 14.4212535</geo>
-                    </location>
-                </place>
-            </listPlace></settingDesc>
+                        <location>
+                            <geo>59.93073501457162 30.363842268494185</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl2">
+                        <placeName ref="https://d-nb.info/gnd/4074987-3">Moskau</placeName>
+                        <location>
+                            <geo>55.7504461 37.6174943</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl4">
+                        <placeName ref="https://d-nb.info/gnd/4005728-8">Berlin</placeName>
+                        <location>
+                            <geo>52.5170365 13.3888599</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl5">
+                        <placeName ref="https://d-nb.info/gnd/4066009-6">Wien</placeName>
+                        <location>
+                            <geo>48.2083537 16.3725042</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl6">
+                        <placeName ref="https://d-nb.info/gnd/4074335-4">London</placeName>
+                        <location>
+                            <geo>51.5073219 -0.1276474</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl7">
+                        <placeName ref="https://d-nb.info/gnd/4035206-7">Leipzig</placeName>
+                        <location>
+                            <geo>51.3406321 12.3747329</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl8">
+                        <placeName ref="https://d-nb.info/gnd/4012995-0">Dresden</placeName>
+                        <location>
+                            <geo>51.0493286 13.7381437</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl9">
+                        <placeName ref="https://d-nb.info/gnd/4008216-7">Breslau</placeName>
+                        <location>
+                            <geo>51.1089776 17.0326689</geo>
+                        </location>
+                    </place>
+                    <place xml:id="pl10">
+                        <placeName ref="https://d-nb.info/gnd/4076310-9">Prag</placeName>
+                        <location>
+                            <geo>50.0874654 14.4212535</geo>
+                        </location>
+                    </place>
+                </listPlace>
+            </settingDesc>
             <!-- WORKLIST -->
-            </profileDesc>
-                <revisionDesc>
+        </profileDesc>
+        <revisionDesc>
             <change><date when="2025-09-06">korr</date></change>
         </revisionDesc>
     </teiHeader>
@@ -453,9 +483,14 @@
                     abgleiten. Nachher <persName ref="#p3">Kussiewitzki</persName> kennen gelernt.
                         <persName ref="#p4">Guttmann</persName> mich zu ihm geschleppt. Er will im
                         <del rend="strikethrough">he</del> nächsten Jahr <title type="music"
-                        ref="#m2">Pelleas</title> in <placeName ref="#pl1">Petersburg</placeName>
-                    und <placeName ref="#pl2">Moskau</placeName> aufführen. Wäre sehr schön,
-                    hoffentlich.</p>
+                        ref="#m2">Pelleas</title> in <placeName ref="#pl1"
+                        >Petersburg</placeName><note type="commentary"><date when="1912-12-21">21.
+                                Dezember 1912</date>, <placeName key="place.10.12">St.
+                                Petersburg</placeName>, Saal der Petersburger
+                            Adelsversammlung; Programm 21. Dezember 1912 (<ref
+                                target="https://archive.schoenberg.at/resources/?r=5533">ASCI
+                                CP5533</ref>).<!-- event 194 --></note> und <placeName ref="#pl2">Moskau</placeName>
+                    aufführen. Wäre sehr schön, hoffentlich.</p>
                 <p>Immerhin beginnt doch heuer das Ausland sehr intensiv sich mit mir zu befassen.
                     In 2 Wochen sagt <persName ref="#p3">K.</persName> soll in <placeName ref="#pl1"
                         >Petersburg</placeName> überdies mein <title type="music" ref="#m3">II.
@@ -471,40 +506,74 @@
                         >Herzka</persName> strahlte! – Im Konzert auch <persName ref="#p9"
                         >Petri</persName> gesprochen. Weichlich. Soll meine <title type="music"
                         ref="#m5">Lieder</title> und <title type="music" ref="#m6"
-                        >Klavierstücke</title> aufführen (am <date when="1912-01-28">28.</date>).
-                    Ohne mir direkt zu missfallen, gefällt er mir – wenig. <persName ref="#p2"
-                        >Busoni</persName> gefragt ob er in <title type="music" ref="#m7"
-                        >Orchesterstücken</title> Klavierpart nehmen will. Abgelehnt: keine Zeit
-                    (offenbar keine Lust!) Infolgedessen: <persName ref="#p9">Petri</persName> auch
-                    keine Lust. Ein Meisterchen! Werde andere nehmen.</p>
+                        >Klavierstücke</title> aufführen (am <date when="1912-01-28"
+                        >28.</date>)<note type="commentary">Das für <date when="1912-01-28">28.
+                                Jänner</date> anberaumte Konzert wurde wegen Verhinderung der
+                            Sängerin auf <date when="1912-02-04">4. Februar</date> verschoben. Im
+                            Harmonium-Saal in <placeName ref="#pl4">Berlin</placeName> spielten
+                                <persName ref="#p15">Martha Winternitz-Dorda</persName> (Gesang),
+                                <persName ref="#p7">Anton Webern</persName> (Harmonium), <persName
+                                ref="#p22">Louis Closson</persName> (Klavier), <persName ref="#p23"
+                                >Eduard Steuermann</persName> (Klavier), <persName ref="#p24">Louis
+                                Grünberg</persName> (Klavier, Celesta) und Max Saal
+                            (Harfe); Programm 4. Februar 1912 (<ref
+                                target="https://archive.schoenberg.at/resources/?r=5513">ASCI
+                                CP5513</ref>). <persName ref="#p40">Arnold Schönberg</persName>
+                            war im Herbst <date when="1912-09">1911</date> von <placeName ref="#pl5"
+                                >Wien</placeName> nach <placeName ref="#pl4">Berlin</placeName>
+                            übersiedelt und organisierte ein Porträt-Konzert, um sich dort
+                            musikalisch einzuführen.</note>. Ohne mir direkt zu missfallen,
+                    gefällt er mir – wenig. <persName ref="#p2">Busoni</persName> gefragt ob er in
+                        <title type="music" ref="#m7">Orchesterstücken</title> Klavierpart nehmen
+                    will. Abgelehnt: keine Zeit (offenbar keine Lust!) Infolgedessen: <persName
+                        ref="#p9">Petri</persName> auch keine Lust. Ein Meisterchen! Werde andere
+                    nehmen.</p>
             </div>
 
             <div type="entry" n="2">
                 <head>
                     <date when="1912-01-21">21. Jänner (Sonntag)</date>
                 </head>
-                <p>Heute angenehme Nachrichten per Post (seit langem die ersten): <orgName ref="#o1"
-                        >Peters</orgName> nimmt <title type="music" ref="#m7"
-                        >Orchesterstücke</title>. Honorar niedrig! Aber <orgName ref="#o1"
-                        >Peters-Edition</orgName>! Das entscheidet. Und gedruckt! <persName
-                            ref="#p10">Marschalk</persName> meldet sich wieder <note type="commentary">Schönberg bezieht sich auf seine Korrespondenz mit seinem ersten VErleger Max Marschalk <ref target="https://schoenberg-ue.at/letters/letter.17618?ref=index.html">Verlag Dreililien an Arnold Schönberg, 2. Jänner 1912</ref></note>. Der hat Hinter=Gründe!
-                    Offenbar hat er sich mit <persName ref="#p6">Herzka</persName> über meine <hi
-                        rend="underline">und</hi> seine Sachen auseinandergesetzt. Habe <persName
-                        ref="#p6">Herzka</persName> wegen Druck der 5 freien Werke zum letzten mal
-                    gefragt. Gleichzeitig <orgName ref="#o9">Tischer und Jagenberg</orgName>
-                    angefragt ob Sie sie haben wollen. Ich glaube nicht, damit ein Unrecht zu tun,
-                    da ich nicht die Absicht habe, einen durch den andern zu überbieten. Sondern im
-                    Gegenteil: Ich habe von <persName ref="#p6">Herzka</persName> weniger verlangt
-                    und werde trotzdem ihm die Sachen geben ohne auf <orgName ref="#o9">T. und
-                        J.</orgName> zu warten. Also nur um Zeit zu gewinnen. – <del
-                        rend="overwritten">Nach</del>Vormittag unangenehme Nachricht: Frau <persName
-                        ref="#p13">Simon-Herlitz</persName> spielt nicht den Harmonium-Part in
-                    meinem Konzert. Empfiehlt <persName ref="#p14">Kaempf</persName>. Bös, im
-                    letzten Moment jemanden suchen zu müssen. Uebrigens <pb n="2"
-                        facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524862"/>Noch immer
-                    keine Zusage von der <persName ref="#p15">Winternitz</persName>. Dann nachmittag
-                    wieder unangenehmes. <persName ref="#p7">Webern</persName> wird am <date
-                        when="1912-03-05">5. März</date> nicht in <del rend="strikethrough">Wi</del>
+                <p>Heute angenehme Nachrichten<note type="commentary">C.F. Peters an Arnold Schönberg
+                        20. Januar 1912 (<ref
+                            target="https://repo.schoenberg.at/urn:nbn:at:at-asc-B149286">ASCC
+                            14928</ref>). Da <persName ref="#p40">Schönbergs</persName> Hauptverlag
+                            <orgName ref="#o2">Universal-Edition</orgName> nicht alle Werke im
+                        gewünschten Tempo publizieren konnte, hatte sich <persName ref="#p40"
+                            >Schönberg</persName> mit Verlagsdirektor <persName ref="#p6"
+                            >Hertzka</persName> darauf verständigt, die <title type="music"
+                            ref="#m7">Orchesterstücke op. 6</title> bei einem anderen Verlag
+                        herauszugeben. Die Überlassung an den namhaften Verlag <orgName ref="#o1"
+                            >C.F. Peters</orgName> sah man weniger als selbstschädigende
+                        Konkurrenzsituation, denn als Möglichkeit, die Reputation zu steigern (siehe
+                        Briefwechsel Arnold Schönberg – Universal-Edition)</note> per Post (seit
+                    langem die ersten): <orgName ref="#o1">Peters</orgName> nimmt <title
+                        type="music" ref="#m7">Orchesterstücke</title>. Honorar niedrig! Aber
+                        <orgName ref="#o1">Peters-Edition</orgName>! Das entscheidet. Und gedruckt!
+                        <persName ref="#p10">Marschalk</persName> meldet sich wieder <note
+                        type="commentary"><persName ref="#p40">Schönberg</persName> bezieht sich auf
+                        seine Korrespondenz mit seinem ersten Verleger <persName ref="p10">Max
+                            Marschalk</persName>
+                        <ref target="https://schoenberg-ue.at/letters/letter.17618?ref=index.html"
+                            >Verlag Dreililien an Arnold Schönberg, 2. Jänner 1912</ref></note>. Der
+                    hat Hinter=Gründe! Offenbar hat er sich mit <persName ref="#p6"
+                        >Herzka</persName> über meine <hi rend="underline">und</hi> seine Sachen
+                    auseinandergesetzt. Habe <persName ref="#p6">Herzka</persName> wegen Druck der 5
+                    freien Werke zum letzten mal gefragt. Gleichzeitig <orgName ref="#o9">Tischer
+                        und Jagenberg</orgName> angefragt ob Sie sie haben wollen. Ich glaube nicht,
+                    damit ein Unrecht zu tun, da ich nicht die Absicht habe, einen durch den andern
+                    zu überbieten. Sondern im Gegenteil: Ich habe von <persName ref="#p6"
+                        >Herzka</persName> weniger verlangt und werde trotzdem ihm die Sachen geben
+                    ohne auf <orgName ref="#o9">T. und J.</orgName> zu warten. Also nur um Zeit zu
+                    gewinnen. – <del rend="overwritten">Nach</del>Vormittag unangenehme Nachricht:
+                    Frau <persName ref="#p13">Simon-Herlitz</persName> spielt nicht den
+                    Harmonium-Part in meinem Konzert. Empfiehlt <persName ref="#p14"
+                        >Kaempf</persName>. Bös, im letzten Moment jemanden suchen zu müssen.
+                    Uebrigens <pb n="2" facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524862"
+                    />Noch immer keine Zusage von der <persName ref="#p15">Winternitz</persName>.
+                    Dann nachmittag wieder unangenehmes. <persName ref="#p7">Webern</persName> wird
+                    am <date when="1912-03-05">5. März</date> nicht in <del rend="strikethrough"
+                        >Wi</del>
                     <placeName ref="#pl4">Berlin</placeName> sein, wenn <persName ref="#p16"
                         >Rosé</persName> hier mein <title type="music" ref="#m8">I. Quartett</title>
                     spielt. Tut mir leid, weil der einzige Freund der das Werk kennt, der einzige
@@ -514,36 +583,44 @@
                     er doch nicht so ausschließlich an mir hängt, wie er gerne glauben machen
                     möchte. Abends Diskussion darüber mit <persName ref="#p17">Mathilde</persName>.
                     Resultat davon: wir sind halb und halb bös. Natürlich geht sie viel zu weit;
-                    denn sie hat aus gewissen Gründen (<persName ref="#p41">G</persName>) ein
-                    Bedürfnis dem <persName ref="#p7">Webern</persName> eins am Zeug zu flicken. Ich
-                    hielt ihr vor, dass ich selber mich gegen <persName ref="#p18">Mahler</persName>
-                    eigentlich oft nicht besser aufgeführt habe; dass Eltern gegen Kinder, Kinder
-                    gegen Eltern sich schlecht benehmen. Dass gut eben eine Abstraktion ist und
-                    nichts Absolutes. Dass es Absolut gute und tadellose Menschen nicht giebt. Und
-                    dass ich nicht vergessen will, in wie vielen andern Fällen sich <persName
-                        ref="#p7">Webern</persName> ausgezeichnet zu mir benimmt. Aber das will sie
-                    nicht einsehen. Sie bleibt starr bei ihrer Behauptung und hört kaum zu. –––</p>
+                    denn sie hat aus gewissen Gründen (<persName ref="#p41">G</persName>)<note
+                        type="commentary"><date when="1907">1907</date>/08 hatte <persName ref="#p17"
+                            >Mathilde Schönberg</persName> eine Affäre mit dem jungen Maler Richard
+                        Gerstl. Als diese im <date when="1908-08">Sommer 1908</date> im gemeinsamen
+                        Urlaub am Traunsee aufflog, flüchteten <persName ref="#p17"
+                            >Mathilde</persName> und Gerstl nach Nußdorf. <persName ref="#p7">Anton
+                            Webern</persName> fuhr ihnen nach und holte <persName ref="#p17"
+                            >Mathilde</persName> zurück. Der in weiterer Folge geächtete und
+                        isolierte Gerstl beging im <date when="1908-11">November 1908</date>
+                        Selbstmord.</note> ein Bedürfnis dem <persName ref="#p7">Webern</persName>
+                    eins am Zeug zu flicken. Ich hielt ihr vor, dass ich selber mich gegen <persName
+                        ref="#p18">Mahler</persName> eigentlich oft nicht besser aufgeführt habe;
+                    dass Eltern gegen Kinder, Kinder gegen Eltern sich schlecht benehmen. Dass gut
+                    eben eine Abstraktion ist und nichts Absolutes. Dass es Absolut gute und
+                    tadellose Menschen nicht giebt. Und dass ich nicht vergessen will, in wie vielen
+                    andern Fällen sich <persName ref="#p7">Webern</persName> ausgezeichnet zu mir
+                    benimmt. Aber das will sie nicht einsehen. Sie bleibt starr bei ihrer Behauptung
+                    und hört kaum zu. –––</p>
             </div>
 
             <div type="entry" n="3">
-                <head><date when="1912-01-22"><hi rend="underline">22.
-                        Jänner</hi></date>.</head>
-                <p rend="inline">Mit <persName ref="#p9">Petri</persName> Probe gehabt. Er wird die Stücke
-                    wahrscheinlich ausgezeichnet spielen. Mindestens klavieristisch. Im Ganzen nahm
-                    er alles zu rasch; oder vielmehr zu eilig. Ich sagte zu <persName ref="#p7"
-                        >Webern</persName>: zu meiner Musik muss man Zeit haben. Die ist nichts für
-                    Leute, die anderes zu tun haben. Aber es ist jedenfalls ein großes Vergnügen
-                    seine Sachen von jemandem zu hören, der sie technisch vollkommen beherrscht. Es
-                    scheint, dass das Konzert sehr schön werden wird. Ich verspreche mir das Beste
-                    von den 8händigen <title type="music" ref="#m7">Orchesterstücken</title>! In den
-                    Vortrag kam ich um eine Viertelstunde zu spät. <persName ref="#p2"
-                        >Busoni</persName> anwesend mit <persName ref="#p19">Frau</persName> und
-                        <persName ref="#p20">Sohn</persName>. Letzterer, sowie <persName ref="#p5"
-                        >van Düren</persName> waren auch (ebenso <persName ref="#p8"
-                        >Clark</persName>) bei <persName ref="#p9">Petri</persName>. <persName
-                        ref="#p5">van Düren</persName> sieht sympathisch aus (Dürer? ! ?). Seine
-                    Musik ist entschieden harmonisch der meinigen nahestehend. Aber rhythmisch und
-                    formell nicht! Habe im Vortrag ohne Vorbereitung gesprochen. Im Ganzen nicht
+                <head><date when="1912-01-22"><hi rend="underline">22. Jänner</hi></date>.</head>
+                <p rend="inline">Mit <persName ref="#p9">Petri</persName> Probe gehabt. Er wird die
+                    Stücke wahrscheinlich ausgezeichnet spielen. Mindestens klavieristisch. Im
+                    Ganzen nahm er alles zu rasch; oder vielmehr zu eilig. Ich sagte zu <persName
+                        ref="#p7">Webern</persName>: zu meiner Musik muss man Zeit haben. Die ist
+                    nichts für Leute, die anderes zu tun haben. Aber es ist jedenfalls ein großes
+                    Vergnügen seine Sachen von jemandem zu hören, der sie technisch vollkommen
+                    beherrscht. Es scheint, dass das Konzert sehr schön werden wird. Ich verspreche
+                    mir das Beste von den 8händigen <title type="music" ref="#m7"
+                        >Orchesterstücken</title>! In den Vortrag kam ich um eine Viertelstunde zu
+                    spät. <persName ref="#p2">Busoni</persName> anwesend mit <persName ref="#p19"
+                        >Frau</persName> und <persName ref="#p20">Sohn</persName>. Letzterer, sowie
+                        <persName ref="#p5">van Düren</persName> waren auch (ebenso <persName
+                        ref="#p8">Clark</persName>) bei <persName ref="#p9">Petri</persName>.
+                        <persName ref="#p5">van Düren</persName> sieht sympathisch aus (Dürer? ! ?).
+                    Seine Musik ist entschieden harmonisch der meinigen nahestehend. Aber rhythmisch
+                    und formell nicht! Habe im Vortrag ohne Vorbereitung gesprochen. Im Ganzen nicht
                     einmal so schlecht. Obwohl ich einigemale bedenklich den Faden verlor und
                     manches nicht zu Ende brachte, was ich angefangen hatte. Ich war wirklich müde
                     von der schlecht durchbrachten Nacht, in der <persName ref="#p21"
@@ -566,11 +643,10 @@
             </div>
 
             <div type="entry" n="4">
-                <head><date when="1912-01-23"><hi rend="underline">23.
-                    Jänner</hi></date>;</head>
-                <p rend="inline">Heute Probe mit <persName ref="#p22">Closson</persName>, <persName ref="#p23"
-                        >Steuermann</persName>, <persName ref="#p24">Grünberg</persName> (lauter
-                        <persName ref="#p2">Busoni</persName>-Schüler) und <persName ref="#p7"
+                <head><date when="1912-01-23"><hi rend="underline">23. Jänner</hi></date>;</head>
+                <p rend="inline">Heute Probe mit <persName ref="#p22">Closson</persName>, <persName
+                        ref="#p23">Steuermann</persName>, <persName ref="#p24">Grünberg</persName>
+                    (lauter <persName ref="#p2">Busoni</persName>-Schüler) und <persName ref="#p7"
                         >Webern</persName>: die <title type="music" ref="#m7"
                         >Orchesterstücke</title> 8händig. Große Enttäuschung. Meine Schüler taugen
                     mehr, als <persName ref="#p2">Busonis</persName>. Sind vielmehr Musiker. Ich
@@ -584,22 +660,34 @@
                     ich es schon zutraue, daß er, wie <persName ref="#p25">Perelmann</persName>
                     erzählt hat, über meine Vorträge geschimpft hat. Er bestreitet das zwar, aber
                     das ist doch erst recht unsympathisch. Und mit diesem Menschen hat <persName
-                        ref="#p2">Busoni</persName> mich verwechseln können: Der hatte jene <title
-                        type="music" ref="#m10">Klavierstücke</title> eingereicht (bei einer
-                    Preiskonkurrenz), die <persName ref="#p2">Busoni</persName> als von mir zu
-                    erkennen glaubte. Sehr tief scheint er mich nicht erfaßt zu haben. Denn das
-                    müßte man doch spüren, daß in meiner Musik etwas ist, was <del
-                        rend="strikethrough">von</del> eine Ähnlichkeit mit Herrn <persName
-                        ref="#p24">Grünberg</persName> ausschließt. Übrigens: <persName ref="#p2"
-                        >Busoni</persName>! Ich habe ihm gestern einen sehr warmen Brief über seine
-                    Kompositionen geschrieben. Es hat mich gedrängt, das Unrecht gutzumachen. Er
-                    läßt mir darauf heute durch <hi rend="underline"><persName ref="#p5">van
-                            Düren</persName> sagen</hi>, daß er mir sehr danke; sich gefreut habe;
-                    aber mir nicht schreiben könne, weil er zu sehr beschäftigt sei. – Ich hätte in
-                    einem solchen Fall Zeit zum Schreiben gefunden! In meine Probe kommt er nicht.
-                    Offenbar weil ich nicht in der seinigen war. Er vergißt nur, daß ich ihn
-                    eingeladen habe, er mich aber nicht. Woher sollte ich wissen, ob es ihm recht
-                    ist?</p>
+                        ref="#p2">Busoni</persName> mich verwechseln können<note type="commentary"
+                        >&#8222;Unter den 871 (!) eingesandten Klavierstücken für das
+                        Signale-Preisausschreiben glaubte ich, Sie in einem Präludium und Fuge zu
+                        erkennen&#8220; schrieb <persName ref="#p2">Busoni</persName> an <persName
+                            ref="#p40">Schönberg</persName>. Die genannte Einsendung war allerdings
+                        nicht von Grünberg, sondern von Karol Szymanowski (Brief von Ferruccio
+                        Busoni an Arnold Schönberg (Berlin, 7. Oktober 1909), bearbeitet von Claudio
+                        Fuchs und Christian Schaper, in: Briefwechsel Ferruccio Busoni – Arnold
+                        Schönberg, hrsg. von Christian Schaper und Ullrich Scheideler, Berlin:
+                        Institut für Musikwissenschaft und Medienwissenschaft der
+                        Humboldt-Universität zu Berlin, 3. Januar 2016: Institut für
+                        Musikwissenschaft und Medienwissenschaft der Humboldt-Universität zu Berlin,
+                        https://busoni-nachlass.org/D0100019 (11. Januar 2020: in
+                        Korrekturphase)</note>: Der hatte jene <title type="music" ref="#m10"
+                        >Klavierstücke</title> eingereicht (bei einer Preiskonkurrenz), die
+                        <persName ref="#p2">Busoni</persName> als von mir zu erkennen glaubte. Sehr
+                    tief scheint er mich nicht erfaßt zu haben. Denn das müßte man doch spüren, daß
+                    in meiner Musik etwas ist, was <del rend="strikethrough">von</del> eine
+                    Ähnlichkeit mit Herrn <persName ref="#p24">Grünberg</persName> ausschließt.
+                    Übrigens: <persName ref="#p2">Busoni</persName>! Ich habe ihm gestern einen sehr
+                    warmen Brief über seine Kompositionen geschrieben. Es hat mich gedrängt, das
+                    Unrecht gutzumachen. Er läßt mir darauf heute durch <hi rend="underline"
+                            ><persName ref="#p5">van Düren</persName> sagen</hi>, daß er mir sehr
+                    danke; sich gefreut habe; aber mir nicht schreiben könne, weil er zu sehr
+                    beschäftigt sei. – Ich hätte in einem solchen Fall Zeit zum Schreiben gefunden!
+                    In meine Probe kommt er nicht. Offenbar weil ich nicht in der seinigen war. Er
+                    vergißt nur, daß ich ihn eingeladen habe, er mich aber nicht. Woher sollte ich
+                    wissen, ob es ihm recht ist?</p>
                 <pb n="4" facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524887"/>
                 <p><orgName ref="#o1">Peters</orgName> hat heute schon das Honorar geschickt. Das
                     ist schnell gegangen. Hoffentlich bringt es Glück. Ich lerne jetzt sehr viele
@@ -615,35 +703,35 @@
             </div>
 
             <div type="entry" n="5">
-                <head><date when="1912-01-28"><hi rend="underline">28. 1.</hi></date>
-                    – </head>
-                <p rend="inline"><persName ref="#p15">Winternitz-Dorda</persName> hat am <date when="1912-01-24"
-                        >24.</date> das Konzert abgesagt! Repertoire-Änderung. Sie singt <date
-                        when="1912-01-28">Sonntag</date> nachmittag. Große Verlegenheit. <persName
-                        ref="#p9">Petri</persName> fährt am <date when="1912-01-29">29.</date> für
-                    fünf Wochen nach <placeName ref="#pl6">London</placeName>. Muß also anderen
-                    Pianisten für <title type="music" ref="#m6">Klavierstücke</title>, <title
-                        type="music" ref="#m19">George-</title> und ältere <title type="music"
-                        ref="#m5">Lieder</title> finden. Dachte auch an <persName ref="#p26"
-                        >Balaban</persName> und Frau <persName ref="#p27">Werndorff</persName>. Im
-                    Notfall! <persName ref="#p28">Buhlik</persName> ist auch am <date
-                        when="1912-01-29">29.</date> da. Aber so lange kann man nicht <del
-                        rend="strikethrough">spielen</del> warten. Konnte am <date when="1912-01-24"
-                        >24.</date> noch keinen Entschluß fassen. Bekam aber Einfall, Konzert bis
-                    zum <date when="1912-02-04">4.</date> cirka zu verschieben, dann <placeName
-                        ref="#pl4">Berlin</placeName>, <placeName ref="#pl7">Leipzig</placeName>,
-                        <placeName ref="#pl8">Dresden</placeName>, <placeName ref="#pl9"
-                        >Breslau</placeName> und <placeName ref="#pl10">Prag</placeName>, als
-                    Tournee, da <persName ref="#p32">Zemlinsky</persName> in <placeName ref="#pl10"
-                        >Prag</placeName> ohnedies einen Abend von mir machen will. <persName
-                        ref="#p4">Gutmann</persName> gesagt, bestellt mich für <date
+                <head><date when="1912-01-28"><hi rend="underline">28. 1.</hi></date> – </head>
+                <p rend="inline"><persName ref="#p15">Winternitz-Dorda</persName> hat am <date
+                        when="1912-01-24">24.</date> das Konzert abgesagt! Repertoire-Änderung. Sie
+                    singt <date when="1912-01-28">Sonntag</date> nachmittag. Große Verlegenheit.
+                        <persName ref="#p9">Petri</persName> fährt am <date when="1912-01-29"
+                        >29.</date> für fünf Wochen nach <placeName ref="#pl6">London</placeName>.
+                    Muß also anderen Pianisten für <title type="music" ref="#m6"
+                        >Klavierstücke</title>, <title type="music" ref="#m19">George-</title> und
+                    ältere <title type="music" ref="#m5">Lieder</title> finden. Dachte auch an
+                        <persName ref="#p26">Balaban</persName> und Frau <persName ref="#p27"
+                        >Werndorff</persName>. Im Notfall! <persName ref="#p28">Buhlik</persName>
+                    ist auch am <date when="1912-01-29">29.</date> da. Aber so lange kann man nicht
+                        <del rend="strikethrough">spielen</del> warten. Konnte am <date
+                        when="1912-01-24">24.</date> noch keinen Entschluß fassen. Bekam aber
+                    Einfall, Konzert bis zum <date when="1912-02-04">4.</date> cirka zu verschieben,
+                    dann <placeName ref="#pl4">Berlin</placeName>, <placeName ref="#pl7"
+                        >Leipzig</placeName>, <placeName ref="#pl8">Dresden</placeName>, <placeName
+                        ref="#pl9">Breslau</placeName> und <placeName ref="#pl10">Prag</placeName>,
+                    als Tournee, da <persName ref="#p32">Zemlinsky</persName> in <placeName
+                        ref="#pl10">Prag</placeName> ohnedies einen Abend von mir machen 
+                    will.
+                        <persName ref="#p4">Gutmann</persName> gesagt, bestellt mich für <date
                         when="1912-01-25">25.</date> zu sich. Stellt Vertrag für <title type="music"
                         ref="#m4">Gurrelieder</title> in Aussicht. Spricht aber vorläufig nichts
                     davon, sondern macht die Aufführung vom materiellen Erfolg der <title
                         type="music" ref="#m9">VIII. Mahlers</title> abhängig, die er im <date
                         when="1912-05">Mai</date> dreimal aufführen will. <note place="left"
                         >!</note> Drei verschiedene Dirigenten: <persName ref="#p29"
-                    >Walter</persName>, <persName ref="#p30">Mengelberg</persName>, <persName
+                        >Walter</persName>, <persName ref="#p30">Mengelberg</persName>, <persName
                         ref="#p31">Göhler</persName>. Schlechte Idee, mit der <persName ref="#p18"
                         >Mahler</persName> sicher nicht einverstanden gewesen wäre. Wenn schon drei
                     Aufführungen, dann alle von einem Dirigenten, damit <del rend="overwritten"
@@ -746,25 +834,24 @@
             </div>
 
             <div type="entry" n="6">
-                <head><date when="1912-02-02"><hi rend="underline">2.
-                        Februar</hi></date></head>
-                <p rend="inline">Sonntag, 2<del rend="overwritten">7</del>8., waren <!-- er und sie -->Eichbergs
-                    zu Mittag <supplied cert="high">da</supplied>. Er ist ja ein ganz guter Kerl.
-                    Immer noch der alte, der eigentlich von einer Verlegenheit in die andere fällt,
-                    was er zwar durch weltmännisch-berlinische Forschheit verbergen möchte, ohne daß
-                    es ihm gelänge. Er spricht auch, insbesondere wenn er von seinem Fach spricht,
-                    sehr klug. Wenn er nur mehr davon spräche, da er doch weiß, daß ich mich für die
-                    Technik so interessiere. <persName ref="#p11">Sie</persName> bemühte sich auch,
-                    möglichst die Spannung auszugleichen, die durch ihre <add place="above">uns
-                        gezeigte</add> Teilnahmslosigkeit zwischen uns herrschte. Anfangs <gap
-                        reason="illegible" unit="char" quantity="1"/> bliebs kalt, dann wurden wir
-                    ja wieder etwas wärmer. <persName ref="#p38">Eichberg</persName> benützte
-                    wiederholt Gelegenheiten, meinem Wirken Aufmerksamkeit zu zeigen. Etwas
-                    forciert! So begann er einzelne meiner Bilder zu loben. Besah meine gedruckten
-                    Noten und Bücher. <pb n="7"
-                        facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524915"/> Erkundigte
-                    sich, ob er meine Harmonielehre verstehen werde. Fragte nach meinen Vorträgen.
-                    Sprach die Absicht aus, meine <add place="above">gedruckten</add>
+                <head><date when="1912-02-02"><hi rend="underline">2. Februar</hi></date></head>
+                <p rend="inline">Sonntag, 2<del rend="overwritten">7</del>8., waren
+                    <!-- er und sie -->Eichbergs zu Mittag <supplied cert="high">da</supplied>. Er
+                    ist ja ein ganz guter Kerl. Immer noch der alte, der eigentlich von einer
+                    Verlegenheit in die andere fällt, was er zwar durch weltmännisch-berlinische
+                    Forschheit verbergen möchte, ohne daß es ihm gelänge. Er spricht auch,
+                    insbesondere wenn er von seinem Fach spricht, sehr klug. Wenn er nur mehr davon
+                    spräche, da er doch weiß, daß ich mich für die Technik so interessiere.
+                        <persName ref="#p11">Sie</persName> bemühte sich auch, möglichst die
+                    Spannung auszugleichen, die durch ihre <add place="above">uns gezeigte</add>
+                    Teilnahmslosigkeit zwischen uns herrschte. Anfangs <gap reason="illegible"
+                        unit="char" quantity="1"/> bliebs kalt, dann wurden wir ja wieder etwas
+                    wärmer. <persName ref="#p38">Eichberg</persName> benützte wiederholt
+                    Gelegenheiten, meinem Wirken Aufmerksamkeit zu zeigen. Etwas forciert! So begann
+                    er einzelne meiner Bilder zu loben. Besah meine gedruckten Noten und Bücher. <pb
+                        n="7" facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524915"/>
+                    Erkundigte sich, ob er meine Harmonielehre verstehen werde. Fragte nach meinen
+                    Vorträgen. Sprach die Absicht aus, meine <add place="above">gedruckten</add>
                     <title type="music" ref="#m5">Lieder</title> anzuschaffen. (Etwas forciert!) Und
                     lobte besonders ein Bild wiederholt. Schließlich sprach er den Wunsch aus, es
                     mir abzukaufen (eine kleine Winterlandschaft, die ich einmal, weil ich Kopfweh
@@ -787,18 +874,21 @@
                         >Marc</persName> zeigte Brief von <persName ref="#p45">Loos</persName>, der
                     über <persName ref="#p46">Oppenheimer</persName> schimpft, ihn Schwindler,
                         <persName ref="#p47">Kokoschka</persName>-Kopisten nennt und vor ihm warnt.
-                    Wirkliches Unrecht, das man dem <persName ref="#p46">Oppenheimer</persName> tut: einen, der unoriginell ist, muß
-                    man deswegen noch nicht Schwindler nennen. In Wirklichkeit ist <persName ref="#p46">Oppenheimer</persName>
-                    gewiss wenig sympathisch. Seine Bilder haben mich nie über sein Nicht-Genie
-                    getäuscht. Er ist ein &#8222;Lausbub&#8220;, aber kein Schwindler. Und seine
-                    Bilder haben nichts mit <persName ref="#p47">Kokoschka</persName> gemein. Dat tut man beiden unrecht! Denn
-                    <persName ref="#p47">Kokoschka</persName> ist echt! – <persName ref="#p39">Marc</persName> ist ein ganz
-                    sympathischer Mensch. Etwas unklar und nicht sehr bedeutend. Er <del
-                        rend="strikethrough">ka</del> wird nicht lange mit <persName ref="#p48">Kandinsky</persName> zusammengehen.
-                    Insbesondere nicht, wenn man ihm das öfter, aber taktvoller nahelegen würde, als
-                    es der Brief eines Kunstfreundes tat, von dem er im Anschluss an <persName ref="#p45">Loos</persName> etwas
-                    präpotente Ratschläge (&#8222;gehen Sie zu <persName ref="#p49">Hans v. Weber</persName>; was der tut, ist
-                    wohlgetan&#8220; ...) erzählte. Montag, (<date when="1912-01-29">29.</date>) schickten wir
+                    Wirkliches Unrecht, das man dem <persName ref="#p46">Oppenheimer</persName> tut:
+                    einen, der unoriginell ist, muß man deswegen noch nicht Schwindler nennen. In
+                    Wirklichkeit ist <persName ref="#p46">Oppenheimer</persName> gewiss wenig
+                    sympathisch. Seine Bilder haben mich nie über sein Nicht-Genie getäuscht. Er ist
+                    ein &#8222;Lausbub&#8220;, aber kein Schwindler. Und seine Bilder haben nichts
+                    mit <persName ref="#p47">Kokoschka</persName> gemein. Dat tut man beiden
+                    unrecht! Denn <persName ref="#p47">Kokoschka</persName> ist echt! – <persName
+                        ref="#p39">Marc</persName> ist ein ganz sympathischer Mensch. Etwas unklar
+                    und nicht sehr bedeutend. Er <del rend="strikethrough">ka</del> wird nicht lange
+                    mit <persName ref="#p48">Kandinsky</persName> zusammengehen. Insbesondere nicht,
+                    wenn man ihm das öfter, aber taktvoller nahelegen würde, als es der Brief eines
+                    Kunstfreundes tat, von dem er im Anschluss an <persName ref="#p45"
+                        >Loos</persName> etwas präpotente Ratschläge (&#8222;gehen Sie zu <persName
+                        ref="#p49">Hans v. Weber</persName>; was der tut, ist wohlgetan&#8220; ...)
+                    erzählte. Montag, (<date when="1912-01-29">29.</date>) schickten wir
                     <!-- er und sie -->Eichbergs das Bildchen, das sie bewundert hatten. Als
                     Geschenk! Da <persName ref="#p38">Eichberg</persName> Geld hat, kann er größere
                     Bilder kaufen und muss nicht das kleinste aussuchen, weil er hofft, es werde
@@ -808,18 +898,19 @@
                     halte es doch noch für möglich, daß ich mit ihm <del rend="strikethrough"
                         >z</del> mich zusammenfinde. Gewünscht habe ich es immer. <pb n="8"
                         facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524925"/><note
-                        place="left">Wohl in <placeName ref="#pl4"><hi
-                                rend="underline">Berlin</hi></placeName> !! <hi rend="underline"
-                            >Schbg</hi></note>Denn er ist zweifellos ein genialer Mensch. Jedenfalls
-                    weitaus das beste, was ich bisher kennenlernte. Im Vortrag sagte ich dann meine
-                    Ideen über Genie und Talent. Insbesondere die, dass das Genie die zukünftige
-                    Form der Menschheit ist. Das schien <persName ref="#p2">Busoni</persName> sehr
-                    zu gefallen. (Freut mich wirklich ungemein!) Er will, dass ich bei ihm, vor
-                    vielen Gästen, einen solchen Vortrag halte. Ich bin nicht abgeneigt.</p>
+                        place="left">Wohl in <placeName ref="#pl4"><hi rend="underline"
+                            >Berlin</hi></placeName> !! <hi rend="underline">Schbg</hi></note>Denn
+                    er ist zweifellos ein genialer Mensch. Jedenfalls weitaus das beste, was ich
+                    bisher kennenlernte. Im Vortrag sagte ich dann meine Ideen über Genie und
+                    Talent. Insbesondere die, dass das Genie die zukünftige Form der Menschheit ist.
+                    Das schien <persName ref="#p2">Busoni</persName> sehr zu gefallen. (Freut mich
+                    wirklich ungemein!) Er will, dass ich bei ihm, vor vielen Gästen, einen solchen
+                    Vortrag halte. Ich bin nicht abgeneigt.</p>
             </div>
             <div type="entry" n="7">
-                <head><date when="1912-01-30"><hi rend="underline">Dienstag</hi>, <del rend="overwritten"
-                        >1</del>30. <del rend="strikethrough">Februar</del></date></head>
+                <head><date when="1912-01-30"><hi rend="underline">Dienstag</hi>, <del
+                            rend="overwritten">1</del>30. <del rend="strikethrough"
+                        >Februar</del></date></head>
                 <p rend="inline">Nachmittags Probe für <del rend="strikethrough">Klavierst</del>
                     <title type="music" ref="#m7">Orchesterstücke</title>. Endlich gingen I. und II.
                     gut. Sogar sehr gut. Ich war darauf gekommen, dass die Bezeichnung (p und f) in
@@ -832,35 +923,35 @@
                 <p>Rendezvous mit <orgName ref="#o1">Peters</orgName>
                     <add place="above">(<persName ref="#p52">Henrichsen</persName>)</add>. Netter
                     Mensch, unbedeutend, Spießer, aber wohlwollend und anscheinend sehr anständig.
-                    War sehr artig. In Habels Weinstube. Lud mich
-                    ein zu Kaviar und Rheinwein. Forschte mich über mein Verhältnis zur <orgName
-                        ref="#o2">Universal-Edition</orgName> aus. Gab zu erkennen, dass er mich
-                    gerne nähme, wenn ich frei wäre. <del rend="overwritten"
-                        >S</del>Deutete an, dass der Vertrag kündbar ist. <add place="inline"
-                        >(Ich)</add> Lehnte indirekt ab, indem ich <persName ref="#p6"
-                        >Herzka</persName> (mit Selbstüberwindung) sehr lobte. Geht ja wirklich
-                    nicht. Manchmal war er ja ganz nett gegen mich (der Kunstverständige, der
-                    Mäcen!) – <persName ref="#p52">Henrichsen</persName> fragte mich über <persName
-                        ref="#p18">Mahler</persName>, und als ich mich begeistert aussprach, fragte
-                    er, &#8222;ob er also nicht die Platten einschmelzen lassen solle&#8220;.
-                    Entsetzlich!! Das ist ja unerhört. Es ist höchste Zeit, dass ich etwas über
-                        <persName ref="#p18">Mahler</persName> schreibe! Das ist wirklich ein
-                    furchtbares Schicksal. Ich antwortete ihm: &#8222;Um Gottes willen, nur das
-                    nicht! Die heutige Jugend betet <persName ref="#p18">Mahler</persName> an wie
-                    einen Gott. Seine Zeit wird in längstens 5-10 Jahren kommen!&#8220;Aber da muss
-                    man unbedingt eingreifen, ehe es zu spät wird. Hätte ich doch nur die Macht! –
-                    Vorher hatte ich mit <persName ref="#p22">Closson</persName> Probe zu den neuen
-                        <title type="music" ref="#m6">Klavierstücken</title>. Er wird sie ja ganz
-                    gut spielen. Etwas trocken zwar. – <date when="1912-01-29">Montag</date> abend war ich in dem erwähnten
+                    War sehr artig. In Habels Weinstube. Lud mich ein zu Kaviar und Rheinwein.
+                    Forschte mich über mein Verhältnis zur <orgName ref="#o2"
+                        >Universal-Edition</orgName> aus. Gab zu erkennen, dass er mich gerne nähme,
+                    wenn ich frei wäre. <del rend="overwritten">S</del>Deutete an, dass der Vertrag
+                    kündbar ist. <add place="inline">(Ich)</add> Lehnte indirekt ab, indem ich
+                        <persName ref="#p6">Herzka</persName> (mit Selbstüberwindung) sehr lobte.
+                    Geht ja wirklich nicht. Manchmal war er ja ganz nett gegen mich (der
+                    Kunstverständige, der Mäcen!) – <persName ref="#p52">Henrichsen</persName>
+                    fragte mich über <persName ref="#p18">Mahler</persName>, und als ich mich
+                    begeistert aussprach, fragte er, &#8222;ob er also nicht die Platten
+                    einschmelzen lassen solle&#8220;. Entsetzlich!! Das ist ja unerhört. Es ist
+                    höchste Zeit, dass ich etwas über <persName ref="#p18">Mahler</persName>
+                    schreibe! Das ist wirklich ein furchtbares Schicksal. Ich antwortete ihm:
+                    &#8222;Um Gottes willen, nur das nicht! Die heutige Jugend betet <persName
+                        ref="#p18">Mahler</persName> an wie einen Gott. Seine Zeit wird in längstens
+                    5-10 Jahren kommen!&#8220;Aber da muss man unbedingt eingreifen, ehe es zu spät
+                    wird. Hätte ich doch nur die Macht! – Vorher hatte ich mit <persName ref="#p22"
+                        >Closson</persName> Probe zu den neuen <title type="music" ref="#m6"
+                        >Klavierstücken</title>. Er wird sie ja ganz gut spielen. Etwas trocken
+                    zwar. – <date when="1912-01-29">Montag</date> abend war ich in dem erwähnten
                         <orgName ref="#o4">Schirmer-Verlags</orgName>-Konzert von <persName
                         ref="#p2">Busoni</persName>. <persName ref="#p18">Mahlers</persName>
-                    <title type="music" ref="#m12">Bearbeitung</title> von <persName ref="#p50">Bach</persName> gehört, die ich dirigieren
-                    soll. Klingt sehr gut, bloss Orgel zu stark. Die übrigen Sachen wenig
-                    interessant, (Geigenkonzerte) und eine symphonische Sache von <gap/> sogar
-                    unausstehlich. – Mittwoch Abend kam <persName ref="#p51">Horwitz</persName>. Um
-                        Agenten und mich zu besuchen. Also nur wegen
-                    des Agenten, denn sonst wäre er zum Konzert
-                    gekommen. Der Mensch wird immer unerträglicher.<pb n="9"
+                    <title type="music" ref="#m12">Bearbeitung</title> von <persName ref="#p50"
+                        >Bach</persName> gehört, die ich dirigieren soll. Klingt sehr gut, bloss
+                    Orgel zu stark. Die übrigen Sachen wenig interessant, (Geigenkonzerte) und eine
+                    symphonische Sache von <gap/> sogar unausstehlich. – Mittwoch Abend kam
+                        <persName ref="#p51">Horwitz</persName>. Um Agenten und mich zu besuchen.
+                    Also nur wegen des Agenten, denn sonst wäre er zum Konzert gekommen. Der Mensch
+                    wird immer unerträglicher.<pb n="9"
                         facs="https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524935"/><persName
                         ref="#p7">Webern</persName> ist wütend auf ihn, weil er ihm schon in der
                     ersten Viertelstunde alle möglichen Bosheiten gesagt hat.</p>

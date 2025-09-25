@@ -26,6 +26,7 @@
                         <header>
                             <div class="topbar">
                                 <nav>
+                                    <a href="../index.html">Home</a>
                                     <a href="../diary/calendar.html">Tagebuch Einträge</a>
                                     <a href="../diary/all.html">Tagebuch gesamt</a>
                                     <a href="../persons/index.html">Personen</a>
@@ -68,6 +69,7 @@
                     <header>
                         <div class="topbar">
                             <nav>
+                                <a href="../index.html">Home</a>
                                 <a href="../diary/calendar.html">Tagebuch Einträge</a>
                                 <a href="../diary/all.html">Tagebuch gesamt</a>
                                 <a href="../persons/index.html">Personen</a>
@@ -111,6 +113,7 @@
                     <header>
                         <div class="topbar">
                             <nav>
+                                <a href="../index.html">Home</a>
                                 <a href="../diary/calendar.html">Tagebuch Einträge</a>
                                 <a href="../diary/all.html">Tagebuch gesamt</a>
                                 <a href="../persons/index.html">Personen</a>
@@ -147,6 +150,7 @@
                     <header>
                         <div class="topbar">
                             <nav>
+                                <a href="../index.html">Home</a>
                                 <a href="../diary/calendar.html">Tagebuch Einträge</a>
                                 <a href="../diary/all.html">Tagebuch gesamt</a>
                                 <a href="../persons/index.html">Personen</a>
@@ -235,6 +239,7 @@
                     <header>
                         <div class="topbar">
                             <nav>
+                                <a href="../index.html">Home</a>
                                 <a href="../diary/calendar.html">Tagebuch Einträge</a>
                                 <a href="../diary/all.html">Tagebuch gesamt</a>
                                 <a href="../persons/index.html">Personen</a>
@@ -303,6 +308,7 @@
                     <header>
                         <div class="topbar">
                             <nav>
+                                <a href="../index.html">Home</a>
                                 <a href="../diary/calendar.html">Tagebuch Einträge</a>
                                 <a href="../diary/all.html">Tagebuch gesamt</a>
                                 <a href="../persons/index.html">Personen</a>
@@ -378,6 +384,7 @@
                     <header>
                         <div class="topbar">
                             <nav>
+                                <a href="../index.html">Home</a>
                                 <a href="../diary/calendar.html">Tagebuch Einträge</a>
                                 <a href="../diary/all.html">Tagebuch gesamt</a>
                                 <a href="../persons/index.html">Personen</a>
@@ -435,7 +442,7 @@
                 </body>
             </html>
         </xsl:result-document>
-        <!-- ================= ABOUT PAGE ================= -->
+         <!-- ================= ABOUT PAGE ================= -->
         <xsl:result-document href="about.html" method="xhtml" indent="yes">
             <html lang="de">
                 <head>
@@ -447,13 +454,14 @@
                     <header>
                         <div class="topbar">
                             <nav>
-                                <a href="../diary/calendar.html">Tagebuch Einträge</a>
-                                <a href="../diary/all.html">Tagebuch gesamt</a>
-                                <a href="../persons/index.html">Personen</a>
-                                <a href="../works/index.html">Werke</a>
-                                <a href="../places/index.html">Orte</a>
-                                <a href="../organizations/index.html">Organisationen</a>
-                                <a href="../about.html">Über diese Edition</a>
+                                <a href="index.html">Home</a>
+                                <a href="diary/calendar.html">Tagebuch Einträge</a>
+                                <a href="diary/all.html">Tagebuch gesamt</a>
+                                <a href="persons/index.html">Personen</a>
+                                <a href="works/index.html">Werke</a>
+                                <a href="places/index.html">Orte</a>
+                                <a href="organizations/index.html">Organisationen</a>
+                                <a href="about.html">Über diese Edition</a>
                             </nav>
                         </div>
                         <h1>Über diese Edition</h1>
@@ -578,7 +586,7 @@
                 </body>
             </html>
         </xsl:result-document>
-    </xsl:template>
+    </xsl:template> 
 
     <!-- ============ RENDERING TEMPLATES FOR ENTRY CONTENT ============ -->
 
@@ -719,7 +727,7 @@
         <span class="note author" data-place="{@place}">
             <button class="note-toggle note-author">✎</button>
             <span class="popup-author">
-                <small>Note by Schönberg, <xsl:value-of select="@place"/> margin: </small>
+                Note by Schönberg, <xsl:value-of select="@place"/> margin: 
                 <xsl:apply-templates select="node()"/>
             </span>
         </span>

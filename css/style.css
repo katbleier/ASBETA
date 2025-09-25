@@ -247,45 +247,118 @@ body.mode-diplomatic .textcrit.del .del-text {
   cursor: pointer;
 }
 
-/* Enhanced popups */
-/* Note popups positioned at marker location */
+/* Base popup styling */
 .popup-add,
 .popup-del,
 .popup-commentary,
 .popup-author {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
+  z-index: 1000;
   background: var(--bg-primary);
-  border: 1px solid var(--border-medium);
+  border: 2px solid var(--border-medium);
   border-radius: var(--radius-medium);
-  padding: 0.75rem 1rem;
-  max-width: 320px;
-  box-shadow: var(--shadow-medium);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   font-size: var(--font-size-small);
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: var(--line-height-base);
   white-space: normal;
-  margin-top: 0.5rem;
+  word-wrap: break-word;
+  hyphens: auto;
+  lang: de;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
 }
 
+/* Commentary popups - wide for longer texts */
+.popup-commentary {
+  max-width: 480px;
+  min-width: 300px;
+  border-left: 4px solid var(--accent-blue);
+  background: var(--bg-primary);
+}
+
+/* Author note popups (note place="...") - medium width */
+.popup-author {
+  max-width: 350px;
+  min-width: 250px;
+  border-left: 4px solid var(--accent-red);
+  background: var(--bg-primary);
+}
+
+/* Add/Del popups - compact for short editorial notes */
+.popup-add,
+.popup-del {
+  max-width: 280px;
+  min-width: 200px;
+  background: var(--bg-primary);
+}
+
+.popup-add {
+  border-left: 4px solid var(--accent-green);
+}
+
+.popup-del {
+  border-left: 4px solid var(--accent-red);
+}
+
+/* Close button for all popups */
+.popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  color: var(--text-primary);
+}
+
+/* Remove arrow indicators */
 .popup-add::before,
 .popup-del::before,
 .popup-commentary::before,
 .popup-author::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid var(--border-medium);
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .popup-commentary {
+    max-width: 90vw;
+    min-width: 280px;
+    left: 5%;
+    right: 5%;
+    transform: none;
+    top: 20%;
+  }
+  
+  .popup-author {
+    max-width: 85vw;
+    min-width: 260px;
+    left: 7.5%;
+    right: 7.5%;
+    transform: none;
+    top: 20%;
+  }
+  
+  .popup-add,
+  .popup-del {
+    max-width: 80vw;
+    min-width: 240px;
+    left: 10%;
+    right: 10%;
+    transform: none;
+    top: 25%;
+  }
 }
 
 /* Ensure the note containers have relative positioning */
@@ -325,8 +398,8 @@ body.mode-diplomatic .textcrit.del .del-text {
 
 /* Author note popups */
 .note.author .popup-author {
-  border-left: 3px solid var(--accent-red);
-  background: linear-gradient(135deg, #fff 0%, rgba(231, 76, 60, 0.02) 100%);
+  border-left: 4px solid var(--accent-red);
+  background: var(--bg-primary); /* Solid white background */
 }
 
 /* Page breaks */
