@@ -482,20 +482,34 @@
                     jetzt wird es gehen. Denn ich habe mir vorgenommen, mich selbst zu täuschen,
                     indem ich mir einrede, ich werde nur ganz kurze Bemerkungen hineinschreiben, zu
                     denen man alle Tage Zeit findet.</p>
-                <p>Also: Gestern abend in <persName ref="#p1">Frieds</persName> Konzert gewesen:
-                        <persName ref="#p2">Busoni</persName>-Kompositionen hatten mir bis jetzt
-                    nicht gefallen. Aber gestern gefiel mir <title type="music" ref="#m1"
-                        >Berceuse</title>. Direkt ergreifendes Stück. Wirklich empfunden. Dem habe
-                    ich sehr unrecht getan. Wieder einem! – Dagegen <persName ref="#p1"
-                        >Fried</persName>: der gefällt mir immer weniger. Der ist nur ein Reißer.
-                    Seit ich ihn kühl behandle, bewirbt er sich sehr um mich. Aber ich lasse ihn
-                    abgleiten. Nachher <persName ref="#p3">Kussiewitzki</persName> kennen gelernt.
-                        <persName ref="#p4">Guttmann</persName> mich zu ihm geschleppt. Er will im
-                        <del rend="strikethrough">he</del> nächsten Jahr <title type="music"
-                        ref="#m2">Pelleas</title> in <placeName ref="#pl1"
-                        >Petersburg</placeName><note type="commentary"><date when="1912-12-21">21.
-                            Dezember 1912</date>, <placeName ref="#pl1">St. Petersburg</placeName>,
-                        Saal der Petersburger Adelsversammlung; Programm 21. Dezember 1912 (<ref
+                <p>Also: Gestern abend in <persName ref="#p1">Frieds</persName> Konzert<note
+                        type="commentary"><date when="1912-01-19">19. Januar 1912</date>, <placeName
+                            ref="#pl4">Berlin</placeName>, Philharmonie, 3. Konzert der Gesellschaft
+                        der Musikfreunde; vgl. <ref
+                            target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/446L443HSNBCVDECKAQTKCFRXCTHCEGS?issuepage=4"
+                            >Deutscher Reichsanzeiger und Preußischer Staatsanzeiger 17</ref> (18.
+                        Januar 1912), S. 4 </note> gewesen: <persName ref="#p2"
+                    >Busoni</persName>-Kompositionen hatten mir bis jetzt nicht gefallen. Aber
+                    gestern gefiel mir <title type="music" ref="#m1">Berceuse</title>. Direkt
+                    ergreifendes Stück. Wirklich empfunden. Dem habe ich sehr unrecht getan. Wieder
+                    einem! – Dagegen <persName ref="#p1">Fried</persName>: der gefällt mir immer
+                    weniger. Der ist nur ein Reißer. Seit ich ihn kühl behandle, bewirbt er sich
+                    sehr um mich. Aber ich lasse ihn abgleiten. Nachher <persName ref="#p3"
+                        >Kussiewitzki</persName> kennen gelernt.<note type="commentary">Der Dirigent
+                            <persName ref="#p3">Serge Koussevitzky</persName> hatte <persName ref="#p40">Schönbergs</persName> Musik erstmals im Jahr zuvor durch
+                        Sergej Prokofieffs Interpretation der <title type="music">Drei Klavierstücke op. 11</title> bei der
+                            Künstlervereinigung ARS in <placeName ref="#pl1">St. Petersburg</placeName> gehört und wurde <persName ref="#p40">Schönberg</persName> durch
+                        dessen Agenten <persName ref="#p4">Emil Gutmann</persName> vorgestellt. Das Vermögen seiner Frau Natalie
+                            (geb. Uškov) hatte  <persName ref="#p3">Koussevitzky</persName> bereits 1909 die Gründung der L’Édition
+                        Russe de Musique ermöglicht, in deren auf zeitgenössische russische Musik
+                        ausgerichtetem Programm unter anderen Skrjabin, Rachmaninow, Strawinsky und
+                        Prokofieff vertreten waren.</note>
+                    <persName ref="#p4">Guttmann</persName> mich zu ihm geschleppt. Er will im <del
+                        rend="strikethrough">he</del> nächsten Jahr <title type="music" ref="#m2"
+                        >Pelleas</title> in <placeName ref="#pl1">Petersburg</placeName><note
+                        type="commentary"><date when="1912-12-21">21. Dezember 1912</date>,
+                            <placeName ref="#pl1">St. Petersburg</placeName>, Saal der Petersburger
+                        Adelsversammlung; Programm 21. Dezember 1912 (<ref
                             target="https://archive.schoenberg.at/resources/?r=5533">ASCI
                             CP5533</ref>).<!-- event 194 --></note> und <placeName ref="#pl2"
                         >Moskau</placeName> aufführen. Wäre sehr schön, hoffentlich.</p>
@@ -508,7 +522,7 @@
                         ref="#p4">Guttmann</persName>, <persName ref="#p6">Herzka</persName>
                     <del rend="overwritten">K.</del>
                     <persName ref="#p7">Webern</persName> und <persName ref="#p8">Clark</persName>
-                    im Heidelberger Restaurant. <persName ref="#p4">Guttmann</persName> sehr
+                    im Heidelberger Restaurant<note type="commentary">Bierrestaurant zum Heidelberger, Hotel Central, Friedrichstraße 143-149</note>. <persName ref="#p4">Guttmann</persName> sehr
                     übermütig. Soll aber geschworen (!!) haben, im Herbst <title type="music"
                         ref="#m4">Gurrelieder</title> aufzuführen! Werden sehen. <persName ref="#p6"
                         >Herzka</persName> strahlte! – Im Konzert auch <persName ref="#p9"
