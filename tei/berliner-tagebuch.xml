@@ -13,14 +13,14 @@
                     <surname>Bleier</surname></editor>
             </titleStmt>
             <publicationStmt>
-                
-              
+
+
                 <publisher><persName>Katharina Bleier</persName></publisher>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by-nc-Sa/4.0">Creative
                         Commons BY-NC-SA 4.0</licence>
                 </availability>
-                <date when-iso="2025"/>
+                <date when="2025">2025</date>
                 <pubPlace ref="http://www.geonames.org/2761369/">Wien</pubPlace>
             </publicationStmt>
             <sourceDesc>
@@ -37,6 +37,13 @@
                                 >https://repo.schoenberg.at/urn:nbn:at:at-asc-T013485</idno>
                         </altIdentifier>
                     </msIdentifier>
+                    <physDesc>
+                        <objectDesc><p>Umschlag (Pappe): Format: H=34,4 cm x B=21,5 cm
+                            Manuskript (schwarze Tinte auf Schreibpapier): Format: H=32,9 cm x B=21 cm;
+                            27 paginierte Seiten, 27 verso unbeschrieben; Konvolut mit schwarzem 
+                            Bindfaden; H= 33,9 cm x B=20,5 cm; 1 unpaginierte Seite, verso 
+                            unbeschrieben; mit weißem Bindfaden</p></objectDesc>
+                    </physDesc>
                 </msDesc>
                 <listBibl>
                     <bibl xml:id="m1">
@@ -140,7 +147,7 @@
                     </bibl>
                 </listBibl>
             </sourceDesc>
-            <!-- physDesc objektbeschreibung -->
+
         </fileDesc>
         <profileDesc>
             <particDesc>
@@ -470,7 +477,7 @@
                 <p>Endlich begonnen. Habe es schon so lange vorgehabt. Aber ich konnte mich von der
                     Vorstellung nicht frei machen, dass ich vorher über mein früheres Leben notieren
                     müsste, was mir einfällt. Deshalb habe ich 10 Jahre, oder mehr versäumt. Aber
-                    hetzts wird es gehen. Denn ich habe mir vorgenommen, mich selbst zu täuschen,
+                    jetzt wird es gehen. Denn ich habe mir vorgenommen, mich selbst zu täuschen,
                     indem ich mir einrede, ich werde nur ganz kurze Bemerkungen hineinschreiben, zu
                     denen man alle Tage Zeit findet.</p>
                 <p>Also: Gestern abend in <persName ref="#p1">Frieds</persName> Konzert gewesen:
@@ -485,12 +492,12 @@
                         <del rend="strikethrough">he</del> nächsten Jahr <title type="music"
                         ref="#m2">Pelleas</title> in <placeName ref="#pl1"
                         >Petersburg</placeName><note type="commentary"><date when="1912-12-21">21.
-                                Dezember 1912</date>, <placeName key="place.10.12">St.
-                                Petersburg</placeName>, Saal der Petersburger
-                            Adelsversammlung; Programm 21. Dezember 1912 (<ref
-                                target="https://archive.schoenberg.at/resources/?r=5533">ASCI
-                                CP5533</ref>).<!-- event 194 --></note> und <placeName ref="#pl2">Moskau</placeName>
-                    aufführen. Wäre sehr schön, hoffentlich.</p>
+                            Dezember 1912</date>, <placeName key="place.10.12">St.
+                            Petersburg</placeName>, Saal der Petersburger Adelsversammlung; Programm
+                        21. Dezember 1912 (<ref
+                            target="https://archive.schoenberg.at/resources/?r=5533">ASCI
+                            CP5533</ref>).<!-- event 194 --></note> und <placeName ref="#pl2"
+                        >Moskau</placeName> aufführen. Wäre sehr schön, hoffentlich.</p>
                 <p>Immerhin beginnt doch heuer das Ausland sehr intensiv sich mit mir zu befassen.
                     In 2 Wochen sagt <persName ref="#p3">K.</persName> soll in <placeName ref="#pl1"
                         >Petersburg</placeName> überdies mein <title type="music" ref="#m3">II.
@@ -508,34 +515,32 @@
                         ref="#m5">Lieder</title> und <title type="music" ref="#m6"
                         >Klavierstücke</title> aufführen (am <date when="1912-01-28"
                         >28.</date>)<note type="commentary">Das für <date when="1912-01-28">28.
-                                Jänner</date> anberaumte Konzert wurde wegen Verhinderung der
-                            Sängerin auf <date when="1912-02-04">4. Februar</date> verschoben. Im
-                            Harmonium-Saal in <placeName ref="#pl4">Berlin</placeName> spielten
-                                <persName ref="#p15">Martha Winternitz-Dorda</persName> (Gesang),
-                                <persName ref="#p7">Anton Webern</persName> (Harmonium), <persName
-                                ref="#p22">Louis Closson</persName> (Klavier), <persName ref="#p23"
-                                >Eduard Steuermann</persName> (Klavier), <persName ref="#p24">Louis
-                                Grünberg</persName> (Klavier, Celesta) und Max Saal
-                            (Harfe); Programm 4. Februar 1912 (<ref
-                                target="https://archive.schoenberg.at/resources/?r=5513">ASCI
-                                CP5513</ref>). <persName ref="#p40">Arnold Schönberg</persName>
-                            war im Herbst <date when="1912-09">1911</date> von <placeName ref="#pl5"
-                                >Wien</placeName> nach <placeName ref="#pl4">Berlin</placeName>
-                            übersiedelt und organisierte ein Porträt-Konzert, um sich dort
-                            musikalisch einzuführen.</note>. Ohne mir direkt zu missfallen,
-                    gefällt er mir – wenig. <persName ref="#p2">Busoni</persName> gefragt ob er in
-                        <title type="music" ref="#m7">Orchesterstücken</title> Klavierpart nehmen
-                    will. Abgelehnt: keine Zeit (offenbar keine Lust!) Infolgedessen: <persName
-                        ref="#p9">Petri</persName> auch keine Lust. Ein Meisterchen! Werde andere
-                    nehmen.</p>
+                            Jänner</date> anberaumte Konzert wurde wegen Verhinderung der Sängerin
+                        auf <date when="1912-02-04">4. Februar</date> verschoben. Im Harmonium-Saal
+                        in <placeName ref="#pl4">Berlin</placeName> spielten <persName ref="#p15"
+                            >Martha Winternitz-Dorda</persName> (Gesang), <persName ref="#p7">Anton
+                            Webern</persName> (Harmonium), <persName ref="#p22">Louis
+                            Closson</persName> (Klavier), <persName ref="#p23">Eduard
+                            Steuermann</persName> (Klavier), <persName ref="#p24">Louis
+                            Grünberg</persName> (Klavier, Celesta) und Max Saal (Harfe); Programm 4.
+                        Februar 1912 (<ref target="https://archive.schoenberg.at/resources/?r=5513"
+                            >ASCI CP5513</ref>). <persName ref="#p40">Arnold Schönberg</persName>
+                        war im Herbst <date when="1912-09">1911</date> von <placeName ref="#pl5"
+                            >Wien</placeName> nach <placeName ref="#pl4">Berlin</placeName>
+                        übersiedelt und organisierte ein Porträt-Konzert, um sich dort musikalisch
+                        einzuführen.</note>. Ohne mir direkt zu missfallen, gefällt er mir – wenig.
+                        <persName ref="#p2">Busoni</persName> gefragt ob er in <title type="music"
+                        ref="#m7">Orchesterstücken</title> Klavierpart nehmen will. Abgelehnt: keine
+                    Zeit (offenbar keine Lust!) Infolgedessen: <persName ref="#p9">Petri</persName>
+                    auch keine Lust. Ein Meisterchen! Werde andere nehmen.</p>
             </div>
 
             <div type="entry" n="2">
                 <head>
                     <date when="1912-01-21">21. Jänner (Sonntag)</date>
                 </head>
-                <p>Heute angenehme Nachrichten<note type="commentary">C.F. Peters an Arnold Schönberg
-                        20. Januar 1912 (<ref
+                <p>Heute angenehme Nachrichten<note type="commentary">C.F. Peters an Arnold
+                        Schönberg 20. Januar 1912 (<ref
                             target="https://repo.schoenberg.at/urn:nbn:at:at-asc-B149286">ASCC
                             14928</ref>). Da <persName ref="#p40">Schönbergs</persName> Hauptverlag
                             <orgName ref="#o2">Universal-Edition</orgName> nicht alle Werke im
@@ -584,10 +589,10 @@
                     möchte. Abends Diskussion darüber mit <persName ref="#p17">Mathilde</persName>.
                     Resultat davon: wir sind halb und halb bös. Natürlich geht sie viel zu weit;
                     denn sie hat aus gewissen Gründen (<persName ref="#p41">G</persName>)<note
-                        type="commentary"><date when="1907">1907</date>/08 hatte <persName ref="#p17"
-                            >Mathilde Schönberg</persName> eine Affäre mit dem jungen Maler Richard
-                        Gerstl. Als diese im <date when="1908-08">Sommer 1908</date> im gemeinsamen
-                        Urlaub am Traunsee aufflog, flüchteten <persName ref="#p17"
+                        type="commentary"><date when="1907">1907</date>/08 hatte <persName
+                            ref="#p17">Mathilde Schönberg</persName> eine Affäre mit dem jungen
+                        Maler Richard Gerstl. Als diese im <date when="1908-08">Sommer 1908</date>
+                        im gemeinsamen Urlaub am Traunsee aufflog, flüchteten <persName ref="#p17"
                             >Mathilde</persName> und Gerstl nach Nußdorf. <persName ref="#p7">Anton
                             Webern</persName> fuhr ihnen nach und holte <persName ref="#p17"
                             >Mathilde</persName> zurück. Der in weiterer Folge geächtete und
@@ -722,8 +727,7 @@
                         >Leipzig</placeName>, <placeName ref="#pl8">Dresden</placeName>, <placeName
                         ref="#pl9">Breslau</placeName> und <placeName ref="#pl10">Prag</placeName>,
                     als Tournee, da <persName ref="#p32">Zemlinsky</persName> in <placeName
-                        ref="#pl10">Prag</placeName> ohnedies einen Abend von mir machen 
-                    will.
+                        ref="#pl10">Prag</placeName> ohnedies einen Abend von mir machen will.
                         <persName ref="#p4">Gutmann</persName> gesagt, bestellt mich für <date
                         when="1912-01-25">25.</date> zu sich. Stellt Vertrag für <title type="music"
                         ref="#m4">Gurrelieder</title> in Aussicht. Spricht aber vorläufig nichts

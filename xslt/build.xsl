@@ -82,17 +82,48 @@
                         <h1>Tagebuch Einträge</h1>
                     </header>
                     <main>
-                        <ul>
-                            <xsl:for-each select="//tei:div[@type = 'entry']">
-                                <li>
-                                    <a href="{concat('entry-',@n,'.html')}">
-                                        <xsl:value-of
-                                            select="format-date((.//tei:date/@when)[1], '[D01].[M01].[Y0001]')"
-                                        />
-                                    </a>
-                                </li>
-                            </xsl:for-each>
-                        </ul>
+                        <!-- TIMELINE SECTION -->
+                        <section class="timeline">
+                            <h2>Chronologie der Einträge</h2>
+                            <div class="timeline-container">
+                                <xsl:for-each select="//tei:div[@type='entry']">
+                                    <xsl:sort select="tei:head/tei:date/@when"/>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">
+                                            <xsl:value-of select="format-date(tei:head/tei:date/@when, '[D01].[M01].[Y0001]')"/>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-title">
+                                                <a href="entry-{@n}.html">
+                                                    <xsl:value-of select="@n"/>. Tagebucheintrag
+                                                </a>
+                                            </div>
+                                            <div class="timeline-excerpt">
+                                                <xsl:variable name="firstPara" select="tei:p[1]"/>
+                                                <xsl:variable name="plainText">
+                                                    <xsl:apply-templates select="$firstPara" mode="plain-text"/>
+                                                </xsl:variable>
+                                                <xsl:choose>
+                                                    <xsl:when test="string-length($plainText) > 120">
+                                                        <xsl:value-of select="substring($plainText, 1, 120)"/>
+                                                        <xsl:text>...</xsl:text>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:value-of select="$plainText"/>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
+                                            </div>
+                                            <div class="timeline-meta">
+                                                <xsl:text>Eintrag </xsl:text>
+                                                <xsl:value-of select="@n"/>
+                                                <xsl:text> von </xsl:text>
+                                                <xsl:value-of select="count(//tei:div[@type='entry'])"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </xsl:for-each>
+                            </div>
+                        </section>
                     </main>
 
                     <script src="../js/toggle.js"/>
@@ -178,32 +209,33 @@
                                         <a href="https://d-nb.info/gnd/{tei:idno[@type='gnd']}"
                                             target="_blank">GND</a>
                                     </xsl:if>
-                                    
+
                                     <!-- Mentions in entries -->
                                     <br/>
                                     <small>
                                         <!-- Get unique diary entries where person is mentioned -->
-                                        <xsl:variable name="mentionedEntries" 
+                                        <xsl:variable name="mentionedEntries"
                                             select="//tei:persName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
-                                        
+
                                         <xsl:if test="$mentionedEntries">
                                             <xsl:text>Mentions in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
                                                 <!-- Remove duplicates by checking if this entry hasn't been processed before -->
-                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
-                                                    <a href="../diary/entry-{@n}.html">
-                                                        <xsl:value-of select="tei:head/tei:date"/>
-                                                    </a>
-                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                <xsl:if
+                                                  test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                  <a href="../diary/entry-{@n}.html">
+                                                  <xsl:value-of select="tei:head/tei:date"/>
+                                                  </a>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
                                                 </xsl:if>
                                             </xsl:for-each>
                                         </xsl:if>
-                                        
+
                                         <!-- Mentions as author of works -->
-                                        <xsl:variable name="authoredWorks" 
+                                        <xsl:variable name="authoredWorks"
                                             select="//tei:listBibl/tei:bibl[tei:author/tei:persName/@ref = concat('#', current()/@xml:id)]"/>
-                                        
+
                                         <xsl:if test="$authoredWorks">
                                             <xsl:if test="$mentionedEntries">
                                                 <xsl:text> </xsl:text>
@@ -211,7 +243,7 @@
                                             <xsl:for-each select="$authoredWorks">
                                                 <xsl:text>(as author: </xsl:text>
                                                 <a href="../works/index.html#{@xml:id}">
-                                                    <xsl:value-of select="tei:title"/>
+                                                  <xsl:value-of select="tei:title"/>
                                                 </a>
                                                 <xsl:text>)</xsl:text>
                                                 <xsl:if test="position() != last()">, </xsl:if>
@@ -271,18 +303,19 @@
                                     <!-- Mentions -->
                                     <br/>
                                     <small>
-                                        <xsl:variable name="mentionedEntries" 
+                                        <xsl:variable name="mentionedEntries"
                                             select="//tei:orgName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
-                                        
+
                                         <xsl:if test="$mentionedEntries">
                                             <xsl:text>Mentions in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
-                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
-                                                    <a href="../diary/entry-{@n}.html">
-                                                        <xsl:value-of select="tei:head/tei:date"/>
-                                                    </a>
-                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                <xsl:if
+                                                  test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                  <a href="../diary/entry-{@n}.html">
+                                                  <xsl:value-of select="tei:head/tei:date"/>
+                                                  </a>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
                                                 </xsl:if>
                                             </xsl:for-each>
                                         </xsl:if>
@@ -347,18 +380,19 @@
                                     <!-- Mentions -->
                                     <br/>
                                     <small>
-                                        <xsl:variable name="mentionedEntries" 
+                                        <xsl:variable name="mentionedEntries"
                                             select="//tei:placeName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
-                                        
+
                                         <xsl:if test="$mentionedEntries">
                                             <xsl:text>Mentions in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
-                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
-                                                    <a href="../diary/entry-{@n}.html">
-                                                        <xsl:value-of select="tei:head/tei:date"/>
-                                                    </a>
-                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                <xsl:if
+                                                  test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                  <a href="../diary/entry-{@n}.html">
+                                                  <xsl:value-of select="tei:head/tei:date"/>
+                                                  </a>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
                                                 </xsl:if>
                                             </xsl:for-each>
                                         </xsl:if>
@@ -417,18 +451,19 @@
                                     <!-- Mentions in diary -->
                                     <br/>
                                     <small>
-                                        <xsl:variable name="mentionedEntries" 
+                                        <xsl:variable name="mentionedEntries"
                                             select="//tei:title[@type = 'music'][@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
-                                        
+
                                         <xsl:if test="$mentionedEntries">
                                             <xsl:text>Mentions in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
-                                                <xsl:if test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
-                                                    <a href="../diary/entry-{@n}.html">
-                                                        <xsl:value-of select="tei:head/tei:date"/>
-                                                    </a>
-                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                <xsl:if
+                                                  test="not(preceding::tei:div[@type = 'entry'][@n = current()/@n])">
+                                                  <a href="../diary/entry-{@n}.html">
+                                                  <xsl:value-of select="tei:head/tei:date"/>
+                                                  </a>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
                                                 </xsl:if>
                                             </xsl:for-each>
                                         </xsl:if>
@@ -442,7 +477,7 @@
                 </body>
             </html>
         </xsl:result-document>
-         <!-- ================= ABOUT PAGE ================= -->
+        <!-- ================= ABOUT PAGE ================= -->
         <xsl:result-document href="about.html" method="xhtml" indent="yes">
             <html lang="de">
                 <head>
@@ -468,129 +503,160 @@
                     </header>
                     <main>
                         <section class="metadata">
-                            <h2>Source Document</h2>
+                            <h2>Quelldokument</h2>
                             <dl>
-                                <dt>Title:</dt>
-                                <dd><xsl:value-of select="//tei:titleStmt/tei:title[@type='source']"/></dd>
-                                
-                                <dt>Uniform Title:</dt>
-                                <dd><xsl:value-of select="//tei:titleStmt/tei:title[@type='uniform']"/></dd>
-                                
-                                <dt>Author:</dt>
+                                <dt>Titel:</dt>
+                                <dd>
+                                    <xsl:value-of
+                                        select="//tei:titleStmt/tei:title[@type = 'source']"/>
+                                </dd>
+
+                                <dt>Einheitstitel:</dt>
+                                <dd>
+                                    <xsl:value-of
+                                        select="//tei:titleStmt/tei:title[@type = 'uniform']"/>
+                                </dd>
+
+                                <dt>Autor:</dt>
                                 <dd>
                                     <xsl:value-of select="//tei:titleStmt/tei:author/tei:forename"/>
                                     <xsl:text> </xsl:text>
                                     <xsl:value-of select="//tei:titleStmt/tei:author/tei:surname"/>
                                     <xsl:if test="//tei:titleStmt/tei:author/@ref">
-                                        <xsl:text> — </xsl:text>
-                                        <a href="{//tei:titleStmt/tei:author/@ref}" target="_blank">GND</a>
+                                        <xsl:text> – </xsl:text>
+                                        <a href="{//tei:titleStmt/tei:author/@ref}" target="_blank"
+                                            >GND</a>
                                     </xsl:if>
                                 </dd>
-                                
-                                <dt>Editor:</dt>
+
+                                <dt>Herausgeberin:</dt>
                                 <dd>
                                     <xsl:value-of select="//tei:titleStmt/tei:editor/tei:forename"/>
                                     <xsl:text> </xsl:text>
                                     <xsl:value-of select="//tei:titleStmt/tei:editor/tei:surname"/>
                                     <xsl:if test="//tei:titleStmt/tei:editor/@ref">
-                                        <xsl:text> — </xsl:text>
-                                        <a href="{//tei:titleStmt/tei:editor/@ref}" target="_blank">GND</a>
+                                        <xsl:text> – </xsl:text>
+                                        <a href="{//tei:titleStmt/tei:editor/@ref}" target="_blank"
+                                            >GND</a>
                                     </xsl:if>
                                 </dd>
                             </dl>
                         </section>
-                        
+
                         <section class="manuscript">
-                            <h2>Manuscript Information</h2>
+                            <h2>Manuskriptinformationen</h2>
                             <dl>
-                                <dt>Repository:</dt>
-                                <dd><xsl:value-of select="//tei:msIdentifier/tei:institution"/></dd>
-                                
-                                <dt>Location:</dt>
-                                <dd><xsl:value-of select="//tei:msIdentifier/tei:settlement/tei:placeName"/></dd>
-                                
-                                <dt>Collection:</dt>
-                                <dd><xsl:value-of select="//tei:msIdentifier/tei:collection"/></dd>
-                                
-                                <dt>Shelf Mark:</dt>
-                                <dd><xsl:value-of select="//tei:msIdentifier/tei:idno[@type='shelfmark']"/></dd>
-                                
-                                <xsl:if test="//tei:msIdentifier/tei:altIdentifier/tei:idno[@type='URI']">
-                                    <dt>Digital Resource:</dt>
+                                <dt>Aufbewahrungsort:</dt>
+                                <dd>
+                                    <xsl:value-of select="//tei:msIdentifier/tei:institution"/>
+                                </dd>
+
+                                <dt>Ort:</dt>
+                                <dd>
+                                    <xsl:value-of
+                                        select="//tei:msIdentifier/tei:settlement/tei:placeName"/>
+                                </dd>
+
+                                <dt>Sammlung:</dt>
+                                <dd>
+                                    <xsl:value-of select="//tei:msIdentifier/tei:collection"/>
+                                </dd>
+
+                                <dt>Signatur:</dt>
+                                <dd>
+                                    <xsl:value-of
+                                        select="//tei:msIdentifier/tei:idno[@type = 'shelfmark']"/>
+                                </dd>
+
+                                <xsl:if
+                                    test="//tei:msIdentifier/tei:altIdentifier/tei:idno[@type = 'URI']">
+                                    <dt>Digitale Ressource:</dt>
                                     <dd>
-                                        <a href="{//tei:msIdentifier/tei:altIdentifier/tei:idno[@type='URI']}" 
-                                            target="_blank">View in Repository</a>
+                                        <a
+                                            href="{//tei:msIdentifier/tei:altIdentifier/tei:idno[@type='URI']}"
+                                            target="_blank">ASC Writings</a>
+                                    </dd>
+                                </xsl:if>
+
+                                <xsl:if test="//tei:physDesc/tei:objectDesc/tei:p">
+                                    <dt>Physische Beschreibung:</dt>
+                                    <dd>
+                                        <xsl:apply-templates
+                                            select="//tei:physDesc/tei:objectDesc/tei:p"/>
                                     </dd>
                                 </xsl:if>
                             </dl>
                         </section>
-                        
+
                         <section class="publication">
-                            <h2>Publication Information</h2>
+                            <h2>Publikationsinformationen</h2>
                             <dl>
-                                <dt>Publisher:</dt>
-                                <dd><xsl:value-of select="//tei:publicationStmt/tei:publisher/tei:persName"/></dd>
-                                
-                                <dt>Publication Date:</dt>
-                                <dd><xsl:value-of select="//tei:publicationStmt/tei:date"/></dd>
-                                
-                                <dt>Publication Place:</dt>
-                                <dd><xsl:value-of select="//tei:publicationStmt/tei:pubPlace"/></dd>
-                                
-                                <dt>License:</dt>
+                                <dt>Herausgeberin:</dt>
                                 <dd>
-                                    <a href="{//tei:publicationStmt/tei:availability/tei:licence/@target}" 
+                                    <xsl:value-of
+                                        select="//tei:publicationStmt/tei:publisher/tei:persName"/>
+                                </dd>
+
+                                <dt>Publikationsdatum:</dt>
+                                <dd>
+                                    <xsl:value-of select="//tei:publicationStmt/tei:date"/>
+                                </dd>
+
+                                <dt>Publikationsort:</dt>
+                                <dd>
+                                    <xsl:value-of select="//tei:publicationStmt/tei:pubPlace"/>
+                                </dd>
+
+                                <dt>Lizenz:</dt>
+                                <dd>
+                                    <a
+                                        href="{//tei:publicationStmt/tei:availability/tei:licence/@target}"
                                         target="_blank">
-                                        <xsl:value-of select="//tei:publicationStmt/tei:availability/tei:licence"/>
+                                        <xsl:value-of
+                                            select="//tei:publicationStmt/tei:availability/tei:licence"
+                                        />
                                     </a>
                                 </dd>
                             </dl>
                         </section>
                         
+
                         <section class="statistics">
-                            <h2>Edition Statistics</h2>
+                            <h2>Editionsstatistik</h2>
                             <dl>
-                                <dt>Diary Entries:</dt>
-                                <dd><xsl:value-of select="count(//tei:div[@type='entry'])"/></dd>
-                                
-                                <dt>Persons Referenced:</dt>
-                                <dd><xsl:value-of select="count(//tei:listPerson/tei:person)"/></dd>
-                                
-                                <dt>Places Referenced:</dt>
-                                <dd><xsl:value-of select="count(//tei:listPlace/tei:place)"/></dd>
-                                
-                                <dt>Musical Works:</dt>
-                                <dd><xsl:value-of select="count(//tei:listBibl/tei:bibl)"/></dd>
-                                
-                                <dt>Organizations:</dt>
-                                <dd><xsl:value-of select="count(//tei:listOrg/tei:org)"/></dd>
+                                <dt>Tagebucheinträge:</dt>
+                                <dd>
+                                    <xsl:value-of select="count(//tei:div[@type = 'entry'])"/>
+                                </dd>
+
+                                <dt>Referenzierte Personen:</dt>
+                                <dd>
+                                    <xsl:value-of select="count(//tei:listPerson/tei:person)"/>
+                                </dd>
+
+                                <dt>Referenzierte Orte:</dt>
+                                <dd>
+                                    <xsl:value-of select="count(//tei:listPlace/tei:place)"/>
+                                </dd>
+
+                                <dt>Musikalische Werke:</dt>
+                                <dd>
+                                    <xsl:value-of select="count(//tei:listBibl/tei:bibl)"/>
+                                </dd>
+
+                                <dt>Organisationen:</dt>
+                                <dd>
+                                    <xsl:value-of select="count(//tei:listOrg/tei:org)"/>
+                                </dd>
                             </dl>
                         </section>
-                        
-                        <section class="technical">
-                            <h2>Technical Information</h2>
-                            <p>This digital edition was created using:</p>
-                            <ul>
-                                <li><strong>TEI P5</strong> for text encoding</li>
-                                <li><strong>XSLT 3.0</strong> for HTML transformation</li>
-                                <li><strong>CSS3</strong> for styling and responsive design</li>
-                                <li><strong>JavaScript</strong> for interactive features</li>
-                            </ul>
-                            
-                            <p>The edition offers two viewing modes:</p>
-                            <ul>
-                                <li><strong>Diplomatic mode</strong>: Shows all editorial apparatus including deletions, additions, and manuscript features</li>
-                                <li><strong>Reading mode</strong>: Provides a clean reading text with additions integrated and deletions hidden</li>
-                            </ul>
-                        </section>
                     </main>
-                    
                     <script src="js/toggle.js"/>
                     <script src="js/notes.js"/>
                 </body>
             </html>
         </xsl:result-document>
-    </xsl:template> 
+    </xsl:template>
 
     <!-- ============ RENDERING TEMPLATES FOR ENTRY CONTENT ============ -->
 
@@ -722,17 +788,13 @@
     <xsl:template match="tei:note[@place]">
         <span class="note author" data-place="{@place}">
             <button class="note-toggle note-author">✎</button>
-            <span class="popup-author">
-                Anmerkung Schönberg, 
-                    <xsl:choose>
-                        <xsl:when test="@place = 'left'">linker</xsl:when>
-                        <xsl:when test="@place = 'right'">rechter</xsl:when>
-                        <xsl:when test="@place = 'top'">oberer</xsl:when>
-                        <xsl:when test="@place = 'bottom'">unterer</xsl:when>
-                        <xsl:otherwise><xsl:value-of select="@place"/></xsl:otherwise>
-                    </xsl:choose>
-                    Rand: 
-                <xsl:apply-templates select="node()"/>
+            <span class="popup-author"> Anmerkung Schönberg, <xsl:choose>
+                    <xsl:when test="@place = 'left'">linker</xsl:when>
+                    <xsl:when test="@place = 'right'">rechter</xsl:when>
+                    <xsl:when test="@place = 'top'">oberer</xsl:when>
+                    <xsl:when test="@place = 'bottom'">unterer</xsl:when>
+                    <xsl:otherwise><xsl:value-of select="@place"/></xsl:otherwise>
+                </xsl:choose> Rand: <xsl:apply-templates select="node()"/>
             </span>
         </span>
     </xsl:template>
@@ -758,8 +820,7 @@
                     <xsl:when test="@place = 'below'">unterhalb der Zeile</xsl:when>
                     <xsl:when test="@place = 'inline'">innerhalb der Zeile</xsl:when>
                     <xsl:otherwise><xsl:value-of select="@place"/></xsl:otherwise>
-                </xsl:choose>
-                hinzugefügt</span>
+                </xsl:choose> hinzugefügt</span>
         </span>
     </xsl:template>
 
@@ -769,13 +830,11 @@
             <span class="del-text">
                 <xsl:apply-templates/>
             </span>
-            <span class="popup-del">Gelöscht (
-                <xsl:choose>
+            <span class="popup-del">Gelöscht ( <xsl:choose>
                     <xsl:when test="@rend = 'strikethrough'">durchgestrichen</xsl:when>
                     <xsl:when test="@rend = 'overwritten'">überschrieben</xsl:when>
                     <xsl:otherwise><xsl:value-of select="@rend"/></xsl:otherwise>
-                </xsl:choose>
-                )</span>
+                </xsl:choose> )</span>
         </span>
     </xsl:template>
 

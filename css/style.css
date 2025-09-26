@@ -153,17 +153,17 @@ button.toggle:hover {
 
 /* Entity references with improved styling */
 a.person {
-  color: var(--accent-red);
+  color: #8e44ad; /* Purple color instead of red */
   text-decoration: none;
-  border-bottom: 1px solid rgba(231, 76, 60, 0.3);
+  border-bottom: 1px solid rgba(142, 68, 173, 0.3);
   padding: 0.1em 0.2em;
   border-radius: var(--radius-small);
   transition: all 0.2s ease;
 }
 
 a.person:hover {
-  background: rgba(231, 76, 60, 0.1);
-  border-bottom-color: var(--accent-red);
+  background: rgba(142, 68, 173, 0.1);
+  border-bottom-color: #8e44ad;
 }
 
 a.place {
@@ -181,17 +181,17 @@ a.place:hover {
 }
 
 a.org {
-  color: var(--accent-purple);
+  color: var(--accent-blue); /* Move blue to organizations */
   text-decoration: none;
-  border-bottom: 1px solid rgba(155, 89, 182, 0.3);
+  border-bottom: 1px solid rgba(52, 152, 219, 0.3);
   padding: 0.1em 0.2em;
   border-radius: var(--radius-small);
   transition: all 0.2s ease;
 }
 
 a.org:hover {
-  background: rgba(155, 89, 182, 0.1);
-  border-bottom-color: var(--accent-purple);
+  background: rgba(52, 152, 219, 0.1);
+  border-bottom-color: var(--accent-blue);
 }
 
 a.work {
@@ -599,4 +599,138 @@ body.mode-reading .textcrit.add:hover .popup-add {
 section {
   margin-bottom: 3rem;
 }
+/* Timeline styling with uniform colors - replace in your style.css */
 
+.timeline {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--border-light);
+  margin-bottom: 3rem;
+}
+
+.timeline h2 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Vertical line */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent-blue);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 80px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline dots - all the same blue color */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-blue);
+  z-index: 1;
+}
+
+.timeline-date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: var(--accent-blue);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+  background: var(--bg-primary);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+.timeline-content:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-1px);
+}
+
+.timeline-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.timeline-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.timeline-title a:hover {
+  color: var(--accent-blue);
+}
+
+.timeline-excerpt {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 15px;
+  }
+  
+  .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .timeline-item::before {
+    left: 7px;
+    width: 14px;
+    height: 14px;
+  }
+  
+  .timeline-content {
+    padding: 0.75rem 1rem;
+  }
+  
+  .timeline-title {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-excerpt {
+    font-size: 0.8rem;
+  }
+}
