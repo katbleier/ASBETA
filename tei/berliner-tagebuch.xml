@@ -14,9 +14,8 @@
                     <surname>Bleier</surname></editor>
             </titleStmt>
             <publicationStmt>
-
-
-                <publisher><persName ref="https://d-nb.info/gnd/1060272059">Katharina Bleier</persName></publisher>
+                <publisher><persName ref="https://d-nb.info/gnd/1060272059">Katharina
+                        Bleier</persName></publisher>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by-nc-Sa/4.0">Creative
                         Commons BY-NC-SA 4.0</licence>
@@ -39,11 +38,13 @@
                         </altIdentifier>
                     </msIdentifier>
                     <physDesc>
-                        <objectDesc><p>Umschlag (Pappe): Format: H=34,4 cm x B=21,5 cm
-                            Manuskript (schwarze Tinte auf Schreibpapier): Format: H=32,9 cm x B=21 cm;
-                            27 paginierte Seiten, 27 verso unbeschrieben; Konvolut mit schwarzem 
-                            Bindfaden; H= 33,9 cm x B=20,5 cm; 1 unpaginierte Seite, verso 
-                            unbeschrieben; mit weißem Bindfaden</p></objectDesc>
+                        <objectDesc>
+                            <p>Umschlag (Pappe): Format: H=34,4 cm x B=21,5 cm Manuskript (schwarze
+                                Tinte auf Schreibpapier): Format: H=32,9 cm x B=21 cm; 27 paginierte
+                                Seiten, 27 verso unbeschrieben; Konvolut mit schwarzem Bindfaden; H=
+                                33,9 cm x B=20,5 cm; 1 unpaginierte Seite, verso unbeschrieben; mit
+                                weißem Bindfaden</p>
+                        </objectDesc>
                     </physDesc>
                 </msDesc>
                 <listBibl>
@@ -493,9 +494,8 @@
                         <del rend="strikethrough">he</del> nächsten Jahr <title type="music"
                         ref="#m2">Pelleas</title> in <placeName ref="#pl1"
                         >Petersburg</placeName><note type="commentary"><date when="1912-12-21">21.
-                            Dezember 1912</date>, <placeName ref="#pl1">St.
-                            Petersburg</placeName>, Saal der Petersburger Adelsversammlung; Programm
-                        21. Dezember 1912 (<ref
+                            Dezember 1912</date>, <placeName ref="#pl1">St. Petersburg</placeName>,
+                        Saal der Petersburger Adelsversammlung; Programm 21. Dezember 1912 (<ref
                             target="https://archive.schoenberg.at/resources/?r=5533">ASCI
                             CP5533</ref>).<!-- event 194 --></note> und <placeName ref="#pl2"
                         >Moskau</placeName> aufführen. Wäre sehr schön, hoffentlich.</p>
@@ -772,8 +772,8 @@
                     aus der gänzlichen Unbeachtung hervorgezogen worden ist. <del
                         rend="strikethrough">M</del> Nehme von diesen Dummheiten einfach nicht
                     Notiz. Vor allem um sie zu einer klaren Antwort zu zwingen, ob sie <add
-                        place="above">mittun</add> will oder nicht. Scheint aber nicht zu erzielen zu
-                    sein. Denn so wenig intelligent das Frauenzimmer sonst ist, darin ist sie
+                        place="above">mittun</add> will oder nicht. Scheint aber nicht zu erzielen
+                    zu sein. Denn so wenig intelligent das Frauenzimmer sonst ist, darin ist sie
                     schlau. Überhaupt: Lügen <del rend="strikethrough">Frauen</del> ja alle
                     Frauenzimmer besser, als die Männer die Wahrheit sagen. <del
                         rend="strikethrough">Antwor</del>

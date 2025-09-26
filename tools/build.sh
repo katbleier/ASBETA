@@ -11,7 +11,7 @@ XSLT=xslt/build.xsl
 OUT=/dev/null
 
 # Ensure output folders exist
-mkdir -p diary facsimiles persons works places organizations
+mkdir -p diary persons works places organizations
 
 # Run Saxon
 java -jar "$SAXON" -s:"$INPUT" -xsl:"$XSLT" -o:"$OUT"

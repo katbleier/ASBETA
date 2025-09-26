@@ -86,38 +86,42 @@
                         <section class="timeline">
                             <h2>Chronologie der Einträge</h2>
                             <div class="timeline-container">
-                                <xsl:for-each select="//tei:div[@type='entry']">
+                                <xsl:for-each select="//tei:div[@type = 'entry']">
                                     <xsl:sort select="tei:head/tei:date/@when"/>
                                     <div class="timeline-item">
                                         <div class="timeline-date">
-                                            <xsl:value-of select="format-date(tei:head/tei:date/@when, '[D01].[M01].[Y0001]')"/>
+                                            <xsl:value-of
+                                                select="format-date(tei:head/tei:date/@when, '[D01].[M01].[Y0001]')"
+                                            />
                                         </div>
                                         <div class="timeline-content">
                                             <div class="timeline-title">
                                                 <a href="entry-{@n}.html">
-                                                    <xsl:value-of select="@n"/>. Tagebucheintrag
-                                                </a>
+                                                  <xsl:value-of select="@n"/>. Tagebucheintrag </a>
                                             </div>
                                             <div class="timeline-excerpt">
                                                 <xsl:variable name="firstPara" select="tei:p[1]"/>
                                                 <xsl:variable name="plainText">
-                                                    <xsl:apply-templates select="$firstPara" mode="plain-text"/>
+                                                  <xsl:apply-templates select="$firstPara"
+                                                  mode="plain-text"/>
                                                 </xsl:variable>
                                                 <xsl:choose>
-                                                    <xsl:when test="string-length($plainText) > 120">
-                                                        <xsl:value-of select="substring($plainText, 1, 120)"/>
-                                                        <xsl:text>...</xsl:text>
-                                                    </xsl:when>
-                                                    <xsl:otherwise>
-                                                        <xsl:value-of select="$plainText"/>
-                                                    </xsl:otherwise>
+                                                  <xsl:when test="string-length($plainText) > 120">
+                                                  <xsl:value-of
+                                                  select="substring($plainText, 1, 120)"/>
+                                                  <xsl:text>...</xsl:text>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <xsl:value-of select="$plainText"/>
+                                                  </xsl:otherwise>
                                                 </xsl:choose>
                                             </div>
                                             <div class="timeline-meta">
                                                 <xsl:text>Eintrag </xsl:text>
                                                 <xsl:value-of select="@n"/>
                                                 <xsl:text> von </xsl:text>
-                                                <xsl:value-of select="count(//tei:div[@type='entry'])"/>
+                                                <xsl:value-of
+                                                  select="count(//tei:div[@type = 'entry'])"/>
                                             </div>
                                         </div>
                                     </div>
@@ -619,7 +623,23 @@
                                 </dd>
                             </dl>
                         </section>
-                        
+
+                        <section class="technical-docs">
+                            <h2>Textkodierung</h2>
+                            <dl>
+                                <dt>TEI-Schema:</dt>
+                                <dd>
+                                    <a href="tei/tei_asbeta.html" target="_blank">ODD
+                                        Dokumentation</a> – Beschreibung des verwendeten TEI-Schemas
+                                    und der Kodierungsrichtlinien </dd>
+
+                                <dt>TEI-Quelldatei:</dt>
+                                <dd>
+                                    <a href="tei/berliner-tagebuch.xml"
+                                        download="berliner-tagebuch.xml"> TEI XML herunterladen </a>
+                                    – Die vollständige TEI-kodierte Quelldatei </dd>
+                            </dl>
+                        </section>
 
                         <section class="statistics">
                             <h2>Editionsstatistik</h2>
