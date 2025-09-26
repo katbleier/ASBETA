@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tei_asbeta.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="T26.02">
     <teiHeader xml:lang="de">
         <fileDesc>
@@ -15,7 +16,7 @@
             <publicationStmt>
 
 
-                <publisher><persName>Katharina Bleier</persName></publisher>
+                <publisher><persName ref="https://d-nb.info/gnd/1060272059">Katharina Bleier</persName></publisher>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by-nc-Sa/4.0">Creative
                         Commons BY-NC-SA 4.0</licence>
@@ -492,7 +493,7 @@
                         <del rend="strikethrough">he</del> nächsten Jahr <title type="music"
                         ref="#m2">Pelleas</title> in <placeName ref="#pl1"
                         >Petersburg</placeName><note type="commentary"><date when="1912-12-21">21.
-                            Dezember 1912</date>, <placeName key="place.10.12">St.
+                            Dezember 1912</date>, <placeName ref="#pl1">St.
                             Petersburg</placeName>, Saal der Petersburger Adelsversammlung; Programm
                         21. Dezember 1912 (<ref
                             target="https://archive.schoenberg.at/resources/?r=5533">ASCI
@@ -704,7 +705,7 @@
                     wenn's anfängt klarer zu werden, unterscheide ich genau. Mir fehlen eben die
                     Klänge! Die Farben. Das Klavier ist doch nur ein Instrument. Aber weniger für
                     die Musiker als für die Pianisten. Vielleicht ist es deshalb so populär!?</p>
-                <milestone unit="section" rend="line"/>
+                <milestone unit="section"/>
             </div>
 
             <div type="entry" n="5">
@@ -771,7 +772,7 @@
                     aus der gänzlichen Unbeachtung hervorgezogen worden ist. <del
                         rend="strikethrough">M</del> Nehme von diesen Dummheiten einfach nicht
                     Notiz. Vor allem um sie zu einer klaren Antwort zu zwingen, ob sie <add
-                        rend="above">mittun</add> will oder nicht. Scheint aber nicht zu erzielen zu
+                        place="above">mittun</add> will oder nicht. Scheint aber nicht zu erzielen zu
                     sein. Denn so wenig intelligent das Frauenzimmer sonst ist, darin ist sie
                     schlau. Überhaupt: Lügen <del rend="strikethrough">Frauen</del> ja alle
                     Frauenzimmer besser, als die Männer die Wahrheit sagen. <del
