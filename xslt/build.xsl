@@ -635,9 +635,8 @@
 
                                 <dt>TEI-Quelldatei:</dt>
                                 <dd>
-                                    <a href="tei/berliner-tagebuch.xml"
-                                        download="berliner-tagebuch.xml"> TEI XML herunterladen </a>
-                                    – Die vollständige TEI-kodierte Quelldatei </dd>
+                                    <a href="tei/berliner-tagebuch.xml" target="_blank">TEI XML</a>
+                                    – Vollständige TEI-kodierte Quelldatei</dd>
                             </dl>
                         </section>
 
