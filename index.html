@@ -15,12 +15,10 @@
     .manuscript-image {
       flex: 0 0 400px;
       height: 500px;
-      background-image: url('https://repo.schoenberg.at/urn:nbn:at:at-asc-TL524845');
-      background-size: cover;
-      background-position: center;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       border: 1px solid var(--border-light);
+      overflow: hidden;
     }
     
     .hero-content {
@@ -81,7 +79,9 @@
 
   <main>
     <section class="hero-section">
-      <div class="manuscript-image"></div>
+      <div class="manuscript-image">
+        <img src="T26_02_0.jpg" alt="Manuscript page" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+      </div>
       <div class="hero-content">
         <h2>Arnold Schönberg<br>Berliner Tagebuch</h2>
         <p>
