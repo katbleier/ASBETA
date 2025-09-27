@@ -163,7 +163,6 @@
                     </header>
 
                     <main class="diary-scroll">
-                        <!-- Alles linear ausgeben -->
                         <xsl:apply-templates select="//tei:text/tei:body/node()"/>
                     </main>
 

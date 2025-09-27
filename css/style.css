@@ -1,4 +1,4 @@
-/* Professional Digital Edition Stylesheet */
+/* Digital Edition Stylesheet */
 
 :root { 
   --text-primary: #2c3e50;
@@ -151,9 +151,9 @@ button.toggle:hover {
   box-shadow: var(--shadow-medium);
 }
 
-/* Entity references with improved styling */
+/* Entity references */
 a.person {
-  color: #8e44ad; /* Purple color instead of red */
+  color: #8e44ad; 
   text-decoration: none;
   border-bottom: 1px solid rgba(142, 68, 173, 0.3);
   padding: 0.1em 0.2em;
@@ -181,7 +181,7 @@ a.place:hover {
 }
 
 a.org {
-  color: var(--accent-blue); /* Move blue to organizations */
+  color: var(--accent-blue); 
   text-decoration: none;
   border-bottom: 1px solid rgba(52, 152, 219, 0.3);
   padding: 0.1em 0.2em;
@@ -272,7 +272,7 @@ body.mode-diplomatic .textcrit.del .del-text {
   transform: translateX(-50%);
 }
 
-/* Commentary popups - wide for longer texts */
+/* Commentary popups */
 .popup-commentary {
   max-width: 480px;
   min-width: 300px;
@@ -280,7 +280,7 @@ body.mode-diplomatic .textcrit.del .del-text {
   background: var(--bg-primary);
 }
 
-/* Author note popups (note place="...") - medium width */
+/* Author note popups */
 .popup-author {
   max-width: 350px;
   min-width: 250px;

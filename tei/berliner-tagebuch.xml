@@ -496,14 +496,17 @@
                     weniger. Der ist nur ein Reißer. Seit ich ihn kühl behandle, bewirbt er sich
                     sehr um mich. Aber ich lasse ihn abgleiten. Nachher <persName ref="#p3"
                         >Kussiewitzki</persName> kennen gelernt.<note type="commentary">Der Dirigent
-                            <persName ref="#p3">Serge Koussevitzky</persName> hatte <persName ref="#p40">Schönbergs</persName> Musik erstmals im Jahr zuvor durch
-                        Sergej Prokofieffs Interpretation der <title type="music">Drei Klavierstücke op. 11</title> bei der
-                            Künstlervereinigung ARS in <placeName ref="#pl1">St. Petersburg</placeName> gehört und wurde <persName ref="#p40">Schönberg</persName> durch
-                        dessen Agenten <persName ref="#p4">Emil Gutmann</persName> vorgestellt. Das Vermögen seiner Frau Natalie
-                            (geb. Uškov) hatte  <persName ref="#p3">Koussevitzky</persName> bereits 1909 die Gründung der L’Édition
-                        Russe de Musique ermöglicht, in deren auf zeitgenössische russische Musik
-                        ausgerichtetem Programm unter anderen Skrjabin, Rachmaninow, Strawinsky und
-                        Prokofieff vertreten waren.</note>
+                            <persName ref="#p3">Serge Koussevitzky</persName> hatte <persName
+                            ref="#p40">Schönbergs</persName> Musik erstmals im Jahr zuvor durch
+                        Sergej Prokofieffs Interpretation der <title type="music">Drei Klavierstücke
+                            op. 11</title> bei der Künstlervereinigung ARS in <placeName ref="#pl1"
+                            >St. Petersburg</placeName> gehört und wurde <persName ref="#p40"
+                            >Schönberg</persName> durch dessen Agenten <persName ref="#p4">Emil
+                            Gutmann</persName> vorgestellt. Das Vermögen seiner Frau Natalie (geb.
+                        Uškov) hatte <persName ref="#p3">Koussevitzky</persName> bereits 1909 die
+                        Gründung der L’Édition Russe de Musique ermöglicht, in deren auf
+                        zeitgenössische russische Musik ausgerichtetem Programm unter anderen
+                        Skrjabin, Rachmaninow, Strawinsky und Prokofieff vertreten waren.</note>
                     <persName ref="#p4">Guttmann</persName> mich zu ihm geschleppt. Er will im <del
                         rend="strikethrough">he</del> nächsten Jahr <title type="music" ref="#m2"
                         >Pelleas</title> in <placeName ref="#pl1">Petersburg</placeName><note
@@ -511,7 +514,7 @@
                             <placeName ref="#pl1">St. Petersburg</placeName>, Saal der Petersburger
                         Adelsversammlung; Programm 21. Dezember 1912 (<ref
                             target="https://archive.schoenberg.at/resources/?r=5533">ASCI
-                            CP5533</ref>).<!-- event 194 --></note> und <placeName ref="#pl2"
+                            CP5533</ref>).</note> und <placeName ref="#pl2"
                         >Moskau</placeName> aufführen. Wäre sehr schön, hoffentlich.</p>
                 <p>Immerhin beginnt doch heuer das Ausland sehr intensiv sich mit mir zu befassen.
                     In 2 Wochen sagt <persName ref="#p3">K.</persName> soll in <placeName ref="#pl1"
@@ -522,13 +525,14 @@
                         ref="#p4">Guttmann</persName>, <persName ref="#p6">Herzka</persName>
                     <del rend="overwritten">K.</del>
                     <persName ref="#p7">Webern</persName> und <persName ref="#p8">Clark</persName>
-                    im Heidelberger Restaurant<note type="commentary">Bierrestaurant zum Heidelberger, Hotel Central, Friedrichstraße 143-149</note>. <persName ref="#p4">Guttmann</persName> sehr
-                    übermütig. Soll aber geschworen (!!) haben, im Herbst <title type="music"
-                        ref="#m4">Gurrelieder</title> aufzuführen! Werden sehen. <persName ref="#p6"
-                        >Herzka</persName> strahlte! – Im Konzert auch <persName ref="#p9"
-                        >Petri</persName> gesprochen. Weichlich. Soll meine <title type="music"
-                        ref="#m5">Lieder</title> und <title type="music" ref="#m6"
-                        >Klavierstücke</title> aufführen (am <date when="1912-01-28"
+                    im Heidelberger Restaurant<note type="commentary">Bierrestaurant zum
+                        Heidelberger, Hotel Central, Friedrichstraße 143-149</note>. <persName
+                        ref="#p4">Guttmann</persName> sehr übermütig. Soll aber geschworen (!!)
+                    haben, im Herbst <title type="music" ref="#m4">Gurrelieder</title> aufzuführen!
+                    Werden sehen. <persName ref="#p6">Herzka</persName> strahlte! – Im Konzert auch
+                        <persName ref="#p9">Petri</persName> gesprochen. Weichlich. Soll meine
+                        <title type="music" ref="#m5">Lieder</title> und <title type="music"
+                        ref="#m6">Klavierstücke</title> aufführen (am <date when="1912-01-28"
                         >28.</date>)<note type="commentary">Das für <date when="1912-01-28">28.
                             Jänner</date> anberaumte Konzert wurde wegen Verhinderung der Sängerin
                         auf <date when="1912-02-04">4. Februar</date> verschoben. Im Harmonium-Saal
@@ -556,7 +560,7 @@
                 </head>
                 <p>Heute angenehme Nachrichten<note type="commentary">C.F. Peters an Arnold
                         Schönberg 20. Januar 1912 (<ref
-                            target="https://repo.schoenberg.at/urn:nbn:at:at-asc-B149286">ASCC
+                            target=" https://schoenberg-peters.at/cfp/letters/letter.14928">ASCC
                             14928</ref>). Da <persName ref="#p40">Schönbergs</persName> Hauptverlag
                             <orgName ref="#o2">Universal-Edition</orgName> nicht alle Werke im
                         gewünschten Tempo publizieren konnte, hatte sich <persName ref="#p40"
@@ -565,24 +569,39 @@
                             ref="#m7">Orchesterstücke op. 6</title> bei einem anderen Verlag
                         herauszugeben. Die Überlassung an den namhaften Verlag <orgName ref="#o1"
                             >C.F. Peters</orgName> sah man weniger als selbstschädigende
-                        Konkurrenzsituation, denn als Möglichkeit, die Reputation zu steigern (siehe
-                        Briefwechsel Arnold Schönberg – Universal-Edition)</note> per Post (seit
-                    langem die ersten): <orgName ref="#o1">Peters</orgName> nimmt <title
-                        type="music" ref="#m7">Orchesterstücke</title>. Honorar niedrig! Aber
-                        <orgName ref="#o1">Peters-Edition</orgName>! Das entscheidet. Und gedruckt!
-                        <persName ref="#p10">Marschalk</persName> meldet sich wieder <note
-                        type="commentary"><persName ref="#p40">Schönberg</persName> bezieht sich auf
-                        seine Korrespondenz mit seinem ersten Verleger <persName ref="p10">Max
-                            Marschalk</persName>
-                        <ref target="https://schoenberg-ue.at/letters/letter.17618?ref=index.html"
-                            >Verlag Dreililien an Arnold Schönberg, 2. Jänner 1912</ref></note>. Der
-                    hat Hinter=Gründe! Offenbar hat er sich mit <persName ref="#p6"
-                        >Herzka</persName> über meine <hi rend="underline">und</hi> seine Sachen
-                    auseinandergesetzt. Habe <persName ref="#p6">Herzka</persName> wegen Druck der 5
-                    freien Werke zum letzten mal gefragt. Gleichzeitig <orgName ref="#o9">Tischer
-                        und Jagenberg</orgName> angefragt ob Sie sie haben wollen. Ich glaube nicht,
-                    damit ein Unrecht zu tun, da ich nicht die Absicht habe, einen durch den andern
-                    zu überbieten. Sondern im Gegenteil: Ich habe von <persName ref="#p6"
+                        Konkurrenzsituation, denn als Möglichkeit, die Reputation zu steigern (Vgl.
+                        Arnold Schönberg an Universal-Edition, 21. Jänner 1912 (<ref
+                            target="https://www.schoenberg-ue.at/letters/letter.293">ASCC
+                        293</ref>).</note> per Post (seit langem die ersten): <orgName ref="#o1"
+                        >Peters</orgName> nimmt <title type="music" ref="#m7"
+                        >Orchesterstücke</title>. Honorar niedrig! Aber <orgName ref="#o1"
+                        >Peters-Edition</orgName>! Das entscheidet. Und gedruckt! <persName
+                        ref="#p10">Marschalk</persName> meldet sich wieder <note type="commentary"
+                            ><persName ref="#p40">Schönberg</persName> bezieht sich auf seine
+                        Korrespondenz mit seinem ersten Verleger <persName ref="p10">Max
+                            Marschalk</persName> Verlag Dreililien an Arnold Schönberg, 20. Jänner
+                        1912 (<ref
+                            target="https://schoenberg-ue.at/letters/letter.12423?ref=index.html"
+                            >ASCC 12423</ref>).</note>. Der hat Hinter=Gründe! Offenbar hat er sich
+                    mit <persName ref="#p6">Herzka</persName> über meine <hi rend="underline"
+                        >und</hi> seine Sachen auseinandergesetzt. Habe <persName ref="#p6"
+                            >Herzka</persName> wegen Druck der 5 freien Werke zum letzten mal gefragt<note type="commentary">&#8222;Nun möchte ich aber doch wissen, wie Sie sich zu den anderen Werken
+                                stellen. Und ich muss, das rasch wissen, denn ich möchte unbedingt alles so
+                                rasch wie möglich gedruckt haben. Deshalb frage ich Sie und bitte Sie um
+                                schleunige und klare Antwort: Welche der übrigbleibenden fünf Werke
+                                wollen Sie haben. Meine Bedingungen sind nur die unseres Vertrages&#8220; (Arnold Schönberg an Universal-Edition, 21. Jänner 1912 (<ref
+                                    target="https://www.schoenberg-ue.at/letters/letter.293">ASCC
+                                    293</ref>). Bei den genannten Werken handelt es sich um Arnold Schönberg, Am Strande; Zwei Lieder für Gesang und Klavier op. 14 (alle drei Lieder 
+                                in einem Opus zusammenzufassen), Kammersymphonie op. 9, George-Lieder op. 
+                                15, Friede auf Erden op. 13.</note>.
+                    Gleichzeitig <orgName ref="#o9">Tischer und Jagenberg</orgName> angefragt<note
+                        type="commentary">&#8222;da die <orgName ref="#o2">Universal-Edition</orgName> nicht
+                        in der Lage ist, soviel Werke von mir in der geforderten Frist zu drucken [...] so bin
+                        ich in der Lage Ihnen folgende Kompositionen zum Verlag anzubieten [...]&#8220; <persName ref="#p40">Schönberg</persName> stellte die Forderung, dass alle angebotenen Werke in Verlag genommen werden müssten, was für einen kleinen Verlag nicht leistbar war.
+                        Arnold Schönberg an Gerhard Tischer, 21. Jänner 1912 (ASCC
+                        23929<!-- urn nachtragen -->).</note> ob Sie sie haben wollen. Ich glaube
+                    nicht, damit ein Unrecht zu tun, da ich nicht die Absicht habe, einen durch den
+                    andern zu überbieten. Sondern im Gegenteil: Ich habe von <persName ref="#p6"
                         >Herzka</persName> weniger verlangt und werde trotzdem ihm die Sachen geben
                     ohne auf <orgName ref="#o9">T. und J.</orgName> zu warten. Also nur um Zeit zu
                     gewinnen. – <del rend="overwritten">Nach</del>Vormittag unangenehme Nachricht:
