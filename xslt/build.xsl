@@ -377,7 +377,7 @@
                                         <xsl:text> — </xsl:text>
                                         <a
                                             href="https://www.openstreetmap.org/?mlat={substring-before(tei:location/tei:geo,' ')}&amp;mlon={substring-after(tei:location/tei:geo,' ')}&amp;zoom=12"
-                                            target="_blank">Map</a>
+                                            >Map</a>
                                     </xsl:if>
 
                                     <!-- Mentions -->
