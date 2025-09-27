@@ -5,8 +5,8 @@ Digital Edition Arnold Schönberg, Berliner Tagebuch Project Digital Editions fo
 
 
 First pages of the handwritten Manuscript
-Encoding: XML/TEI
-Static Website: https://katbleier.github.io/ASBETA/
+*Encoding: XML/TEI
+*Static Website: https://katbleier.github.io/ASBETA/
 
 
 
