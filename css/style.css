@@ -215,7 +215,7 @@ a.work:hover {
   display: inline-block;
 }
 
-/* Diplomatic mode: additions with subtle background */
+/* Diplomatic mode */
 body.mode-diplomatic .textcrit.add .add-text {
   background: linear-gradient(120deg, rgba(39, 174, 96, 0.15) 0%, rgba(39, 174, 96, 0.08) 100%);
   padding: 0.1em 0.3em;
@@ -223,7 +223,7 @@ body.mode-diplomatic .textcrit.add .add-text {
   border-left: 2px solid rgba(39, 174, 96, 0.4);
 }
 
-/* Reading mode: additions inline */
+/* Reading mode: additions */
 body.mode-reading .textcrit.add {
   position: static;
 }
