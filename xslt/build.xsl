@@ -221,7 +221,7 @@
                                             select="//tei:persName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
 
                                         <xsl:if test="$mentionedEntries">
-                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:text>Erwähnt in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
                                                 <!-- Remove duplicates by checking if this entry hasn't been processed before -->
@@ -310,7 +310,7 @@
                                             select="//tei:orgName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
 
                                         <xsl:if test="$mentionedEntries">
-                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:text>Erwähnt in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
                                                 <xsl:if
@@ -387,7 +387,7 @@
                                             select="//tei:placeName[@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
 
                                         <xsl:if test="$mentionedEntries">
-                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:text>Erwähnt in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
                                                 <xsl:if
@@ -458,7 +458,7 @@
                                             select="//tei:title[@type = 'music'][@ref = concat('#', current()/@xml:id)]/ancestor::tei:div[@type = 'entry']"/>
 
                                         <xsl:if test="$mentionedEntries">
-                                            <xsl:text>Mentions in: </xsl:text>
+                                            <xsl:text>Erwähnt in: </xsl:text>
                                             <xsl:for-each select="$mentionedEntries">
                                                 <xsl:sort select="@n" data-type="number"/>
                                                 <xsl:if
